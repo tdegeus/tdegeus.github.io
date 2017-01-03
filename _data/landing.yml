@@ -1,0 +1,30 @@
+# index page sections
+- id: 'about-me'
+  name: 'About'
+  tpl: 'about.html'
+  css: ''
+
+- id: 'career'
+  name: 'Career'
+  tpl: 'career.html'
+  css: 'timeline'
+
+- id: 'languages'
+  name: 'Languages'
+  tpl: 'languages.html'
+  css: 'team'
+
+- id: 'software'
+  name: 'Software'
+  tpl: 'software.html'
+  css: 'project'
+
+- id: 'blog'
+  name: 'Blog'
+  tpl: 'blog.html'
+  css: 'testimonials navy-section'
+
+- id: 'links'
+  name: 'Links'
+  tpl: 'links.html'
+  css: 'contact'

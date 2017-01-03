@@ -1,0 +1,12 @@
+# blog page sections
+- name: Blog
+  href: '/blog/'
+
+- name: GooseFFT
+  href: '/goosefft/'
+
+- name: GooseEYE
+  href: '/gooseeye/'
+
+- name: Python
+  href: '/python/'

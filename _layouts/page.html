@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body id="page-top" class="plain-page">
+
+  <div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">{{ site.title }}</a>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="page-scroll" href="/blog/">{{ site.index.home }}</a></li>
+            {% if page.title != 'Software' %}
+              {% for tag in site.data.pages %}
+                {% if page.title == tag.name %}
+                <li class="active">
+                {% else %}
+                <li>
+                {% endif %}
+                <a class="page-scroll" href="{{ tag.href }}">{{ tag.name }}</a></li>
+              {% endfor %}
+            {% else %}
+              {% for tag in site.data.software %}
+                {% if page.title == tag.name %}
+                <li class="active">
+                {% else %}
+                <li>
+                {% endif %}
+                <a class="page-scroll" href="{{ tag.href }}">{{ tag.name }}</a></li>
+              {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="wrapper wrapper-content  animated fadeInRight article">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="ibox">
+          <div class="ibox-content">
+            <div class="text-center article-title">
+              <h1>
+                {{ page.title }}
+              </h1>
+            </div>
+              {{ content }}
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  {% include footer.html %}
+
+</body>
+</html>

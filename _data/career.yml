@@ -1,0 +1,18 @@
+
+- name: Rubicon Grant
+  desc: The Netherlands Organisation for Scientific Research (NWO)
+  date: 2016
+  job:  Personal fellowship
+  icon: fa-euro
+
+- name: Doctor of Philosophy
+  desc: Eindhoven University of Technology<br /><i>Cum Laude</i><br /><a href="/about/phd.html">More...</a>
+  date: 2016
+  job:  PhD
+  icon: fa-university
+
+- name: Master of Science
+  desc: Eindhoven University of Technology<br /><i>With great appreciation (GPA 8.5)</i>
+  date: 2012
+  job:  MSc
+  icon: fa-university
