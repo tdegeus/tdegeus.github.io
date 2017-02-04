@@ -2,6 +2,9 @@
 - name: Blog
   href: '/blog/'
 
+- name: Carreer
+  href: '/carreer/'
+
 - name: GooseFFT
   href: '/goosefft/'
 
@@ -10,3 +13,6 @@
 
 - name: Python
   href: '/python/'
+
+- name: C++
+  href: '/cpp/'

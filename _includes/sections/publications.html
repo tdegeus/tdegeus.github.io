@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <div class="navy-line"></div>
+      <h1>Publications</h1>
+    </div>
+  </div>
+  <div class="row features-block">
+    <div class="col-lg-12">
+      <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
+      {% for publication in site.data.publications %}
+      {% assign loopindex = forloop.index | modulo: 2 %}
+        <div class="vertical-timeline-block">
+          <div class="vertical-timeline-icon navy-bg wow rotateIn">
+            <i class="fa {{ publication.icon }}"></i>
+          </div>
+          <div class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
+            <h2>{{ publication.name }}</h2>
+            <p>{{ publication.desc }}</p>
+            <span class="vertical-date">{{ publication.date }} - {{ publication.number }}<br/> <small>{{ publication.journal }}</small>
+            </span>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div>
+  <center><a href="/publications.html">More</a></center>
+  </div>
+</div>

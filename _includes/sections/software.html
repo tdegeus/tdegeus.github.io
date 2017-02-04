@@ -19,13 +19,9 @@
       {% endif %}
       <div class="team-member">
         <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
-        <h4><a href="{{ project.url | prepend: 'https://github.com' }}" target="blank"><span class="navy">{{ project.name }}</a></span></h4>
+        <h4><a href="{{ project.url }}" target="blank"><span class="navy">{{ project.name }}</a></span></h4>
         <p>{{ project.desc }}</p>
         {% if project.url %}
-        <ul class="list-inline">
-        <li><a class="github-button" href="{{ project.url | prepend: 'https://github.com'}}" data-icon="octicon-star" data-count-href="{{ project.url | append: '/stargazers' }}" data-count-api="{{ project.url | prepend: '/repos' | append: '#stargazers_count' }}" data-count-aria-label="# stargazers on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Star</a></li>
-        <li><a class="github-button" href="{{ project.url | prepend: 'https://github.com'}}" data-icon="octicon-repo-forked" data-count-href="{{ project.url | append: '/network/members' }}" data-count-api="{{ project.url | prepend: '/repos' | append: '#forks_count' }}" data-count-aria-label="# forks on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Fork</a></li>
-        </ul>
         {% endif %}
       </div>
     </div>

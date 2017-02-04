@@ -9,22 +9,22 @@
   tpl: 'career.html'
   css: 'timeline'
 
-- id: 'languages'
-  name: 'Languages'
-  tpl: 'languages.html'
-  css: 'team'
+- id: 'publications'
+  name: 'Publications'
+  tpl: 'publications.html'
+  css: 'timeline'
 
 - id: 'software'
   name: 'Software'
   tpl: 'software.html'
   css: 'project'
 
+- id: 'languages'
+  name: 'Languages'
+  tpl: 'languages.html'
+  css: 'team'
+
 - id: 'blog'
   name: 'Blog'
   tpl: 'blog.html'
   css: 'testimonials navy-section'
-
-- id: 'links'
-  name: 'Links'
-  tpl: 'links.html'
-  css: 'contact'

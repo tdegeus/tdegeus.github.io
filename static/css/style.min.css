@@ -5747,8 +5747,12 @@ body.landing-page {
     color: #fff;
     padding: 20px 0;
 }
-.landing-page .gray-section {
+.landing-page .dark-gray-section {
     background: #f4f4f4;
+    margin-top: 60px;
+}
+.landing-page .gray-section {
+    background: #e8e8e8;
     margin-top: 60px;
 }
 .landing-page .team-member {
