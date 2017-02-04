@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-12 text-center">
       <div class="navy-line"></div>
-      <h1>Publications</h1>
+      <h1>Featured publications</h1>
     </div>
   </div>
   <div class="row features-block">
@@ -17,7 +17,7 @@
           <div class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
             <h2>{{ publication.name }}</h2>
             <p>{{ publication.desc }}</p>
-            <span class="vertical-date">{{ publication.date }} - {{ publication.number }}<br/> <small>{{ publication.journal }}</small>
+            <span class="vertical-date">{{ publication.date }}<br/> <small>{{ publication.journal }}<br /><i>Download from {% if publication.doi %}- <a href="https://doi.org/{{ publication.doi }}">journal</a> {% endif %} {% if publication.arxiv %}- <a href="http://arxiv.org/abs/{{ publication.arxiv }}">arXiv</a>{% endif %}</i></small>
             </span>
           </div>
         </div>
@@ -26,6 +26,6 @@
     </div>
   </div>
   <div>
-  <center><a href="/publications.html">More</a></center>
+  <center><h3><a href="/publications.html">More...</a></h3></center><br />
   </div>
 </div>

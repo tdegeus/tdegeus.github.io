@@ -1,15 +1,12 @@
 
-- name: Test
-  desc: Bla blac
-  date: 2016
-  number: 10
-  journal:  CMA
-  icon: fa-university
-
-- name: Test
-  desc: Bla blac
-  date: 2016
-  number: 5
-  journal:  CMA
-  icon: fa-university
+- name: Finite strain FFT-based non-linear solvers made simple
+  date: 2017
+  icon: fa-book
+  journal: Computer Methods in Applied Mechanics and Engineering
+  doi: j.cma.2016.12.032
+  arxiv: 1604.03817
+  desc:
+    This paper extends the FFT-based solver to finite strain, and is aimed to
+    make the method accessible. This publication is supported by simple and
+    compact numerical examples.
 

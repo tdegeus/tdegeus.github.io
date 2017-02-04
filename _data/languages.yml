@@ -6,7 +6,7 @@
   percentage: 95
 
 - name: <b>French</b>
-  percentage: 50
+  percentage: 60
 
 - name: <b>German</b>
   percentage: 25
@@ -15,13 +15,13 @@
   percentage: 80
 
 - name: Python
-  percentage: 85
+  percentage: 90
 
 - name: C++
-  percentage: 70
+  percentage: 80
 
 - name: Fortran
-  percentage: 80
+  percentage: 75
 
 - name: HTML/CSS
   percentage: 30

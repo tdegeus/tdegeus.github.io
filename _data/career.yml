@@ -6,10 +6,16 @@
   icon: fa-euro
 
 - name: Doctor of Philosophy
-  desc: Eindhoven University of Technology<br /><i>Cum Laude</i><br /><a href="/about/phd.html">More...</a>
+  desc: Eindhoven University of Technology<br /><i>Cum Laude</i><br /><a href="/phd.html">More...</a>
   date: 2016
   job:  PhD
   icon: fa-university
+
+- name: Publications
+  desc: 10th journal publication<br /><a href="/publications.html">More...</a>
+  date: 2016
+  job:  Milestone
+  icon: fa-book
 
 - name: Master of Science
   desc: Eindhoven University of Technology<br /><i>With great appreciation (GPA 8.5)</i>
