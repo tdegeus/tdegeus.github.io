@@ -3,8 +3,8 @@
   date: 2017
   icon: fa-book
   journal: Computer Methods in Applied Mechanics and Engineering
-  doi: j.cma.2016.12.032
-  arxiv: 1604.03817
+  doi: 10.1016/j.cma.2016.12.032
+  arxiv: 1603.08893
   desc:
     This paper extends the FFT-based solver to finite strain, and is aimed to
     make the method accessible. This publication is supported by simple and
