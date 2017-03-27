@@ -97,6 +97,6 @@ permalink: /
 {% for section in site.data.landing %}
   {% assign loopindex = forloop.index | modulo: 2 %}
   <section id="{{ section.id }}" class="features {% if loopindex != 1 %} dark-gray-section {% else %} gray-section {% endif %} {{ section.css }}" style="margin-top: 0px;">
-    {% include sections/{{section.tpl}} %}
+    {% include {{section.tpl}} %}
   </section>
 {% endfor %}

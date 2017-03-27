@@ -1,30 +1,35 @@
 # index page sections
 - id: 'about-me'
   name: 'About'
-  tpl: 'about.html'
+  tpl: 'index_sections/about.html'
   css: ''
 
 - id: 'career'
   name: 'Career'
-  tpl: 'career.html'
+  tpl: 'index_sections/career.html'
   css: 'timeline'
 
 - id: 'publications'
   name: 'Publications'
-  tpl: 'publications.html'
+  tpl: 'index_sections/publications.html'
   css: 'timeline'
 
 - id: 'software'
   name: 'Software'
-  tpl: 'software.html'
+  tpl: 'index_sections/software.html'
   css: 'project'
 
 - id: 'languages'
   name: 'Languages'
-  tpl: 'languages.html'
+  tpl: 'index_sections/languages.html'
   css: 'team'
 
 - id: 'blog'
   name: 'Blog'
-  tpl: 'blog.html'
+  tpl: 'index_sections/blog.html'
   css: 'testimonials navy-section'
+
+- id: 'sitemap'
+  name: 'Site Map'
+  tpl: 'index_sections/site_map.html'
+  css: ''

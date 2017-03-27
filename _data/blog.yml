@@ -3,16 +3,16 @@
   href: '/blog/'
 
 - name: Career
-  href: '/career/'
+  href: '/blog/career/'
 
 - name: GooseFFT
-  href: '/goosefft/'
+  href: '/blog/goosefft/'
 
 - name: GooseEYE
-  href: '/gooseeye/'
+  href: '/blog/gooseeye/'
 
 - name: Python
-  href: '/python/'
+  href: '/blog/python/'
 
 - name: C++
-  href: '/cpp/'
+  href: '/blog/cpp/'

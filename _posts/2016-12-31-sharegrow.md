@@ -1,9 +1,7 @@
 ---
 layout:     post
 title:      "Tip: sharegrow.eu"
-date:       2016-12-31
 categories: [Blog]
-tags:       [Blog]
 author:     Elleke Ketelaars
 ---
 

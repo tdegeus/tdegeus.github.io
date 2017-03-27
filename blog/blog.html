@@ -16,7 +16,7 @@ permalink: /blog/
     <div class="col-lg-8 col-lg-offset-2">
         <div class="wrapper wrapper-content animated fadeInRight">
 
-            <!-- latest 10 blog -->
+            <!-- latest 10 blog-posts -->
 			{% for post in site.posts limit:10 %}
             <div class="vote-item">
                 <div class="row">
@@ -29,6 +29,10 @@ permalink: /blog/
                         <div class="vote-info">
                             <i class="fa fa-clock-o"></i> <a>{{ post.date | date: "%-d %b %Y" }}</a>
                             <i class="fa fa-user"></i> <a>{% if post.author %}{{ post.author }}{% else %}{{ site.author.name }}{% endif %}</a>
+                            <i class="fa fa-eye"></i>
+                            {% for category in post.categories %}
+                            <button class="btn btn-white btn-xs" type="button"><a href="/blog/{{ category | capitalize }}">{{ category }}</a></button>
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="col-md-2 ">

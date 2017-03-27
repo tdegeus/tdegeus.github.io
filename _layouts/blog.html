@@ -35,7 +35,7 @@
               {% else %}
               <li>
               {% endif %}
-              <a class="page-scroll" href="{{ tag.href }}">{{ tag.name }}</a></li>
+              <a class="page-scroll" href="{{ tag.href | capitalize }}">{{ tag.name }}</a></li>
             {% endfor %}
           </ul>
         </div>
