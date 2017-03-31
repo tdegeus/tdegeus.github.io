@@ -1,17 +1,17 @@
 - name: Blog
-  href: '/blog/'
+  href: '/blog'
 
 - name: Publications
-  href: '/publications/'
+  href: '/publications'
 
 - name: Conferences
-  href: '/conferences/'
+  href: '/conferences'
 
 - name: PhD thesis
-  href: '/phd/'
+  href: '/phd'
 
 - name: Software
-  href: '/software/'
+  href: '/software'
 
 - name: About
-  href: '/about/'
+  href: '/about'
