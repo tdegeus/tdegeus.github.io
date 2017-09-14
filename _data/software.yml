@@ -14,10 +14,3 @@
     and interfaces. It also features a graphical user-interface, such that it
     can be used as stand-alone software.
 
-- name: 'GooseFEM'
-  url: 'http://goosefem.geus.me'
-  img: 'static/img/landing/goosefem.png'
-  desc:
-    GooseFEM is a package used to perform mechanical simulations. This software
-    includes different material models, boundary conditions, and solvers. It can
-    be used from C++ but also from Python.

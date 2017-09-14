@@ -3,11 +3,12 @@ layout: page
 title: Conferences
 ---
 
-## Invited presentations
+## Conference presentations (invited)
 
 {: reversed="reversed"}
 
-1.  Fifth International Conference on Computational Modeling of Fracture and Failure of Materials and Structures, CFRAC, 2017, Nantes, France, planned.
+1.  ECCOMAS PhD Olympiad, Young Investigator Symposium, Milan, Italy.
+1.  Fifth International Conference on Computational Modeling of Fracture and Failure of Materials and Structures, CFRAC, 2017, Nantes, France.
 1.  International Conference on Computational Plasticity, 2015, Barcelona, Spain.
 1.  European Solid Mechanics Conference, 2015, Madrid, Spain.
 
@@ -15,6 +16,7 @@ title: Conferences
 
 {: reversed="reversed"}
 
+1.  Conference on Computational Plasticity, 2017, Barcelona, Spain.
 1.  Lorentz Workshop: "Micro-Nano Models for Tribology", 2017, Leiden, The Netherlands.
 1.  ICTAM, 2016, Montreal, Canada.
 1.  European Conference on Fracture, 2016, Catania, Italy.
@@ -36,5 +38,6 @@ title: Conferences
 
 {: reversed="reversed"}
 
+1.  MINES ParisTech, Centre des matériaux, Paris, France.
 1.  MINES ParisTech, Centre for Material Forming (cemef), Sophia-Antipolis, France.
 1.  TATA Steel Europe, IJmuiden, The Netherlands.
