@@ -1,4 +1,10 @@
 
+- name: Winner of the 7th ECCOMAS PhD Olympiad
+  desc: Awarded at the Young Investigators Conference, Milan, Italy
+  date: 2017
+  job:  Award
+  icon: fa-university
+
 - name: Winner of Martinus van Marum Prijs 2017
   desc: Koninklijke Hollandsche Maatschappij der Wetenschappen<br /><a href="/career/2017/06/13/khmw-martinus-van-marum-prijs.html">More...</a>
   date: 2017
@@ -12,7 +18,7 @@
   icon: fa-euro
 
 - name: Doctor of Philosophy
-  desc: Eindhoven University of Technology<br /><i>Cum Laude</i><br /><a href="/phd.html">More...</a>
+  desc: Eindhoven University of Technology<br /><i><a href="https://www.tue.nl/en/university/departments/mechanical-engineering/news/04-05-2016-tom-de-geus-gaines-his-phd-cum-laude/">Cum Laude</a></i><br /><a href="/phd.html">More...</a>
   date: 2016
   job:  PhD
   icon: fa-university

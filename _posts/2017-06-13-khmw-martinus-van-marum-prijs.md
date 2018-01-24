@@ -4,6 +4,8 @@ title:  "Winner of Martinus van Marum Prijs 2017"
 categories: [Career]
 ---
 
+Other coverage: [TU/e](https://www.tue.nl/en/university/departments/mechanical-engineering/news/26-04-2017-tom-de-geus-awarded-martinus-van-marus-award/)
+
 **Tom de Geus (TUe) wint Martinus van Marum Prijs 2017 voor vernieuwend onderzoek naar tweefasenmaterialen**
 
 Dr. ir. Tom de Geus ontvangt de Martinus van Marum Prijs 2017 (12.500 euro) voor Ingenieurswetenschappen voor zijn dissertatie over tweefasenstaal ‘From damage to fracture, from micro to macro: a systematic study of ductile fracture in multi-phase microstructures’. Daarnaast publiceerde hij nog 12 artikelen. Hij promoveerde in mei 2016 bij Prof. dr. ir. M.G.D. Geers aan de Technische Universiteit Eindhoven aan de faculteit Werktuigbouwkunde. De prijs wordt uitgereikt bij de Koninklijke Hollandsche Maatschappij der Wetenschappen op vrijdag 16 juni 2017, om 15.30 uur in het prachtige Hodshon Huis, Spaarne 17 te Haarlem. Hier zal Tom de Geus ook zijn promotieonderzoek presenteren. Die middag worden tevens twee andere promotieprijzen uitgereikt, zie: [khmw.nl](http://www.khmw.nl).
