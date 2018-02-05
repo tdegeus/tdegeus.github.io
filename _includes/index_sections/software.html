@@ -15,7 +15,7 @@
             <i class="fa {{ program.icon }}"></i>
           </div>
           <div class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
-            <h2>{{ program.name }}</h2>
+            <h2><a href="{{ program.url }}"> {{ program.name }}</a></h2>
             <p>{{ program.desc }}</p>
             <span class="vertical-date">{{ program.license }}<br/> <small>{{ program.keywords }}</small>
             </span>
