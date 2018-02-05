@@ -16,7 +16,7 @@
   },
 
   "dependencies" : {
-    "jquery" : ">= 1.7"
+    "jquery": ">=3.3"
   },
 
   "licenses" : [
