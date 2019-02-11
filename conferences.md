@@ -7,7 +7,8 @@ title: Conferences
 
 {: reversed="reversed"}
 
-1.  ECCOMAS PhD Olympiad, Young Investigator Symposium, Milan, Italy.
+1.  55th. Annual Technical Meeting of the Society of Engineering Science, 2018, Madrid, Spain.
+1.  ECCOMAS PhD Olympiad, Young Investigator Symposium, 2017, Milan, Italy.
 1.  Fifth International Conference on Computational Modeling of Fracture and Failure of Materials and Structures, CFRAC, 2017, Nantes, France.
 1.  International Conference on Computational Plasticity, 2015, Barcelona, Spain.
 1.  European Solid Mechanics Conference, 2015, Madrid, Spain.
@@ -16,6 +17,7 @@ title: Conferences
 
 {: reversed="reversed"}
 
+1.  Avalanche Dynamics and Precursors of Catastrophic Events, 2019, Les Houches, France.
 1.  Conference on Computational Plasticity, 2017, Barcelona, Spain.
 1.  Lorentz Workshop: "Micro-Nano Models for Tribology", 2017, Leiden, The Netherlands.
 1.  ICTAM, 2016, Montreal, Canada.
@@ -38,6 +40,15 @@ title: Conferences
 
 {: reversed="reversed"}
 
-1.  MINES ParisTech, Centre des matériaux, Paris, France.
-1.  MINES ParisTech, Centre for Material Forming (cemef), Sophia-Antipolis, France.
-1.  TATA Steel Europe, IJmuiden, The Netherlands.
+1.  Czech Technical University, Prague, Czech Republic (30.01.2019)
+1.  Eindhoven University of Technology, Eindhoven, The Netherlands (12.02.2018).
+1.  MINES ParisTech, Centre des matériaux, Paris, France (13.09.2017)
+1.  MINES ParisTech, Centre for Material Forming (cemef), Sophia-Antipolis, France (04.11.2016)
+1.  TATA Steel Europe, IJmuiden, The Netherlands (04.2016)
+
+## Posters
+
+1.  MEchanics and PHysics of STretchable Objects, MEPHISTO, Cargèse, France (2018).
+1.  Physics day. EPFL, Lausanne, Switzerland (2018).
+1.  Annual Engineering Mechanics Symposium, The Netherlands (2012, 2013, 2014, 2015, 2016).
+1.  Annual M2i Symposium, The Netherlands (2013, 2014, 2015, 2016).
