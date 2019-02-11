@@ -6,7 +6,7 @@
   percentage: 95
 
 - name: <b>French</b>
-  percentage: 60
+  percentage: 80
 
 - name: <b>German</b>
   percentage: 25
@@ -18,7 +18,7 @@
   percentage: 90
 
 - name: C++
-  percentage: 80
+  percentage: 90
 
 - name: Fortran
   percentage: 75
