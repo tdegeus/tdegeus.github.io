@@ -16,3 +16,9 @@
 
 - name: C++
   href: '/blog/cpp/'
+
+- name: Conda
+  href: '/blog/Conda/'
+
+- name: git
+  href: '/blog/git/'

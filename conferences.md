@@ -7,6 +7,8 @@ title: Conferences
 
 {: reversed="reversed"}
 
+1.  56th. Annual Technical Meeting of the Society of Engineering Science, 2019, Saint Louis, United States.
+1.  EarthFlows meeting: Complexity in Solid Earth and Geophysical Flows, 2019, Oslo, Norway
 1.  55th. Annual Technical Meeting of the Society of Engineering Science, 2018, Madrid, Spain.
 1.  ECCOMAS PhD Olympiad, Young Investigator Symposium, 2017, Milan, Italy.
 1.  Fifth International Conference on Computational Modeling of Fracture and Failure of Materials and Structures, CFRAC, 2017, Nantes, France.
@@ -17,6 +19,7 @@ title: Conferences
 
 {: reversed="reversed"}
 
+1.  24th International Conference on Nonlinear Elasticity in Materials, ICNEM '19, Kraków, Poland.
 1.  Avalanche Dynamics and Precursors of Catastrophic Events, 2019, Les Houches, France.
 1.  Conference on Computational Plasticity, 2017, Barcelona, Spain.
 1.  Lorentz Workshop: "Micro-Nano Models for Tribology", 2017, Leiden, The Netherlands.

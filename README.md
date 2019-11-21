@@ -48,7 +48,7 @@ git push
 ```bash 
 jekyll build 
 cp -r _site/* ../gh-pages/ 
-cd ../_gh-pages
+cd ../gh-pages
 git add -A   # (only use -A to commit all changes)
 git commit -m "type your message here"
 git push 
