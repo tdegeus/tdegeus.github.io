@@ -4301,6 +4301,7 @@ dd.project-people {
 }
 .article .ibox-content {
     padding: 40px;
+    max-width: 1000px;
 }
 .issue-tracker .btn-link {
     color: #3385FF;
@@ -6198,9 +6199,10 @@ body.plain-page {
     max-width: 800px;
 }
 .plain-page p {
-    color: #aeaeae;
+    color: #727272;
     font-size: 13px;
     max-width: 800px;
+    line-height: 1.5em;
 }
 .plain-page address {
     font-size: 13px;
