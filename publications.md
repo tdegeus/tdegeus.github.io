@@ -24,6 +24,11 @@ title: Publications
 1.  **T.W.J. de Geus**, R.H.J. Peerlings, M.G.D. Geers. Microstructural topology effects on the onset of ductile failure in multi-phase materials -- A systematic computational approach. *International Journal of Solids and Structures*, 2015, 67--68:326--339, [doi: 10.1016/j.ijsolstr.2015.04.035](https://doi.org/10.1016/j.ijsolstr.2015.04.035), [arXiv: 1604.02858](http://arxiv.org/abs/1604.02858).
 1.  **T.W.J. de Geus**, R.H.J. Peerlings, C.B. Hirschberger. An analysis of the pile-up of infinite periodic walls of edge dislocations. *Mechanics Research Communications*, 2013, 54:7--13, [doi: 10.1016/j.mechrescom.2013.08.010](https://doi.org/10.1016/j.mechrescom.2013.08.010), [arXiv: 1604.02848](http://arxiv.org/abs/1604.02848).
 
+## Preprints
+
+1. W. Ji (吉文成), **T.W.J. de Geus**, M. Popović, E. Agoritsas, M. Wyart. Thermal origin of quasi-localised excitations in glasses. [arXiv: 1912.10537](http://arxiv.org/abs/1912.10537)
+1. J. Volmer, **T.W.J. de Geus**, R.H.J. Peerlings. Improving the initial guess for the Newton-Raphson protocol in time-dependent simulations. [arXiv: 1912.12140](http://arxiv.org/abs/1912.12140)
+
 ## Book chapters
 
 {: reversed="reversed"}
