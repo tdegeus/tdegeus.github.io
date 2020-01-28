@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:de Geus;Tom;;;
+FN:Tom de Geus
+ORG:EPFL
+PHOTO;VALUE=URI;TYPE=JPG:;http://www.geus.me/static/img/landing/Tom.jpg
+TEL;TYPE=HOME,VOICE:+41 77 993 72 35
+ADR;TYPE=WORK;PREF=1;LABEL="BSP (Cubotron) 510\nRoute de la Sorge\nCH-1015 Lausanne\nSwitzerland":;Route de la Sorge;BSP (Cubotron) 510;Lausanne;;CH-1015;Switzerland
+EMAIL:tom@geus.me
+REV:2020-01-28T10:00:00Z
+END:VCARD

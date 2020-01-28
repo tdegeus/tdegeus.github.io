@@ -31,7 +31,7 @@ for i in range(20):
     fig, ax = plt.subplots()
     ax.plot([0, 1], [0, i])
     ax.set_ylim([0, 20])
-    plt.savefig(filename
+    plt.savefig(filename)
 ```
 
 To convert this to a movie, we will use *ffmpeg-python*:
