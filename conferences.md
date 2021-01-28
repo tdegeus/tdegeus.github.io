@@ -22,7 +22,6 @@ title: Conferences
 1.  24th International Conference on Nonlinear Elasticity in Materials, ICNEM '19, Kraków, Poland.
 1.  Avalanche Dynamics and Precursors of Catastrophic Events, 2019, Les Houches, France.
 1.  Conference on Computational Plasticity, 2017, Barcelona, Spain.
-1.  Lorentz Workshop: "Micro-Nano Models for Tribology", 2017, Leiden, The Netherlands.
 1.  ICTAM, 2016, Montreal, Canada.
 1.  European Conference on Fracture, 2016, Catania, Italy.
 1.  ECCOMAS Young Investigators Conference. 2016, Crete, Greece.
@@ -52,6 +51,7 @@ title: Conferences
 ## Posters
 
 1.  MEchanics and PHysics of STretchable Objects, MEPHISTO, Cargèse, France (2018).
+1.  Lorentz Workshop: "Micro-Nano Models for Tribology", Leiden, The Netherlands (2017).
 1.  Physics day. EPFL, Lausanne, Switzerland (2018).
 1.  Annual Engineering Mechanics Symposium, The Netherlands (2012, 2013, 2014, 2015, 2016).
 1.  Annual M2i Symposium, The Netherlands (2013, 2014, 2015, 2016).
