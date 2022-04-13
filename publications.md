@@ -7,14 +7,15 @@ title: Publications
 
 {: reversed="reversed"}
 
-1. M. Popović, **T.W.J. de Geus**, W. Ji (吉文成), M. Wyart. Thermally activated flow in models of amorphous solids. Accepted for publication in *Physical Review E*, 2021, [arXiv: 2009.04963](https://arxiv.org/abs/2009.04963).
+1. W. Ji (吉文成), **T.W.J. de Geus**, E. Agoritsas, M. Wyart. Geometry of hopping processes and local excitations in glasses. Accepted for publication in *Physical Review E*, 2022, [arXiv: 2106.13153](https://arxiv.org/abs/2106.13153).
+1. M. Popović, **T.W.J. de Geus**, W. Ji (吉文成), M. Wyart. Thermally activated flow in models of amorphous solids. *Physical Review E*, 2021, 104:025010, [doi: 10.1103/PhysRevE.104.025010](https://doi.org/10.1103/PhysRevE.104.025010), [arXiv: 2009.04963](https://arxiv.org/abs/2009.04963).
 1. W. Ji (吉文成), **T.W.J. de Geus**, M. Popović, E. Agoritsas, M. Wyart. Thermal origin of quasilocalized excitations in glasses. *Physical Review E*, 2020, 102:062110, [doi: 10.1103/PhysRevE.102.062110](https://doi.org/10.1103/PhysRevE.102.062110), [arXiv: 1912.10537](https://arxiv.org/abs/1912.10537)
 1. J. Volmer, **T.W.J. de Geus**, R.H.J. Peerlings. Improving the initial guess for the Newton-Raphson protocol in time-dependent simulations. *Journal of Computational Physics*, 2020, 420:109721. [doi: 10.1016/j.jcp.2020.109721](https://doi.org/10.1016/j.jcp.2020.109721), [arXiv: 1912.12140](https://arxiv.org/abs/1912.12140).
 1. **T.W.J. de Geus**, M. Popović, W. Ji (吉文成), A. Rosso, M. Wyart. How collective asperity detachments nucleate slip at frictional interfaces. *Proceedings of the National Academy of Sciences, USA*, 2019, 116(48):23977-23983, [doi: 10.1073/pnas.1906551116](https://doi.org/10.1073/pnas.1906551116), [arXiv: 1904.07635](https://arxiv.org/abs/1904.07635).
     *Dataset: [doi: 10.5281/zenodo.3477938](https://doi.org/10.5281/zenodo.3477938)*.
-1.  J. Vondřejc, **T.W.J. de Geus**. Energy-based comparison between Fourier-Galerkin and finite element method within numerical homogenisation. *Journal of Computational and Applied Mathematics*, 2020, 374:112585, [doi: 10.1016/j.cam.2019.112585](https://doi.org/10.1016/j.cam.2019.112585), [arXiv: 1709.08477](https://arxiv.org/abs/1709.08477). 
-1.  W. Ji (吉文成), M. Popović, **T.W.J. de Geus**, E. Lerner, M. Wyart. Theory for the density of interacting quasi-localised modes in amorphous solids. *Physical Review E*, 2018, 99(2):023003, [doi: 10.1103/PhysRevE.99.023003](https://doi.org/10.1103/PhysRevE.99.023003), [arXiv: 1806.01561](https://arxiv.org/abs/1806.01561). 
-1.  M. Popović, **T.W.J. de Geus**, M. Wyart. Elastoplastic description of sudden failure in athermal amorphous materials during quasistatic loading. *Physical Review E*, 2018, 98(4):040901, [doi: 10.1103/PhysRevE.98.040901](https://doi.org/10.1103/PhysRevE.98.040901), [arXiv: 1803.11504](https://arxiv.org/abs/1803.11504). 
+1.  J. Vondřejc, **T.W.J. de Geus**. Energy-based comparison between Fourier-Galerkin and finite element method within numerical homogenisation. *Journal of Computational and Applied Mathematics*, 2020, 374:112585, [doi: 10.1016/j.cam.2019.112585](https://doi.org/10.1016/j.cam.2019.112585), [arXiv: 1709.08477](https://arxiv.org/abs/1709.08477).
+1.  W. Ji (吉文成), M. Popović, **T.W.J. de Geus**, E. Lerner, M. Wyart. Theory for the density of interacting quasi-localised modes in amorphous solids. *Physical Review E*, 2018, 99(2):023003, [doi: 10.1103/PhysRevE.99.023003](https://doi.org/10.1103/PhysRevE.99.023003), [arXiv: 1806.01561](https://arxiv.org/abs/1806.01561).
+1.  M. Popović, **T.W.J. de Geus**, M. Wyart. Elastoplastic description of sudden failure in athermal amorphous materials during quasistatic loading. *Physical Review E*, 2018, 98(4):040901, [doi: 10.1103/PhysRevE.98.040901](https://doi.org/10.1103/PhysRevE.98.040901), [arXiv: 1803.11504](https://arxiv.org/abs/1803.11504).
 1.  **T.W.J. de Geus**, J. Vondřejc, J. Zeman, R.H.J. Peerlings, M.G.D. Geers. Finite strain FFT-based non-linear solvers made simple. *Computer Methods in Applied Mechanics and Engineering*, 2017, 318:412-430, [doi: 10.1016/j.cma.2016.12.032](https://doi.org/10.1016/j.cma.2016.12.032), [arXiv: 1603.08893](https://arxiv.org/abs/1603.08893).
 1.  J. Zeman, **T.W.J. de Geus**, J. Vondřejc, R.H.J. Peerlings, M.G.D. Geers. A finite element perspective on non-linear FFT-based micromechanical simulations. *International Journal for Numerical Methods in Engineering*, 2017, 111(10):903-926, [doi: 10.1002/nme.5481](https://doi.org/10.1002/nme.5481), [arXiv: 1601.05970](https://arxiv.org/abs/1601.05970).
 1.  **T.W.J. de Geus**, R.H.J. Peerlings, M.G.D. Geers. Fracture in multi-phase materials: Why some microstructures are more critical than others. *Engineering Fracture Mechanics*, 2017, 169:354--370, [doi: 10.1016/j.engfracmech.2016.08.009](https://doi.org/10.1016/j.engfracmech.2016.08.009), [arXiv: 1603.08910](https://arxiv.org/abs/1603.08910).
@@ -30,7 +31,8 @@ title: Publications
 
 ## Preprints
 
-1. M. Popović, **T.W.J. de Geus**, M. Wyart. Thermally activated flow in models of amorphous solids. [arXiv: 2009.04963](https://arxiv.org/abs/2009.04963).
+1. **T.W.J. de Geus**, M. Wyart. Scaling theory for the statistics of slip at frictional interfaces. [arXiv: 2204.02795](https://arxiv.org/abs/2204.02795).
+1. M. Popović, **T.W.J. de Geus**, A. Rosso, M. Wyart. Scaling description of creep flow in amorphous solids. [arXiv: 2111.04061](https://arxiv.org/abs/2111.04061).
 
 ## Book chapters
 

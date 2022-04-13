@@ -19,6 +19,10 @@ title: Conferences
 
 {: reversed="reversed"}
 
+1.  [ECCOMAS](https://www.eccomas2022.org), 2022, Oslo, Norway.
+1.  [19th U.S. National Congress on Theoretical and Applied Mechanics](https://www.usnctam2022.org), Austin, USA.
+1.  [Contact Mechanics International Symposium 2022](https://cmis2022.epfl.ch), Lausanne, Switzerland.
+1.  [Disordered Elastic Systems](https://spetses2021des.sciencesconf.org), 2021, Spetses, Greece
 1.  24th International Conference on Nonlinear Elasticity in Materials, ICNEM '19, Kraków, Poland.
 1.  Avalanche Dynamics and Precursors of Catastrophic Events, 2019, Les Houches, France.
 1.  Conference on Computational Plasticity, 2017, Barcelona, Spain.
@@ -42,6 +46,7 @@ title: Conferences
 
 {: reversed="reversed"}
 
+1.  ENS Lyon, Lyon, France (09.11.2021).
 1.  Czech Technical University, Prague, Czech Republic (30.01.2019)
 1.  Eindhoven University of Technology, Eindhoven, The Netherlands (12.02.2018).
 1.  MINES ParisTech, Centre des matériaux, Paris, France (13.09.2017)
@@ -50,8 +55,13 @@ title: Conferences
 
 ## Posters
 
+1.  [Lorentz Workshop: "Disorder's Role in Glass Formation and Deformation"](https://www.lorentzcenter.nl/disorders-role-in-glass-formation-and-deformation.html), Leiden, The Netherlands (2022).
 1.  MEchanics and PHysics of STretchable Objects, MEPHISTO, Cargèse, France (2018).
 1.  Lorentz Workshop: "Micro-Nano Models for Tribology", Leiden, The Netherlands (2017).
 1.  Physics day. EPFL, Lausanne, Switzerland (2018).
 1.  Annual Engineering Mechanics Symposium, The Netherlands (2012, 2013, 2014, 2015, 2016).
 1.  Annual M2i Symposium, The Netherlands (2013, 2014, 2015, 2016).
+
+## Poster contributions
+
+1.  [PASC22](https://pasc22.pasc-conference.org), Basel, Switzerland (2022).
