@@ -7,7 +7,7 @@ title: Publications
 
 {: reversed="reversed"}
 
-1. W. Ji (吉文成), **T.W.J. de Geus**, E. Agoritsas, M. Wyart. Geometry of hopping processes and local excitations in glasses. Accepted for publication in *Physical Review E*, 2022, [arXiv: 2106.13153](https://arxiv.org/abs/2106.13153).
+1. W. Ji (吉文成), **T.W.J. de Geus**, E. Agoritsas, M. Wyart. Mean-field description for the architecture of low-energy excitations in glasses. *Physical Review E*, 2022, 105(4):044601, [doi: 10.1103/PhysRevE.105.044601](https://doi.org/10.1103/PhysRevE.105.044601). [arXiv: 2106.13153](https://arxiv.org/abs/2106.13153).
 1. M. Popović, **T.W.J. de Geus**, W. Ji (吉文成), M. Wyart. Thermally activated flow in models of amorphous solids. *Physical Review E*, 2021, 104:025010, [doi: 10.1103/PhysRevE.104.025010](https://doi.org/10.1103/PhysRevE.104.025010), [arXiv: 2009.04963](https://arxiv.org/abs/2009.04963).
 1. W. Ji (吉文成), **T.W.J. de Geus**, M. Popović, E. Agoritsas, M. Wyart. Thermal origin of quasilocalized excitations in glasses. *Physical Review E*, 2020, 102:062110, [doi: 10.1103/PhysRevE.102.062110](https://doi.org/10.1103/PhysRevE.102.062110), [arXiv: 1912.10537](https://arxiv.org/abs/1912.10537)
 1. J. Volmer, **T.W.J. de Geus**, R.H.J. Peerlings. Improving the initial guess for the Newton-Raphson protocol in time-dependent simulations. *Journal of Computational Physics*, 2020, 420:109721. [doi: 10.1016/j.jcp.2020.109721](https://doi.org/10.1016/j.jcp.2020.109721), [arXiv: 1912.12140](https://arxiv.org/abs/1912.12140).
