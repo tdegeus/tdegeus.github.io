@@ -7,6 +7,8 @@ title: Conferences
 
 {: reversed="reversed"}
 
+1.  [19th U.S. National Congress on Theoretical and Applied Mechanics](https://www.usnctam2022.org), Austin, USA.
+1.  Friction and faulting workshop, 10.06.2022, Njord Center, Oslo, Norway.
 1.  56th. Annual Technical Meeting of the Society of Engineering Science, 2019, Saint Louis, United States.
 1.  EarthFlows meeting: Complexity in Solid Earth and Geophysical Flows, 2019, Oslo, Norway
 1.  55th. Annual Technical Meeting of the Society of Engineering Science, 2018, Madrid, Spain.
@@ -19,9 +21,11 @@ title: Conferences
 
 {: reversed="reversed"}
 
+1.  [Friction and Wear across Scales](https://friction-and-wear-2022.ethz.ch), 2022, Ascona, Switzerland.
+1.  [Swiss Physical Society, Annual Meeting](https://www.sps.ch/en/events/sps-annual-meeting-2022), 27.06.2022 - 30.06.2002, Fribourg, Switzerland.
 1.  [ECCOMAS](https://www.eccomas2022.org), 2022, Oslo, Norway.
-1.  [19th U.S. National Congress on Theoretical and Applied Mechanics](https://www.usnctam2022.org), Austin, USA.
 1.  [Contact Mechanics International Symposium 2022](https://cmis2022.epfl.ch), Lausanne, Switzerland.
+1.  [Swiss Soft Days](https://swisssoftdays.ethz.ch), 05.04.2022, Basel, Switzerland.
 1.  [Disordered Elastic Systems](https://spetses2021des.sciencesconf.org), 2021, Spetses, Greece
 1.  24th International Conference on Nonlinear Elasticity in Materials, ICNEM '19, Kraków, Poland.
 1.  Avalanche Dynamics and Precursors of Catastrophic Events, 2019, Les Houches, France.
@@ -46,6 +50,12 @@ title: Conferences
 
 {: reversed="reversed"}
 
+1.  Universität Zürich, Physics Institute, Zurich, Switzerland (04.10.2022).
+1.  Université Grenoble Alpes, Interdisciplinary Physics Laboratory, Grenoble, France (19.09.2022).
+1.  ETH Zürich, Department of Earth Sciences, Zürich, Switzerland (07.09.2022).
+1.  Eindhoven University of Technology, Eindhoven, The Netherlands (17.06.2022).
+1.  University of Lausanne, Lausanne, Switzerland (15.06.2022).
+1.  University of Fribourg, Fribourg, Switzerland (16.05.2022).
 1.  ENS Lyon, Lyon, France (09.11.2021).
 1.  Czech Technical University, Prague, Czech Republic (30.01.2019)
 1.  Eindhoven University of Technology, Eindhoven, The Netherlands (12.02.2018).
