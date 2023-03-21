@@ -50,6 +50,8 @@ title: Conferences
 
 {: reversed="reversed"}
 
+1.  Université Grenoble Alpes, ISTerre, Grenoble, France (09.11.2022).
+1.  University of Fribourg, Fribourg, Switzerland (03.11.2022).
 1.  Universität Zürich, Physics Institute, Zurich, Switzerland (04.10.2022).
 1.  Université Grenoble Alpes, Interdisciplinary Physics Laboratory, Grenoble, France (19.09.2022).
 1.  ETH Zürich, Department of Earth Sciences, Zürich, Switzerland (07.09.2022).
@@ -57,7 +59,7 @@ title: Conferences
 1.  University of Lausanne, Lausanne, Switzerland (15.06.2022).
 1.  University of Fribourg, Fribourg, Switzerland (16.05.2022).
 1.  ENS Lyon, Lyon, France (09.11.2021).
-1.  Czech Technical University, Prague, Czech Republic (30.01.2019)
+1.  Czech Technical University, Prague, Czech Republic (30.01.2019).
 1.  Eindhoven University of Technology, Eindhoven, The Netherlands (12.02.2018).
 1.  MINES ParisTech, Centre des matériaux, Paris, France (13.09.2017)
 1.  MINES ParisTech, Centre for Material Forming (cemef), Sophia-Antipolis, France (04.11.2016)
