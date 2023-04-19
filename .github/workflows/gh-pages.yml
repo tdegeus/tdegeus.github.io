@@ -3,7 +3,7 @@ name: gh-pages
 on:
   push:
     branches:
-      - master
+    - master
 
 jobs:
 
@@ -28,4 +28,4 @@ jobs:
       uses: helaili/jekyll-action@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        target_branch: 'gh-pages'
+        target_branch: gh-pages

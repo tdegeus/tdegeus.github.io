@@ -1,13 +1,13 @@
 Publications
 ============
 
+.. note::
+
+    Publications are shown per topic in chronological order.
+
 .. |br| raw:: html
 
    <br />
-
-.. bibliography::
-
-   deGeus2019
 
 Frictional interface
 --------------------
@@ -106,12 +106,6 @@ Two-phase materials
     doi: `10.1016/j.ijsolstr.2015.04.035 <https://doi.org/10.1016/j.ijsolstr.2015.04.035>`_ |br|
     arXiv: `1604.02858 <https://arxiv.org/abs/1604.02858>`_
 
-*   **T.W.J. de Geus**, R.H.J. Peerlings, C.B. Hirschberger. |br|
-    An analysis of the pile-up of infinite periodic walls of edge dislocations. |br|
-    *Mechanics Research Communications*, 2013, 54:7--13. |br|
-    doi: `10.1016/j.mechrescom.2013.08.010 <https://doi.org/10.1016/j.mechrescom.2013.08.010>`_ |br|
-    arXiv: `1604.02848 <https://arxiv.org/abs/1604.02848>`_
-
 FFT solvers
 -----------
 
@@ -139,10 +133,19 @@ FFT solvers
     doi: `10.1002/nme.5481 <https://doi.org/10.1002/nme.5481>`_ |br|
     arXiv: `1601.05970 <https://arxiv.org/abs/1601.05970>`_
 
+Crystal plasticity
+------------------
+
+*   **T.W.J. de Geus**, R.H.J. Peerlings, C.B. Hirschberger. |br|
+    An analysis of the pile-up of infinite periodic walls of edge dislocations. |br|
+    *Mechanics Research Communications*, 2013, 54:7--13. |br|
+    doi: `10.1016/j.mechrescom.2013.08.010 <https://doi.org/10.1016/j.mechrescom.2013.08.010>`_ |br|
+    arXiv: `1604.02848 <https://arxiv.org/abs/1604.02848>`_
+
 Metal interfaces
 ----------------
 
 *   J. van Beeck, F. Maresca, **T.W.J. de Geus**, P.J.G. Schreurs, M.G.D. Geers. |br|
     Predicting deformation-induced polymer--steel interface roughening and failure. |br|
     *European Journal of Mechanics - A/Solids*, 2016, 55:1--11. |br|
-    doi: `10.1016/j.euromechsol.2015.08.002 <https://doi.org/10.1016/j.euromechsol.2015.08.002>` |br|
+    doi: `10.1016/j.euromechsol.2015.08.002 <https://doi.org/10.1016/j.euromechsol.2015.08.002>`_
