@@ -75,5 +75,3 @@ Posters
 -   Physics day. EPFL, Lausanne, Switzerland (2018).
 -   Annual Engineering Mechanics Symposium, The Netherlands (2012, 2013, 2014, 2015, 2016).
 -   Annual M2i Symposium, The Netherlands (2013, 2014, 2015, 2016).
-
-

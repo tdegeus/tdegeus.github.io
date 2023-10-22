@@ -3,3 +3,4 @@ channels:
 dependencies:
 - furo
 - sphinxcontrib-bibtex
+- sphinx-design
