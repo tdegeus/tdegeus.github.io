@@ -5,7 +5,7 @@ import GooseBib as bib
 import pybtex.plugin
 from pybtex.style.formatting import toplevel
 from pybtex.style.formatting.unsrt import Style as UnsrtStyle
-from pybtex.style.template import field, optional, optional_field, sentence, words, href
+from pybtex.style.template import field, optional, optional_field, sentence, words, href, join
 
 def myformat():
 
@@ -54,7 +54,21 @@ def myformat():
             "conference_deGeus2012_1",
         ],
         "library_posters.bib": [
+            "poster_deGeus2022_2",
+            "poster_deGeus2022_1",
+            "poster_deGeus2018_2",
+            "poster_deGeus2018_1",
+            "poster_deGeus2017_1",
+            "poster_deGeus2016_2",
+            "poster_deGeus2016_1",
+            "poster_deGeus2015_3",
+            "poster_deGeus2015_2",
             "poster_deGeus2015_1",
+            "poster_deGeus2014_2",
+            "poster_deGeus2014_1",
+            "poster_deGeus2013_2",
+            "poster_deGeus2013_1",
+            "poster_deGeus2012_1",
         ],
         "library_seminars.bib": [
             "seminar_deGeus2022_8",
@@ -105,26 +119,39 @@ def myformat():
     for fname, keys in data.items():
         fpath = (root / fname)
         fpath.write_text(texplain.bib_select(bibfile, keys, reorder=True))
-        bib.bibtex.GbibClean(["--in-place", "--rename-field", "arxivid", "eprint", "--add-field", "book:date", "--add-field", "book:number", fpath])
+        bib.bibtex.GbibClean(["--in-place", "--rename-field", "arxivid", "eprint", "--add-field", "book:date", "--add-field", "book:number", "--add-field", "book:address", fpath])
 
     return [fname for fname in data]
 
 class MyConf(UnsrtStyle):
     def get_book_template(self, e):
+        name = join(sep=", ") [field('publisher'), optional_field('number')]
         template = toplevel [
             # self.format_author_or_editor(e),
             self.format_btitle(e, 'title'),
+            href(field('url', raw=True)) [name] if 'url' in e.fields else name,
             sentence [
-                field('publisher'),
-                optional_field('number'),
                 optional_field('address'),
                 words [field('date') if 'date' in e.fields else field('year')]
             ],
-            self.format_web_refs(e),
         ]
         return template
 
-class MySeminar(MyConf):
+class MyPoster(UnsrtStyle):
+    def get_book_template(self, e):
+        name = join(sep=", ") [field('publisher'), optional_field('number')]
+        template = toplevel [
+            self.format_author_or_editor(e),
+            # self.format_btitle(e, 'title'),
+            href(field('url', raw=True)) [name] if 'url' in e.fields else name,
+            sentence [
+                optional_field('address'),
+                words [field('date') if 'date' in e.fields else field('year')]
+            ],
+        ]
+        return template
+
+class MySeminar(UnsrtStyle):
     def get_book_template(self, e):
         template = toplevel [
             sentence [
@@ -138,6 +165,7 @@ class MySeminar(MyConf):
         return template
 
 pybtex.plugin.register_plugin("pybtex.style.formatting", "myconf", MyConf)
+pybtex.plugin.register_plugin("pybtex.style.formatting", "myposter", MyPoster)
 pybtex.plugin.register_plugin("pybtex.style.formatting", "myseminar", MySeminar)
 
 project = 'Tom de Geus'
