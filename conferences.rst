@@ -2,8 +2,42 @@
 Conferences
 ***********
 
-Conferences
-===========
+Conferences (invited oral)
+--------------------------
+
+.. bibliography:: library_invited.bib
+    :style: unsrt
+    :list: enumerated
+    :all:
+
+Conferences (oral)
+------------------
+
+.. bibliography:: library_conferences.bib
+    :style: unsrt
+    :list: enumerated
+    :all:
+
+Conferences (posters)
+---------------------
+
+.. bibliography:: library_posters.bib
+    :style: unsrt
+    :list: enumerated
+    :all:
+
+Colloquia (invited)
+-------------------
+
+.. bibliography:: library_seminars.bib
+    :style: unsrt
+    :list: enumerated
+    :all:
+
+
+
+Old
+===
 
 .. note::
 

@@ -10,7 +10,6 @@ Contents
    :caption: Career
 
    publications.rst
-   publications_friction.rst
    conferences.rst
    prizes.rst
    grants.rst

@@ -1,29 +1,108 @@
 import pathlib
 import texplain
+import GooseBib as bib
 
 def myformat():
 
+    ret = []
     root = pathlib.Path(__file__).parent
-    categories = [{
-        "title": "Stick-slip friction",
-        "collaborators": ["Matthieu Wyart", "Marko Popović", "Alberto Rosso", "Wencheng Ji"],
-        "students": ["Elisa El Sergany"],
-        "cite": ["deGeus2019"],
-        "bib": "library_friction.bib",
-        "rst": "publications_friction.rst",
-    }]
-
     bibfile = (root / "library.bib").read_text()
 
-    for entry in categories:
-        (root / entry["bib"]).write_text(texplain.bib_select(bibfile, entry["cite"]))
-        txt = []
-        txt += [entry["title"], "="*len(entry["title"]), ""]
-        txt += [":cite:empty:`{}`".format(c) for c in entry["cite"]]
-        txt += ["", ".. bibliography:: {}".format(entry["bib"]), "   :style: unsrt", ""]
-        (root / entry["rst"]).write_text("\n".join(txt))
+    data = {
+        "library_invited.bib": [
+            "conference_deGeus2015_4_invited",
+            "conference_deGeus2015_5_invited",
+            "conference_deGeus2017_2_invited",
+            "conference_deGeus2017_3_invited",
+            "conference_deGeus2018_1_invited",
+            "conference_deGeus2019_3_invited",
+            "conference_deGeus2019_4_invited",
+            "conference_deGeus2021_1_invited",
+            "conference_deGeus2022_4_invited",
+            "conference_deGeus2022_7_invited",
+        ],
+        "library_conferences.bib": [
+            "conference_deGeus2012_1",
+            "conference_deGeus2013_1",
+            "conference_deGeus2013_2",
+            "conference_deGeus2013_3",
+            "conference_deGeus2014_1",
+            "conference_deGeus2014_2",
+            "conference_deGeus2014_3",
+            "conference_deGeus2015_2",
+            "conference_deGeus2015_3",
+            "conference_deGeus2016_1",
+            "conference_deGeus2016_2",
+            "conference_deGeus2016_3",
+            "conference_deGeus2016_4",
+            "conference_deGeus2016_5",
+            "conference_deGeus2017_1",
+            "conference_deGeus2019_1",
+            "conference_deGeus2019_2",
+            "conference_deGeus2021_2",
+            "conference_deGeus2022_1",
+            "conference_deGeus2022_2",
+            "conference_deGeus2022_3",
+            "conference_deGeus2022_5",
+            "conference_deGeus2022_6",
+            "conference_deGeus2023_1",
+            "conference_deGeus2023_2",
+        ],
+        "library_posters.bib": [
+            "poster_deGeus2015_1",
+        ],
+        "library_seminars.bib": [
+            "seminar_deGeus2022_8",
+            "seminar_deGeus2022_7",
+            "seminar_deGeus2022_6",
+            "seminar_deGeus2022_5",
+            "seminar_deGeus2022_4",
+            "seminar_deGeus2022_3",
+            "seminar_deGeus2022_2",
+            "seminar_deGeus2022_1",
+            "seminar_deGeus2021_1",
+            "seminar_deGeus2019_1",
+            "seminar_deGeus2018_1",
+            "seminar_deGeus2017_1",
+            "seminar_deGeus2016_2",
+            "seminar_deGeus2016_1",
+        ],
+        "library_publications.bib": [
+            "ElSergany2023",
+            "Poincloux2023",
+            "deGeus2023",
+            "deGeus2022",
+            "Ji2022",
+            "Popovic2021a",
+            "Popovic2021b",
+            "Vondrejc2020",
+            "Ji2020",
+            "Volmer2019",
+            "deGeus2019",
+            "Ji2019",
+            "Popovic2018",
+            "deGeus2017",
+            "Zeman2017",
+            "deGeus2017a",
+            "deGeus2016",
+            "deGeus2016c",
+            "deGeus2016a",
+            "deGeus2016b",
+            "VanBeeck2016",
+            "deGeus2016d",
+            "deGeus2015a",
+            "deGeus2015",
+            "deGeus2014",
+            "deGeus2013",
+        ],
+    }
 
-    return [entry["bib"] for entry in categories]
+    for fname, keys in data.items():
+      fpath = (root / fname)
+      fpath.write_text(texplain.bib_select(bibfile, keys, reorder=True))
+      bib.bibtex.GbibClean(["--in-place", "--rename-field", "arxivid", "eprint", fpath])
+
+    return [fname for fname in data]
 
 
 project = 'Tom de Geus'
