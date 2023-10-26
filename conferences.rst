@@ -6,7 +6,7 @@ Conferences (invited oral)
 --------------------------
 
 .. bibliography:: library_invited.bib
-    :style: unsrt
+    :style: myconf
     :list: enumerated
     :all:
 
@@ -14,7 +14,7 @@ Conferences (oral)
 ------------------
 
 .. bibliography:: library_conferences.bib
-    :style: unsrt
+    :style: myconf
     :list: enumerated
     :all:
 
@@ -22,7 +22,7 @@ Conferences (posters)
 ---------------------
 
 .. bibliography:: library_posters.bib
-    :style: unsrt
+    :style: myconf
     :list: enumerated
     :all:
 
@@ -30,7 +30,7 @@ Colloquia (invited)
 -------------------
 
 .. bibliography:: library_seminars.bib
-    :style: unsrt
+    :style: myseminar
     :list: enumerated
     :all:
 
