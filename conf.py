@@ -128,6 +128,7 @@ class MyConf(UnsrtStyle):
         name = join(sep=", ") [field('publisher'), optional_field('number')]
         template = toplevel [
             # self.format_author_or_editor(e),
+            words [field('date') if 'date' in e.fields else field('year')],
             self.format_btitle(e, 'title'),
             href(field('url', raw=True)) [name] if 'url' in e.fields else name,
             sentence [
