@@ -50,7 +50,7 @@ jobs:
           scheme-basic
           subfig
           tcolorbox
-          tikz
+          tikzfill.image
           titlesec
           uri
           xcolor
