@@ -186,7 +186,9 @@ for project in projects:
     with cwd(root / "research" / project):
         for fname in ["goose-article.cls", "unsrtnat.bst", "library.bib"]:
             shutil.copyfile(f"../{fname}", fname)
-        subprocess.run(["latexmk", "-pdf", "main.tex"])
+        result = subprocess.run(["latexmk", "-pdf", "main.tex"])
+        if result.returncode != 0:
+            raise RuntimeError("latexmk failed")
 
 
 class MyConf(UnsrtStyle):
