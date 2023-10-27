@@ -44,6 +44,7 @@ jobs:
           caption
           titlesec
           xcolor
+          authblk
 
     - name: Clone pybtex
       run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
