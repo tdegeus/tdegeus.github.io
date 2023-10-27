@@ -44,6 +44,9 @@ jobs:
     - name: Make
       run: make html
 
+    - name: Setup custom domain
+      run: echo "www.geus.me" > _build/html/CNAME
+
     - name: Deploy to GitHub Pages
       if: success() && github.ref == 'refs/heads/main'
       uses: crazy-max/ghaction-github-pages@v2
