@@ -1,16 +1,14 @@
-name: gh-pages
+name: CI
 
 on:
   workflow_dispatch:
+  pull_request:
   push:
     branches: [main]
 
-  release:
-    types: [released]
-
 jobs:
 
-  publish:
+  standard:
 
     runs-on: [ubuntu-latest]
 
