@@ -44,6 +44,7 @@ jobs:
           hyperref
           latexmk
           newfloat
+          pgf
           ragged2e
           scheme-basic
           subfig
