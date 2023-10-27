@@ -184,8 +184,8 @@ projects = ["stick-slip", "shear-band", "fracture_dp"]
 
 for project in projects:
     with cwd(root / "research" / project):
-        subprocess.run(["latexmk", "-pdf", "main.tex"])
-
+        if not pathlab.Path("main.pdf").exists():
+            subprocess.run(["latexmk", "-pdf", "main.tex"])
 
 class MyConf(UnsrtStyle):
     def get_book_template(self, e):

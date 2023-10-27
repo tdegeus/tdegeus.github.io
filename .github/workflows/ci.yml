@@ -29,6 +29,18 @@ jobs:
         working_directory: research/stick-slip
         root_file: main.tex
 
+    - name: Compile flyer
+      uses: dante-ev/latex-action@latest
+      with:
+        working_directory: research/shear-band
+        root_file: main.tex
+
+    - name: Compile flyer
+      uses: dante-ev/latex-action@latest
+      with:
+        working_directory: research/fracture_dp
+        root_file: main.tex
+
     - name: Create conda environment
       uses: mamba-org/setup-micromamba@main
       with:
