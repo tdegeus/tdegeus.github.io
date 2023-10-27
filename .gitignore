@@ -15,3 +15,6 @@ main.pdf
 *.cb
 *.cb2
 .*.lb
+*.fdb_latexmk
+*.bbl
+*.blg
