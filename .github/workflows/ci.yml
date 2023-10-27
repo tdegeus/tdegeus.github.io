@@ -41,6 +41,7 @@ jobs:
           latexmk
           hyperref
           cleveref
+          caption
 
     - name: Clone pybtex
       run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
