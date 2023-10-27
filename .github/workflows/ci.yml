@@ -39,6 +39,7 @@ jobs:
           authblk
           caption
           cleveref
+          environ
           etoolbox
           framed
           hyperref
