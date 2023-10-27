@@ -45,6 +45,7 @@ jobs:
           titlesec
           xcolor
           authblk
+          ragged2e
 
     - name: Clone pybtex
       run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
