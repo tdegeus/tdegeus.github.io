@@ -1,7 +1,7 @@
 import os
 import pathlib
-import subprocess
 import shutil
+import subprocess
 from contextlib import contextmanager
 
 import GooseBib as bib
@@ -187,6 +187,7 @@ for project in projects:
         for fname in ["goose-article.cls", "unsrtnat.bst", "library.bib"]:
             shutil.copyfile(f"../{fname}", fname)
         subprocess.run(["latexmk", "-pdf", "main.tex"])
+
 
 class MyConf(UnsrtStyle):
     def get_book_template(self, e):
