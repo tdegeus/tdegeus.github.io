@@ -34,6 +34,10 @@ jobs:
         create-args: >-
           texlive-core
 
+    # todo: try
+    - name: Install GooseBib via pip
+      run: python -m pip install GooseBib
+
     - name: Clone pybtex
       run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
 
