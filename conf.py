@@ -246,4 +246,3 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_title = "Tom de Geus"
 extensions = ["sphinxcontrib.bibtex", "sphinx_design", "sphinx.ext.githubpages"]
 bibtex_bibfiles = libraries
-html_baseurl = "www.geus.me"
