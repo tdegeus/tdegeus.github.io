@@ -2,10 +2,14 @@
 :bdg-link-primary:`ORCiD <https://orcid.org/0000-0002-1694-3375>`
 :bdg-link-primary:`GitHub <https://github.com/tdegeus>`
 
-*****************
-Awards and prizes
-*****************
+FFT homogenisation
+==================
 
-.. |br| raw:: html
+:footcite:`deGeus2017a`
+:footcite:`Zeman2017`
 
-   <br />
+**Selected publications**
+
+.. footbibliography::
+
+

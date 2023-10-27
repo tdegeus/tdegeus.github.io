@@ -2,10 +2,15 @@
 :bdg-link-primary:`ORCiD <https://orcid.org/0000-0002-1694-3375>`
 :bdg-link-primary:`GitHub <https://github.com/tdegeus>`
 
-*****************
-Awards and prizes
-*****************
+Fracture in multi-phase material
+================================
 
-.. |br| raw:: html
+:footcite:`deGeus2016d`
+:footcite:`deGeus2016a`
+:footcite:`deGeus2017`
 
-   <br />
+**Selected publications**
+
+.. footbibliography::
+
+

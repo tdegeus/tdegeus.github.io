@@ -3,6 +3,9 @@ import pathlib
 import GooseBib as bib
 import pybtex.plugin
 import texplain
+import subprocess
+import pathlib
+import os
 from pybtex.style.formatting import toplevel
 from pybtex.style.formatting.unsrt import Style as UnsrtStyle
 from pybtex.style.template import field
@@ -11,6 +14,7 @@ from pybtex.style.template import join
 from pybtex.style.template import optional_field
 from pybtex.style.template import sentence
 from pybtex.style.template import words
+from contextlib import contextmanager
 
 
 def myformat():
@@ -118,6 +122,17 @@ def myformat():
             "deGeus2014",
             "deGeus2013",
         ],
+        # "library_friction.bib": [
+        #     "ElSergany2023",
+        #     "Poincloux2023",
+        #     "deGeus2022",
+        #     "deGeus2019",
+        # ],
+        # "library_amorphous.bib": [
+        #     "Popovic2021a",
+        #     "Popovic2021b",
+        #     "Popovic2018",
+        # ],
     }
 
     for fname, keys in data.items():
@@ -126,6 +141,8 @@ def myformat():
         bib.bibtex.GbibClean(
             [
                 "--in-place",
+                "--arxiv",
+                "arXiv preprint: {}",
                 "--rename-field",
                 "arxivid",
                 "eprint",
@@ -140,6 +157,33 @@ def myformat():
         )
 
     return [fname for fname in data]
+
+libraries = myformat()
+
+@contextmanager
+def cwd(dirname: pathlib.Path):
+    """
+    Set the cwd to a specified directory::
+
+        with cwd("foo"):
+            # Do something in foo
+
+    :param dirname: The directory to change to.
+    """
+    origin = pathlib.Path().absolute()
+    try:
+        os.chdir(dirname)
+        yield
+    finally:
+        os.chdir(origin)
+
+
+root = pathlib.Path(__file__).parent
+projects = ["stick-slip", "shear-band", "fracture_dp"]
+
+for project in projects:
+    with cwd(root / "research" / project):
+        subprocess.run(["latexmk", "-pdf", "main.tex"])
 
 
 class MyConf(UnsrtStyle):
@@ -198,4 +242,4 @@ html_theme = "furo"
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_title = "Tom de Geus"
 extensions = ["sphinxcontrib.bibtex", "sphinx_design"]
-bibtex_bibfiles = myformat()
+bibtex_bibfiles = libraries
