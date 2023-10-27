@@ -1,15 +1,19 @@
 import pathlib
-import texplain
-import re
+
 import GooseBib as bib
 import pybtex.plugin
+import texplain
 from pybtex.style.formatting import toplevel
 from pybtex.style.formatting.unsrt import Style as UnsrtStyle
-from pybtex.style.template import field, optional, optional_field, sentence, words, href, join
+from pybtex.style.template import field
+from pybtex.style.template import href
+from pybtex.style.template import join
+from pybtex.style.template import optional_field
+from pybtex.style.template import sentence
+from pybtex.style.template import words
+
 
 def myformat():
-
-    ret = []
     root = pathlib.Path(__file__).parent
     bibfile = (root / "library.bib").read_text()
 
@@ -117,63 +121,81 @@ def myformat():
     }
 
     for fname, keys in data.items():
-        fpath = (root / fname)
+        fpath = root / fname
         fpath.write_text(texplain.bib_select(bibfile, keys, reorder=True))
-        bib.bibtex.GbibClean(["--in-place", "--rename-field", "arxivid", "eprint", "--add-field", "book:date", "--add-field", "book:number", "--add-field", "book:address", fpath])
+        bib.bibtex.GbibClean(
+            [
+                "--in-place",
+                "--rename-field",
+                "arxivid",
+                "eprint",
+                "--add-field",
+                "book:date",
+                "--add-field",
+                "book:number",
+                "--add-field",
+                "book:address",
+                fpath,
+            ]
+        )
 
     return [fname for fname in data]
 
+
 class MyConf(UnsrtStyle):
     def get_book_template(self, e):
-        name = join(sep=", ") [field('publisher'), optional_field('number')]
-        template = toplevel [
+        name = join(sep=", ")[field("publisher"), optional_field("number")]
+        template = toplevel[
             # self.format_author_or_editor(e),
-            words [field('date') if 'date' in e.fields else field('year')],
-            self.format_btitle(e, 'title'),
-            href(field('url', raw=True)) [name] if 'url' in e.fields else name,
-            sentence [
-                optional_field('address'),
-                words [field('date') if 'date' in e.fields else field('year')]
+            words[field("date") if "date" in e.fields else field("year")],
+            self.format_btitle(e, "title"),
+            href(field("url", raw=True))[name] if "url" in e.fields else name,
+            sentence[
+                optional_field("address"),
+                words[field("date") if "date" in e.fields else field("year")],
             ],
         ]
         return template
+
 
 class MyPoster(UnsrtStyle):
     def get_book_template(self, e):
-        name = join(sep=", ") [field('publisher'), optional_field('number')]
-        template = toplevel [
+        name = join(sep=", ")[field("publisher"), optional_field("number")]
+        template = toplevel[
             self.format_author_or_editor(e),
             # self.format_btitle(e, 'title'),
-            href(field('url', raw=True)) [name] if 'url' in e.fields else name,
-            sentence [
-                optional_field('address'),
-                words [field('date') if 'date' in e.fields else field('year')]
+            href(field("url", raw=True))[name] if "url" in e.fields else name,
+            sentence[
+                optional_field("address"),
+                words[field("date") if "date" in e.fields else field("year")],
             ],
         ]
         return template
 
+
 class MySeminar(UnsrtStyle):
     def get_book_template(self, e):
-        template = toplevel [
-            sentence [
-                field('publisher'),
-                optional_field('number'),
-                optional_field('address'),
-                words [field('date') if 'date' in e.fields else field('year')]
+        template = toplevel[
+            sentence[
+                field("publisher"),
+                optional_field("number"),
+                optional_field("address"),
+                words[field("date") if "date" in e.fields else field("year")],
             ],
             self.format_web_refs(e),
         ]
         return template
 
+
 pybtex.plugin.register_plugin("pybtex.style.formatting", "myconf", MyConf)
 pybtex.plugin.register_plugin("pybtex.style.formatting", "myposter", MyPoster)
 pybtex.plugin.register_plugin("pybtex.style.formatting", "myseminar", MySeminar)
 
-project = 'Tom de Geus'
-copyright = 'Tom de Geus'
-author = 'Tom de Geus'
+project = "Tom de Geus"
+copyright = "Tom de Geus"
+author = "Tom de Geus"
 html_theme = "furo"
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_title = "Tom de Geus"
-extensions = ['sphinxcontrib.bibtex', 'sphinx_design']
+extensions = ["sphinxcontrib.bibtex", "sphinx_design"]
 bibtex_bibfiles = myformat()

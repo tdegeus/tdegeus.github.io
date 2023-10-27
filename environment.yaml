@@ -2,5 +2,5 @@ channels:
 - conda-forge
 dependencies:
 - furo
-- sphinxcontrib-bibtex
 - sphinx-design
+- sphinxcontrib-bibtex
