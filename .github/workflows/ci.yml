@@ -36,17 +36,18 @@ jobs:
       uses: teatimeguest/setup-texlive-action@v3
       with:
         packages: >-
-          xcolor
-          uri
-          titlesec
-          subfig
-          scheme-basic
-          ragged2e
-          latexmk
-          hyperref
-          cleveref
-          caption
           authblk
+          caption
+          cleveref
+          etoolbox
+          hyperref
+          latexmk
+          ragged2e
+          scheme-basic
+          subfig
+          titlesec
+          uri
+          xcolor
 
     - name: Clone pybtex
       run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
