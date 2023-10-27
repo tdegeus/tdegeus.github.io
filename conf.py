@@ -1,6 +1,7 @@
 import os
 import pathlib
 import subprocess
+import shutil
 from contextlib import contextmanager
 
 import GooseBib as bib
@@ -121,17 +122,6 @@ def myformat():
             "deGeus2014",
             "deGeus2013",
         ],
-        # "library_friction.bib": [
-        #     "ElSergany2023",
-        #     "Poincloux2023",
-        #     "deGeus2022",
-        #     "deGeus2019",
-        # ],
-        # "library_amorphous.bib": [
-        #     "Popovic2021a",
-        #     "Popovic2021b",
-        #     "Popovic2018",
-        # ],
     }
 
     for fname, keys in data.items():
@@ -181,11 +171,22 @@ def cwd(dirname: pathlib.Path):
 
 root = pathlib.Path(__file__).parent
 projects = ["stick-slip", "shear-band", "fracture_dp"]
+bib.bibtex.GbibClean(
+    [
+        "--force",
+        "--output",
+        root / "research" / "library.bib",
+        "--arxiv",
+        "arXiv preprint: {}",
+        root / "library.bib",
+    ]
+)
 
 for project in projects:
     with cwd(root / "research" / project):
-        if not pathlab.Path("main.pdf").exists():
-            subprocess.run(["latexmk", "-pdf", "main.tex"])
+        for fname in ["goose-article.cls", "unsrtnat.bst", "library.bib"]:
+            shutil.copyfile(f"../{fname}", fname)
+        subprocess.run(["latexmk", "-pdf", "main.tex"])
 
 class MyConf(UnsrtStyle):
     def get_book_template(self, e):

@@ -2,6 +2,10 @@ _build
 _site
 .DS_Store
 library_*.bib
+research/*/goose-article.cls
+research/*/unsrtnat.bst
+research/*/library.bib
+research/library.bib
 main.pdf
 *.aux
 *.lof
