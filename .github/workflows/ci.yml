@@ -42,6 +42,7 @@ jobs:
           etoolbox
           hyperref
           latexmk
+          newfloat
           ragged2e
           scheme-basic
           subfig
