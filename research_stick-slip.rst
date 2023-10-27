@@ -19,5 +19,3 @@ Over the recent year I have proposed a novel theory for the onset of slip (forme
 **Selected publications**
 
 .. footbibliography::
-
-

@@ -1,11 +1,11 @@
+import os
 import pathlib
+import subprocess
+from contextlib import contextmanager
 
 import GooseBib as bib
 import pybtex.plugin
 import texplain
-import subprocess
-import pathlib
-import os
 from pybtex.style.formatting import toplevel
 from pybtex.style.formatting.unsrt import Style as UnsrtStyle
 from pybtex.style.template import field
@@ -14,7 +14,6 @@ from pybtex.style.template import join
 from pybtex.style.template import optional_field
 from pybtex.style.template import sentence
 from pybtex.style.template import words
-from contextlib import contextmanager
 
 
 def myformat():
@@ -158,7 +157,9 @@ def myformat():
 
     return [fname for fname in data]
 
+
 libraries = myformat()
+
 
 @contextmanager
 def cwd(dirname: pathlib.Path):

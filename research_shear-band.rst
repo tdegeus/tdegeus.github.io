@@ -17,4 +17,3 @@ We prose models on:
 **Selected publications**
 
 .. footbibliography::
-

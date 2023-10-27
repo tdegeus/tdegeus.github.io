@@ -11,5 +11,3 @@ FFT homogenisation
 **Selected publications**
 
 .. footbibliography::
-
-

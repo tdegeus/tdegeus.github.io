@@ -25,7 +25,7 @@ repos:
   - id: rst-directive-colons
   - id: rst-inline-touching-normal
 - repo: https://github.com/psf/black
-  rev: 23.10.0
+  rev: 23.10.1
   hooks:
   - id: black
     args: [--safe, --quiet, --line-length=100]
@@ -57,6 +57,13 @@ repos:
   hooks:
   - id: conda_envfile_parse
     files: environment.yaml
+- repo: https://github.com/tdegeus/texplain
+  rev: v0.8.7
+  hooks:
+  - id: texcleanup
+    args: [--format-labels, --use-cleveref]
+  - id: texindent
+    args: []
 # - repo: https://github.com/tdegeus/GooseBib
 #   rev: v0.8.1
 #   hooks:

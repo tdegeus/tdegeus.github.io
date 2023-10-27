@@ -18,3 +18,4 @@ main.pdf
 *.fdb_latexmk
 *.bbl
 *.blg
+*.synctex.gz

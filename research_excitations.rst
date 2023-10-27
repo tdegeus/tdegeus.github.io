@@ -10,5 +10,3 @@ Fundamental excitations
 **Selected publications**
 
 .. footbibliography::
-
-

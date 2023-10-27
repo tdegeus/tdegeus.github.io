@@ -12,5 +12,3 @@ Fracture in multi-phase material
 **Selected publications**
 
 .. footbibliography::
-
-
