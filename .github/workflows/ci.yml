@@ -45,6 +45,7 @@ jobs:
           hyperref
           latexmk
           newfloat
+          pdfcol
           pgf
           ragged2e
           scheme-basic
