@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+
+  standard:
+
+    runs-on: [ubuntu-latest]
+
+    defaults:
+      run:
+        shell: bash -e -l {0}
+
+    steps:
+
+    - name: Clone this library
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Create conda environment
+      uses: mamba-org/setup-micromamba@main
+      with:
+        environment-file: environment.yaml
+        environment-name: myenv
+        init-shell: bash
+        cache-downloads: true
+        post-cleanup: all
+        create-args: >-
+          texlive-core
+
+    - name: Clone pybtex
+      run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
+
+    - name: Install pybtex locally
+      working-directory: pybtex
+      run: python -m pip install . -v --no-build-isolation
+
+    - name: Make
+      run: make html
+
+    - name: Deploy to GitHub Pages
+      if: success() && github.ref == 'refs/heads/main'
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        target_branch: gh-pages
+        build_dir: _build/html
+        jekyll: false
+        keep_history: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
