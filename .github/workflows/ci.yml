@@ -44,6 +44,7 @@ jobs:
           framed
           hyperref
           latexmk
+          listings
           newfloat
           pdfcol
           pgf
