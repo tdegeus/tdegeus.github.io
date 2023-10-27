@@ -45,7 +45,7 @@ jobs:
       run: make html
 
     - name: Deploy to GitHub Pages
-      if: success()
+      if: success() && github.ref == 'refs/heads/main'
       uses: crazy-max/ghaction-github-pages@v2
       with:
         target_branch: gh-pages
