@@ -34,10 +34,12 @@ jobs:
         create-args: >-
           texlive-core
 
+    - name: Clone pybtex
+      run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
+
     - name: Install pybtex locally
-      run: |
-        git clone https://bitbucket.org/pybtex-devs/pybtex.git
-        python -m pip install . -v --no-build-isolation
+      working-directory: pybtex
+      run: python -m pip install . -v --no-build-isolation
 
     - name: Make
       run: make html
