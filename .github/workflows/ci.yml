@@ -43,6 +43,7 @@ jobs:
           cleveref
           caption
           titlesec
+          xcolor
 
     - name: Clone pybtex
       run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
