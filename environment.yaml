@@ -2,7 +2,7 @@ channels:
 - conda-forge
 dependencies:
 - furo
-- goosebib >=0.9.0
+- goosebib >=0.9.1
 - sphinx-design
 - sphinxcontrib-bibtex
 - texplain >=0.8.8
