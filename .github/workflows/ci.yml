@@ -31,8 +31,14 @@ jobs:
         init-shell: bash
         cache-downloads: true
         post-cleanup: all
-        create-args: >-
-          texlive-core
+
+    - name: Setup TeXLive
+      uses: teatimeguest/setup-texlive-action@v3
+      with:
+        packages: >-
+          scheme-basic
+          cleveref
+          hyperref
 
     - name: Clone pybtex
       run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
