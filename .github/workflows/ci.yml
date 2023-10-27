@@ -42,6 +42,7 @@ jobs:
           hyperref
           cleveref
           caption
+          titlesec
 
     - name: Clone pybtex
       run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
