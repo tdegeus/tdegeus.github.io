@@ -31,8 +31,33 @@ jobs:
         init-shell: bash
         cache-downloads: true
         post-cleanup: all
-        create-args: >-
-          texlive-core
+
+    - name: Setup TeXLive
+      uses: teatimeguest/setup-texlive-action@v3
+      with:
+        packages: >-
+          authblk
+          caption
+          cleveref
+          environ
+          etoolbox
+          framed
+          hyperref
+          latexmk
+          listings
+          listingsutf8
+          newfloat
+          pdfcol
+          pgf
+          ragged2e
+          scheme-basic
+          sttools
+          subfig
+          tcolorbox
+          tikzfill
+          titlesec
+          uri
+          xcolor
 
     - name: Clone pybtex
       run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
