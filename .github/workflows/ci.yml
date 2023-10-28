@@ -43,6 +43,7 @@ jobs:
           etoolbox
           framed
           hyperref
+          latex-extra
           latexmk
           listings
           listingsutf8
@@ -51,7 +52,6 @@ jobs:
           pgf
           ragged2e
           scheme-basic
-          stfloats
           subfig
           tcolorbox
           tikzfill
