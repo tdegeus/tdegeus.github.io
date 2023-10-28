@@ -51,6 +51,7 @@ jobs:
           pgf
           ragged2e
           scheme-basic
+          stfloats
           subfig
           tcolorbox
           tikzfill
