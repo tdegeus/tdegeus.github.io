@@ -45,6 +45,7 @@ jobs:
           hyperref
           latexmk
           listings
+          listingsutf8
           newfloat
           pdfcol
           pgf
