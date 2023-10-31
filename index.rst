@@ -23,4 +23,5 @@ Contents
    conferences.rst
    prizes.rst
    grants.rst
+   students.rst
    education.rst
