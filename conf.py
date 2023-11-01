@@ -207,7 +207,6 @@ def cwd(dirname: pathlib.Path):
 
 
 root = pathlib.Path(__file__).parent
-projects = ["stick-slip", "shear-band", "fracture_dp"]
 bib.bibtex.GbibClean(
     [
         "--force",
@@ -219,8 +218,8 @@ bib.bibtex.GbibClean(
     ]
 )
 
-for project in projects:
-    with cwd(root / "research" / project):
+for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
+    with cwd(project):
         for fname in ["goose-article.cls", "unsrtnat.bst", "library.bib"]:
             shutil.copyfile(f"../{fname}", fname)
         result = subprocess.run(["latexmk", "-pdf", "main.tex"])

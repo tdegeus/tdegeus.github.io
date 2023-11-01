@@ -36,11 +36,16 @@ jobs:
       uses: teatimeguest/setup-texlive-action@v3
       with:
         packages: >-
+          array
           authblk
+          bibunits
           caption
           cleveref
+          enumitem
           environ
           etoolbox
+          etoolbox
+          eurosym
           framed
           hyperref
           latexmk
@@ -51,6 +56,7 @@ jobs:
           pgf
           ragged2e
           scheme-basic
+          setspace
           sttools
           subfig
           tcolorbox
