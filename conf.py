@@ -79,6 +79,7 @@ def myformat():
             "poster_deGeus2012_1",
         ],
         "library_seminars.bib": [
+            "seminar_deGeus2022_9",
             "seminar_deGeus2022_8",
             "seminar_deGeus2022_7",
             "seminar_deGeus2022_6",
