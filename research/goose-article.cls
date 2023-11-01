@@ -1,8 +1,8 @@
 % ------------------------------------------------------------------------------
 %  @LaTeX-class-file{
 %     filename        = "goose-article.cls",
-%     version         = "0.10.1",
-%     date            = "February 2023",
+%     version         = "0.11.0",
+%     date            = "November 2023",
 %     codetable       = "ISO/ASCII",
 %     keywords        = "LaTeX, goose-article",
 %     supported       = "https://github.com/tdegeus/goose-article",
@@ -14,14 +14,14 @@
 % ==============================================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{goose-article}[2022/04/06 v0.10.0 customized article class]
+\ProvidesClass{goose-article}[2023/11/01 v0.11.0 customized article class]
 
 % ==============================================================================
 % Options
 % ==============================================================================
 
-% Bibliography [namecite, twocolumnbib]
-% -------------------------------------
+% Bibliography [namecite, twocolumnbib, normalsizebib]
+% ----------------------------------------------------
 
 \newif\if@namecite
 \let\if@namecite\iffalse
@@ -30,6 +30,10 @@
 \newif\if@twocolumnbib
 \let\if@twocolumnbib\iffalse
 \DeclareOption{twocolumnbib}{\let\if@twocolumnbib\iftrue}
+
+\newif\if@normalsizebib
+\let\if@normalsizebib\iffalse
+\DeclareOption{normalsizebib}{\let\if@normalsizebib\iftrue}
 
 % Layout [narrow, wide, wwide, doublespacing]
 % -------------------------------------------
@@ -57,12 +61,16 @@
 \let\if@empty\iffalse
 \DeclareOption{empty}{\let\if@empty\iftrue}
 
-% Pargraph [plainparagraph]
-% -------------------------
+% Pargraph [plainparagraph, displayparagraph]
+% -------------------------------------------
 
 \newif\if@plainparagraph
 \let\if@plainparagraph\iffalse
 \DeclareOption{plainparagraph}{\let\if@plainparagraph\iftrue}
+
+\newif\if@displayparagraph
+\let\if@displayparagraph\iffalse
+\DeclareOption{displayparagraph}{\let\if@displayparagraph\iftrue}
 
 % Math [fleqn]
 % ------------
@@ -162,7 +170,11 @@
     \let\oldbibliography\bibliography
     \renewcommand{\bibliography}[1]{%
         \setlength{\bibsep}{3pt plus 0.3ex}
-        \def\bibfont{\scriptsize}
+        \if@normalsizebib
+            \def\bibfont{\normalsize}
+        \else
+            \def\bibfont{\scriptsize}
+        \fi
         \if@twocolumnbib
             \begin{multicols}{2}
                 \raggedright\oldbibliography{#1}\justifying
@@ -176,7 +188,11 @@
     \let\oldbibliography\bibliography
     \renewcommand{\bibliography}[1]{%
         \setlength{\bibsep}{3pt plus 0.3ex}
-        \def\bibfont{\scriptsize}
+        \if@normalsizebib
+            \def\bibfont{\normalsize}
+        \else
+            \def\bibfont{\scriptsize}
+        \fi
         \if@twocolumnbib
             \begin{multicols}{2}
                 \raggedright\oldbibliography{#1}\justifying
@@ -314,10 +330,18 @@
 \titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}{}
 \titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}{}
 \titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}{}
-\if@plainparagraph
-    \titleformat{\paragraph}[runin]{\normalfont\normalsize\bfseries}{}{}{}
+\if@displayparagraph
+    \if@plainparagraph
+        \titleformat{\paragraph}{\normalfont\normalsize\bfseries}{}{}{}
+    \else
+        \titleformat{\paragraph}{\normalfont\normalsize\bfseries}{}{}{}[.]
+    \fi
 \else
-    \titleformat{\paragraph}[runin]{\normalfont\normalsize\bfseries}{}{}{}[.]
+    \if@plainparagraph
+        \titleformat{\paragraph}[runin]{\normalfont\normalsize\bfseries}{}{}{}
+    \else
+        \titleformat{\paragraph}[runin]{\normalfont\normalsize\bfseries}{}{}{}[.]
+    \fi
 \fi
 
 % spacing {left}{top}{bottom}, of:

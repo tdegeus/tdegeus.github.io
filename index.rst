@@ -25,3 +25,5 @@ Contents
    grants.rst
    students.rst
    education.rst
+
+:download:`Download CV <research/cv/main.pdf>`
