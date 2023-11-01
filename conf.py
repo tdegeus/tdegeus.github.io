@@ -185,9 +185,6 @@ def myformat():
     return [fname for fname in data]
 
 
-libraries = myformat()
-
-
 @contextmanager
 def cwd(dirname: pathlib.Path):
     """
@@ -206,8 +203,8 @@ def cwd(dirname: pathlib.Path):
         os.chdir(origin)
 
 
+libraries = myformat()
 root = pathlib.Path(__file__).parent
-projects = ["stick-slip", "shear-band", "fracture_dp"]
 bib.bibtex.GbibClean(
     [
         "--force",
@@ -219,10 +216,13 @@ bib.bibtex.GbibClean(
     ]
 )
 
-for project in projects:
-    with cwd(root / "research" / project):
+for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
+    with cwd(project):
         for fname in ["goose-article.cls", "unsrtnat.bst", "library.bib"]:
             shutil.copyfile(f"../{fname}", fname)
+        if project.name == "cv":
+            for lib in libraries:
+                shutil.copyfile(f"../../{lib}", lib)
         result = subprocess.run(["latexmk", "-pdf", "main.tex"])
         if result.returncode != 0:
             raise RuntimeError("latexmk failed")
