@@ -294,5 +294,5 @@ extensions = [
 bibtex_bibfiles = libraries
 html_favicon = "favicon.ico"
 redirects = {
-    "<phd>": "education.html#doctor-of-philosophy",
+    "phd": "education.html#doctor-of-philosophy",
 }
