@@ -30,6 +30,19 @@
 
 .. toctree::
    :maxdepth: 1
+   :caption: Programming
+
+   software_mechanics.rst
+   software_statistics.rst
+   software_hpc.rst
+   software_storage.rst
+   software_cpp.rst
+   software_tex.rst
+   software_tools.rst
+   software_tips.rst
+
+.. toctree::
+   :maxdepth: 1
    :caption: Info
 
    contact.rst

@@ -4,5 +4,6 @@ dependencies:
 - furo
 - goosebib >=0.9.1
 - sphinx-design
+- sphinx-reredirects
 - sphinxcontrib-bibtex
 - texplain >=0.8.8
