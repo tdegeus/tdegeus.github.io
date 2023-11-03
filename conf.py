@@ -218,6 +218,8 @@ bib.bibtex.GbibClean(
 
 for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
     with cwd(project):
+        if not pathlib.Path("main.tex").exists():
+            continue
         for fname in ["goose-article.cls", "unsrtnat.bst", "library.bib"]:
             shutil.copyfile(f"../{fname}", fname)
         if project.name == "cv":
@@ -285,3 +287,4 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_title = "Tom de Geus"
 extensions = ["sphinxcontrib.bibtex", "sphinx_design", "sphinx.ext.githubpages"]
 bibtex_bibfiles = libraries
+html_favicon = "favicon.ico"

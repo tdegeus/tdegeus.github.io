@@ -2,11 +2,11 @@
 :bdg-link-primary:`ORCiD <https://orcid.org/0000-0002-1694-3375>`
 :bdg-link-primary:`GitHub <https://github.com/tdegeus>`
 
-Contents
-========
+.. image:: images/Tom_2016.jpg
+   :width: 200px
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Research
 
    research_stick-slip.rst
@@ -16,7 +16,7 @@ Contents
    research_excitations.rst
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Career
 
    publications.rst
@@ -27,3 +27,9 @@ Contents
    education.rst
 
 :download:`Download CV <research/cv/main.pdf>`
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Info
+
+   contact.rst
