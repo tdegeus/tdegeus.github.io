@@ -285,6 +285,14 @@ author = "Tom de Geus"
 html_theme = "furo"
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_title = "Tom de Geus"
-extensions = ["sphinxcontrib.bibtex", "sphinx_design", "sphinx.ext.githubpages"]
+extensions = [
+    "sphinxcontrib.bibtex",
+    "sphinx_design",
+    "sphinx.ext.githubpages",
+    "sphinx_reredirects",
+]
 bibtex_bibfiles = libraries
 html_favicon = "favicon.ico"
+redirects = {
+    "<phd>": "education.html#doctor-of-philosophy",
+}
