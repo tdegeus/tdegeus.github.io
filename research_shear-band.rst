@@ -14,6 +14,8 @@ We prose models on:
 *   How the system can nucleate a shear-band in a very stable system :footcite:`Popovic2018`.
 *   How the system will spontaneously fluidise when subjected to a finite temperature :footcite:`Popovic2021a`.
 
+:download:`More... <research/shear-band/main.pdf>`
+
 **Selected publications**
 
 .. footbibliography::

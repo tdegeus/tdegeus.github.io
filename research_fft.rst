@@ -17,6 +17,10 @@ Both claims are demonstrated in this paper and substantiated with a `simple code
 The aim is to render the method transparent and accessible, whereby researchers that are new to this method should be able to implement it efficiently.
 The potential of this method is demonstrated using two examples, each with a different material model.
 
+.. image:: research/fft/2d.jpg
+    :width: 100%
+    :align: center
+
 **Selected publications**
 
 .. footbibliography::

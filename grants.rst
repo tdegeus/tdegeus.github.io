@@ -59,6 +59,11 @@ This provides access to observables with a clear meaning, and is fully in line w
 This model is well suited for the proposed project as it is formulated at a level where one may expect to capture the nucleation of slip, and measure slip dynamics and macroscopic observables such as stress drops.
 In contrast to existing approaches, it enables, for the first time, all systematic variations that are needed to unravel the nucleation of slip.
 
+
+.. image:: images/lausanne.jpg
+   :width: 100%
+   :align: center
+
 NWO Rubicon (09.2016)
 =====================
 

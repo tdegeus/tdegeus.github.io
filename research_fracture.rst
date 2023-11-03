@@ -13,12 +13,19 @@ To go beyond this trade-off, the next step is to use multiphase materials.
 Such materials consist of two or more constituents, each with their own properties.
 A significant challenge is that failure of such materials is structurally complex and often very poorly understood.
 I propose that that there is a long-range arrangement of constituents responsible for "soft spots" that are particularly close to failure, and in which failure is initiated before macroscopic necking occurs.
-These "soft spots" can be identified by computing the correlation between damage on the local phase distribution. See:
+These "soft spots" can be identified by computing the correlation between damage on the local phase distribution.
+See:
 
 *   Numerical approach/results :footcite:`deGeus2016d`.
 *   Experimental confirmation :footcite:`deGeus2016a`.
 
 Similarly, (un)favourably oriented "soft spots" lead to rapid shear localisation and failure :footcite:`deGeus2017`.
+
+:download:`More... <research/fracture_dp/main.pdf>`
+
+.. image:: research/fracture_dp/soft-spot_hex.jpg
+    :width: 100%
+    :align: center
 
 **Selected publications**
 

@@ -18,6 +18,10 @@ Mechanical Engineering |br|
 `Cum Laude <https://www.tue.nl/en/university/departments/mechanical-engineering/news/04-05-2016-tom-de-geus-gaines-his-phd-cum-laude/>`_ |br|
 2016
 
+.. image:: research/fracture_dp/thesis.jpg
+    :width: 100%
+    :align: center
+
 Master of Science
 =================
 
