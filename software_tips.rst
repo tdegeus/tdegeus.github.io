@@ -38,6 +38,24 @@ git
         git branch -D patch
         git push --delete origin patch
 
+.. dropdown:: Update remote branch
+
+    When a remote branch is deleted from a repository,
+    it can still show up in the local branch list.
+
+    Often
+    .. code-block:: bash
+
+        git fetch
+
+    should suffice. However, sometimes you'll have to do
+
+    .. code-block:: bash
+
+        git fetch --prune
+
+    See `this StackOverflow discussion <https://stackoverflow.com/questions/32651627/how-do-i-update-the-remote-branches-list-in-git-from-the-server>`_.
+
 .. dropdown:: Generate patch
 
     In case a new release cannot be made (because you don't have access to a repository), but you still want to update a `conda-forge <https://conda-forge.org>`_ recipe, you can add 'patches' to the recipe.
@@ -72,25 +90,6 @@ git
     .. code-block:: bash
 
         git clone --depth=5 ...
-
-    Update remote branch
-    --------------------
-
-    When a remote branch is deleted from a repository,
-    it can still show up in the local branch list.
-
-    Often
-    .. code-block:: bash
-
-        git fetch
-
-    should suffice. However, sometimes you'll have to do
-
-    .. code-block:: bash
-
-        git fetch --prune
-
-    See `this StackOverflow discussion <https://stackoverflow.com/questions/32651627/how-do-i-update-the-remote-branches-list-in-git-from-the-server>`_.
 
 conda
 =====

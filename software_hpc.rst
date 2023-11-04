@@ -6,12 +6,14 @@
 High Performance Computing
 **************************
 
-.. |br| raw:: html
+:bdg-link-info:`shelephant <https://tdegeus.github.com/shelephant>`
+:bdg-success-line:`Python`
+:bdg-success-line:`command line`
 
-   <br />
+Dataset management (for HPC).
 
-*   `shelephant <https://tdegeus.github.com/shelephant>`_ |br|
-    Dataset management (for HPC).
+:bdg-link-info:`GooseSLURM <https://tdegeus.github.com/GooseSLURM>`
+:bdg-success-line:`Python`
+:bdg-success-line:`command line`
 
-*   `GooseSLURM <https://tdegeus.github.com/GooseSLURM>`_ |br|
-    SLURM wrapper.
+SLURM wrapper.

@@ -36,7 +36,6 @@
    software_statistics.rst
    software_hpc.rst
    software_libraries.rst
-   software_tools.rst
    software_tips.rst
 
 .. toctree::

@@ -6,22 +6,31 @@
 Statistics
 **********
 
-.. |br| raw:: html
-
-   <br />
-
 Random number generator
 -----------------------
 
-*   `prrng <https://tdegeus.github.com/prrng>`_  (Python/C++) |br|
-    Portable Random Number Generator:
-    draw the same sequence of random numbers from Python or C++ on any platform (Linux, Mac, Windows).
+:bdg-link-info:`prrng <https://tdegeus.github.com/prrng>`
+:bdg-success-line:`C++`
+:bdg-success-line:`Python`
+
+Portable Random Number Generator:
+draw the same sequence of random numbers from Python or C++ on any platform (Linux, Mac, Windows).
 
 Ensemble averaging
 ------------------
 
-*   `GooseEYE <https://tdegeus.github.com/GooseEYE>`_ (Python/C++) |br|
-    Perform geometrical statistics on microstructures and interfaces.
+:bdg-link-info:`GooseEYE <https://tdegeus.github.com/GooseEYE>`
+:bdg-success-line:`C++`
+:bdg-success-line:`Python`
 
-*   `enstat <https://tdegeus.github.com/enstat>`_ (Python)
-*   `powerfit <https://tdegeus.github.com/powerfit>`_ (Python)
+Perform geometrical statistics on microstructures and interfaces.
+
+:bdg-link-info:`enstat <https://tdegeus.github.com/enstat>`
+:bdg-success-line:`Python`
+
+Compute ensemble averages, without keeping all data in memory.
+
+:bdg-link-info:`powerfit <https://tdegeus.github.com/powerfit>`
+:bdg-success-line:`Python`
+
+Fit a power-law to data.
