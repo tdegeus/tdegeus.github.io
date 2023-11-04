@@ -13,214 +13,191 @@ Tips
 git
 ===
 
-Update fork
------------
+.. dropdown:: Update fork
 
-GitHub command-line tools
-:::::::::::::::::::::::::
+    .. code-block:: bash
 
-See `documentation <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork#syncing-a-fork-with-the-github-cli>`_
+        git remote add upstream {url_to_remote}
+        git fetch upstream
+        git rebase upstream/main
 
-.. code-block:: bash
+.. dropdown:: Remove local and remote branch
 
-    gh repo sync fork_owner/fork_name
+    Note that a common usage of a fork is to open a pull-request, in particular from a branch on the fork:
 
-Manually
-::::::::
+    .. code-block:: bash
 
-To update a git fork, proceed as follows:
+        git checkout -b patch
+        ... # commits here
 
-.. code-block:: bash
+    Once merged, you can delete the branch:
 
-    git remote add upstream {url_to_remote}
-    git fetch upstream
-    git rebase upstream/main
+    .. code-block:: bash
 
-Removing a branch
-:::::::::::::::::
+        git checkout main
+        git branch -D patch
+        git push --delete origin patch
 
-Note that a common usage of a fork is to open a pull-request, in particular from a branch on the fork:
+.. dropdown:: Generate patch
 
-.. code-block:: bash
+    In case a new release cannot be made (because you don't have access to a repository), but you still want to update a `conda-forge <https://conda-forge.org>`_ recipe, you can add 'patches' to the recipe.
 
-    git checkout -b patch
-    ... # commits here
+    To this end, clone the repository
 
-Once merged, you can delete the branch:
+    .. code-block:: bash
 
-.. code-block:: bash
+        git clone https://github.com/someuser/somerepo
 
-    git checkout main
-    git branch -D patch
-    git push --delete origin patch
+    Move to the repository
 
-Generate patch
---------------
+    .. code-block:: bash
 
-In case a new release cannot be made (because you don't have access to a repository), but you still want to update a `conda-forge <https://conda-forge.org>`_ recipe, you can add 'patches' to the recipe.
+        cd somerepo
 
-To this end, clone the repository
+    and determine the number of commits since the last release (e.g. 3). Then have git create the patches, using:
 
-.. code-block:: bash
+    .. code-block:: bash
 
-    git clone https://github.com/someuser/somerepo
+        git format-patch -3
 
-Move to the repository
+    This will create a number of ``*.patch`` files (3 in this case). These patches can be added to the recipe. See for example the `cling-feedstock <https://github.com/conda-forge/cling-feedstock/blob/master/recipe/meta.yaml>`_.
 
-.. code-block:: bash
+.. dropdown:: Partial clone
 
-    cd somerepo
+    Recently I came across a few repositories with a very rich history
+    (corresponding to a huge disk-space, requiring also a significant downloading time).
+    If one is not particularly interested in the histories, on can
+    partially (shallow) clone a repository:
 
-and determine the number of commits since the last release (e.g. 3). Then have git create the patches, using:
+    .. code-block:: bash
 
-.. code-block:: bash
+        git clone --depth=5 ...
 
-    git format-patch -3
+    Update remote branch
+    --------------------
 
-This will create a number of ``*.patch`` files (3 in this case). These patches can be added to the recipe. See for example the `cling-feedstock <https://github.com/conda-forge/cling-feedstock/blob/master/recipe/meta.yaml>`_.
+    When a remote branch is deleted from a repository,
+    it can still show up in the local branch list.
 
-Partial clone
--------------
+    Often
+    .. code-block:: bash
 
-Recently I came across a few repositories with a very rich history
-(corresponding to a huge disk-space, requiring also a significant downloading time).
-If one is not particularly interested in the histories, on can
-partially (shallow) clone a repository:
+        git fetch
 
-.. code-block:: bash
+    should suffice. However, sometimes you'll have to do
 
-    git clone --depth=5 ...
+    .. code-block:: bash
 
-Update remote branch
---------------------
+        git fetch --prune
 
-When a remote branch is deleted from a repository,
-it can still show up in the local branch list.
-
-Often
-.. code-block:: bash
-
-    git fetch
-
-should suffice. However, sometimes you'll have to do
-
-.. code-block:: bash
-
-    git fetch --prune
-
-See `this StackOverflow discussion <https://stackoverflow.com/questions/32651627/how-do-i-update-the-remote-branches-list-in-git-from-the-server>`_.
-
+    See `this StackOverflow discussion <https://stackoverflow.com/questions/32651627/how-do-i-update-the-remote-branches-list-in-git-from-the-server>`_.
 
 conda
 =====
 
-Manually add library to Conda environment
------------------------------------------
+.. dropdown:: Add library to Conda environment
 
-Conda is a great tool as a package manager and virtual environment together. Many (up-to-date) packages are available through `conda-forge <https://conda-forge.org>`_. However, ever to often you might want to install from a local source (for example to test the current master branch).
+    Conda is a great tool as a package manager and virtual environment together. Many (up-to-date) packages are available through `conda-forge <https://conda-forge.org>`_. However, ever to often you might want to install from a local source (for example to test the current master branch).
 
-Start by activating the relevant Conda environment (e.g. "myenv"):
-
-.. code-block:: bash
-
-    conda activate myenv
-
-(see `Conda documentation <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>`_ on how to manage environments).
-
-Then, go to the library:
-
-.. code-block:: bash
-
-    cd /path/to/library
-
-*   **Python**
-
-    Make sure that you have *Python* installed, e.g. using
+    Start by activating the relevant Conda environment (e.g. "myenv"):
 
     .. code-block:: bash
 
-        conda install -c conda-forge python
+        conda activate myenv
 
-    Then, with the *Python* executable that is loaded (from ``myenv``)
+    (see `Conda documentation <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>`_ on how to manage environments).
 
-    .. code-block:: bash
-
-        python -m pip install .
-
-*   **CMake (for libraries in C, C++, etc.)**
-
-    Make sure that you have *CMake* installed, e.g. using
+    Then, go to the library:
 
     .. code-block:: bash
 
-        conda install -c conda-forge cmake
+        cd /path/to/library
 
-    Then, with the *CMake* executable that is loaded (from ``myenv``)
+    .. dropdown:: Python
 
-    .. code-block:: bash
+        Make sure that you have *Python* installed, e.g. using
 
-        cmake . -DCMAKE_INSTALL_PREFIX:PATH="${CONDA_PREFIX}"
+        .. code-block:: bash
+
+            conda install -c conda-forge python
+
+        Then, with the *Python* executable that is loaded (from ``myenv``)
+
+        .. code-block:: bash
+
+            python -m pip install .
+
+    .. dropdown:: CMake
+
+        Make sure that you have *CMake* installed, e.g. using
+
+        .. code-block:: bash
+
+            conda install -c conda-forge cmake
+
+        Then, with the *CMake* executable that is loaded (from ``myenv``)
+
+        .. code-block:: bash
+
+            cmake . -DCMAKE_INSTALL_PREFIX:PATH="${CONDA_PREFIX}"
 
 Python
 ======
 
-Create movie with 'ffmpeg-python'
----------------------------------
+.. dropdown:: Create movie with 'ffmpeg-python'
 
-`ffmpeg-python <https://github.com/kkroening/ffmpeg-python>`_ is a great wrapper around *ffmpeg* to create your movie from Python.
+    `ffmpeg-python <https://github.com/kkroening/ffmpeg-python>`_ is a great wrapper around *ffmpeg* to create your movie from Python.
 
-Let us begin by setting up an environment that contains what we need:
+    Let us begin by setting up an environment that contains what we need:
 
-.. code-block:: bash
+    .. code-block:: bash
 
-    conda activate myenv
-    conda install -c conda-forge ffmpeg-python
-    conda install -c conda-forge matplotlib
+        conda activate myenv
+        conda install -c conda-forge ffmpeg-python
+        conda install -c conda-forge matplotlib
 
-(see `Conda documentation <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>`_ on how to manage environments).
+    (see `Conda documentation <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html>`_ on how to manage environments).
 
-Then, we will create an animation as a batch of images:
+    Then, we will create an animation as a batch of images:
 
-.. code-block:: python
+    .. code-block:: python
 
-    import matplotlib.pyplot as plt
+        import matplotlib.pyplot as plt
 
-    filenames = []
+        filenames = []
 
-    for i in range(20):
+        for i in range(20):
 
-        filename = 'image_{0:02d}.png'.format(i)
-        filenames += [filename]
+            filename = 'image_{0:02d}.png'.format(i)
+            filenames += [filename]
 
-        fig, ax = plt.subplots()
-        ax.plot([0, 1], [0, i])
-        ax.set_ylim([0, 20])
-        plt.savefig(filename)
+            fig, ax = plt.subplots()
+            ax.plot([0, 1], [0, i])
+            ax.set_ylim([0, 20])
+            plt.savefig(filename)
 
-To convert this to a movie, we will use *ffmpeg-python*:
+    To convert this to a movie, we will use *ffmpeg-python*:
 
-.. code-block:: python
+    .. code-block:: python
 
-    import ffmpeg
+        import ffmpeg
 
-    (
-        ffmpeg
-        .input('image_%02d.png', framerate=2)
-        .output('movie.mp4')
-        .run()
-    )
+        (
+            ffmpeg
+            .input('image_%02d.png', framerate=2)
+            .output('movie.mp4')
+            .run()
+        )
 
-pybind11 examples
------------------
+.. dropdown:: pybind11 examples
 
-`pybind11 examples <https://github.com/tdegeus/pybind11_examples>`_.
-Some basic examples on how to start using pybind11. Pybind11 is a C++ library that allows to expose a C++ library to Python easily.
+    `pybind11 examples <https://github.com/tdegeus/pybind11_examples>`_.
+    Some basic examples on how to start using pybind11. Pybind11 is a C++ library that allows to expose a C++ library to Python easily.
 
-Paraview
+ParaView
 ========
 
-Examples
---------
+.. dropdown:: ParaView examples
 
-`ParaView examples <https://github.com/tdegeus/paraview_examples>`_.
-Some basic examples on how to make data available in ParaView.
+    `ParaView examples <https://github.com/tdegeus/paraview_examples>`_.
+    Some basic examples on how to make data available in ParaView.
