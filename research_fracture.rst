@@ -21,6 +21,7 @@ See:
 
 Similarly, (un)favourably oriented "soft spots" lead to rapid shear localisation and failure :footcite:`deGeus2017`.
 
+:octicon:`file;1em;sd-text-info`
 :download:`More... <research/fracture_dp/main.pdf>`
 
 .. image:: research/fracture_dp/soft-spot_hex.jpg

@@ -10,6 +10,7 @@ Contact
 
    <br />
 
+:octicon:`file;1em;sd-text-info`
 :download:`Tom de Geus.vcf <contact/contact.vcf>`
 
 .. image:: contact/qrcode_contact.png

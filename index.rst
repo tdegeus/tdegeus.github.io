@@ -26,7 +26,8 @@
    students.rst
    education.rst
 
-:download:`Download CV <research/cv/main.pdf>`
+:octicon:`file;1em;sd-text-info`
+:download:`CV <research/cv/main.pdf>`
 
 .. toctree::
    :maxdepth: 1

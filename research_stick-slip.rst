@@ -14,6 +14,7 @@ Over the recent years I have proposed a novel theory for the onset of slip (form
 *   A competition between disorder and elasticity that results in spatial correlations in stress :footcite:`deGeus2022`.
 *   A phase-transition-like behaviour that results in a critical stress for slip (the "dynamic friction coefficient") :footcite:`deGeus2019`.
 
+:octicon:`file;1em;sd-text-info`
 :download:`More... <research/stick-slip/main.pdf>`
 
 **Selected publications**
