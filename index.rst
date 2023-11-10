@@ -25,6 +25,7 @@
    grants.rst
    students.rst
    education.rst
+   activities.rst
 
 :octicon:`file;1em;sd-text-info`
 :download:`CV <research/cv/main.pdf>`
