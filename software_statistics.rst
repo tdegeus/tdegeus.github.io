@@ -9,7 +9,7 @@ Statistics
 Random number generator
 -----------------------
 
-:bdg-link-info:`prrng <https://tdegeus.github.com/prrng>`
+:bdg-link-info:`prrng <https://github.com/tdegeus/prrng>`
 :bdg-success-line:`C++`
 :bdg-success-line:`Python`
 
@@ -19,18 +19,18 @@ draw the same sequence of random numbers from Python or C++ on any platform (Lin
 Ensemble averaging
 ------------------
 
-:bdg-link-info:`GooseEYE <https://tdegeus.github.com/GooseEYE>`
+:bdg-link-info:`GooseEYE <https://github.com/tdegeus/GooseEYE>`
 :bdg-success-line:`C++`
 :bdg-success-line:`Python`
 
 Perform geometrical statistics on microstructures and interfaces.
 
-:bdg-link-info:`enstat <https://tdegeus.github.com/enstat>`
+:bdg-link-info:`enstat <https://github.com/tdegeus/enstat>`
 :bdg-success-line:`Python`
 
 Compute ensemble averages, without keeping all data in memory.
 
-:bdg-link-info:`powerfit <https://tdegeus.github.com/powerfit>`
+:bdg-link-info:`powerfit <https://github.com/tdegeus/powerfit>`
 :bdg-success-line:`Python`
 
 Fit a power-law to data.
