@@ -30,13 +30,15 @@ Swiss Champion Rowing, Master Men 4x |br|
 Luzern, Switzerland |br|
 07.2023
 
+.. image:: images/CS23.jpg
+    :width: 400px
+
 Bronze Medal Swiss Championships Rowing, Master Men 2x |br|
 Luzern, Switzerland |br|
 07.2021
 
-.. image:: images/CS23.jpg
+.. image:: images/CS21.jpg
     :width: 400px
-    :align: center
 
 Student jobs
 ------------
