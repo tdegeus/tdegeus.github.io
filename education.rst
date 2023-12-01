@@ -58,4 +58,5 @@ Master of Science
 Eindhoven University of Technology |br|
 Mechanical Engineering |br|
 With great appreciation (GPA 8.5/10) |br|
+Internship: Harvard University |br|
 2012
