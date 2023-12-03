@@ -239,10 +239,7 @@ class MyConf(UnsrtStyle):
             words[field("date") if "date" in e.fields else field("year")],
             self.format_btitle(e, "title"),
             href(field("url", raw=True))[name] if "url" in e.fields else name,
-            sentence[
-                optional_field("address"),
-                words[field("date") if "date" in e.fields else field("year")],
-            ],
+            sentence[optional_field("address"),],
         ]
         return template
 
