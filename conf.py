@@ -79,6 +79,7 @@ def myformat():
             "poster_deGeus2012_1",
         ],
         "library_seminars.bib": [
+            "seminar_deGeus2024_1",
             "seminar_deGeus2022_10",
             "seminar_deGeus2022_9",
             "seminar_deGeus2022_8",
@@ -97,6 +98,7 @@ def myformat():
             "seminar_deGeus2016_1",
         ],
         "library_publications.bib": [
+            "deGeus2024",
             "ElSergany2023",
             "Poincloux2023",
             "deGeus2023",
