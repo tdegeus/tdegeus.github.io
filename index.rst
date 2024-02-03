@@ -9,6 +9,7 @@
    :maxdepth: 1
    :caption: Research
 
+   research_creep.rst
    research_stick-slip.rst
    research_shear-band.rst
    research_fracture.rst
