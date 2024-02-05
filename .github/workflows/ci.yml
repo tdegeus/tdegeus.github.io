@@ -78,6 +78,12 @@ jobs:
     - name: Setup custom domain
       run: echo "www.geus.me" > _build/html/CNAME
 
+    - uses: actions/upload-artifact@v4
+      with:
+        name: preview
+        path: _build/html
+        retention-days: 1
+
     - name: Deploy to GitHub Pages
       if: success() && github.ref == 'refs/heads/main'
       uses: crazy-max/ghaction-github-pages@v4
