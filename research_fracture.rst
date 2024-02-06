@@ -2,8 +2,8 @@
 :bdg-link-primary:`ORCiD <https://orcid.org/0000-0002-1694-3375>`
 :bdg-link-primary:`GitHub <https://github.com/tdegeus>`
 
-Fracture in multi-phase material
-================================
+Fracture multi-phase material
+=============================
 
 A key to a successful design is to anticipate failure.
 In practice it is desirable that failure limits be known material properties, and that approaching the failure limit is accompanied by a clear signal.

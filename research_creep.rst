@@ -2,8 +2,8 @@
 :bdg-link-primary:`ORCiD <https://orcid.org/0000-0002-1694-3375>`
 :bdg-link-primary:`GitHub <https://github.com/tdegeus>`
 
-Creep
-=====
+Creep of interfaces
+===================
 
 The physical properties of a material are often controlled by embedded interfaces (e.g. for dislocations in crystals, crack fronts, frictional interfaces, or magnetic domain walls).
 Pinned by impurities, they dramatically increase the material's strength, toughness, or hysteresis.

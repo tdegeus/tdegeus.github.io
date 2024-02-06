@@ -2,8 +2,8 @@
 :bdg-link-primary:`ORCiD <https://orcid.org/0000-0002-1694-3375>`
 :bdg-link-primary:`GitHub <https://github.com/tdegeus>`
 
-Fundamental excitations
-=======================
+Excitations glasses
+===================
 
 In amorphous materials, groups of particles can rearrange locally into a new stable configuration.
 Such elementary excitations are key as they determine the response to external stresses :footcite:`Ji2019`, as well as to thermal and quantum fluctuations :footcite:`Ji2020`.
