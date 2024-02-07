@@ -23,10 +23,10 @@
    publications.rst
    conferences.rst
    prizes.rst
-   grants.rst
    students.rst
    education.rst
    activities.rst
+   grants.rst
 
 :octicon:`file;1em;sd-text-info`
 :download:`CV <research/cv/main.pdf>`
