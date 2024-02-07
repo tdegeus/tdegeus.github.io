@@ -1,4 +1,11 @@
-\documentclass[displayparagraph,plainparagraph,colorlinks,normalsizebib]{goose-article}
+\documentclass[
+    bibsize = normalsize,
+    bibpackage = none,
+    paragraphshape = display,
+    paragraphafter = none,
+]{goose-article}
+
+\usepackage[backend=bibtex, style=numeric, sorting=ydnt]{biblatex}
 
 \usepackage{eurosym}
 \usepackage{setspace}
@@ -26,9 +33,31 @@
 
 \renewcommand{\arraystretch}{1.3}
 
-\usepackage{bibunits}
-\defaultbibliographystyle{unsrtnat}
-\defaultbibliography{library}
+% --------------------------------------------
+% https://tex.stackexchange.com/a/22770/132350
+
+% Count total number of entries in each refsection
+\AtDataInput{%
+    \csnumgdef{entrycount:\therefsection}{%
+        \csuse{entrycount:\therefsection}+1
+    }
+}
+
+% Print the labelnumber as the total number of entries in the
+% current refsection, minus the actual labelnumber, plus one
+\DeclareFieldFormat{labelnumber}{\mkbibdesc{#1}}
+\newrobustcmd*{\mkbibdesc}[1]{%
+    \number\numexpr\csuse{entrycount:\therefsection}+1-#1\relax
+}
+
+% --------------------------------------------
+
+\addbibresource[label=publications]{library_publications.bib}
+\addbibresource[label=invited]{library_invited.bib}
+\addbibresource[label=conferences]{library_conferences.bib}
+\addbibresource[label=posters]{library_posters.bib}
+\addbibresource[label=seminars]{library_seminars.bib}
+\addbibresource[label=students]{library_students.bib}
 
 \begin{document}
 
@@ -258,41 +287,40 @@
     % ---------
 \end{tabular}
 
-\begin{bibunit}
-    \renewcommand{\refname}{Publications (chronological)}
+\begin{refsection}[publications]
     \nocite{*}
-    \putbib[library_publications]
-\end{bibunit}
+    \printbibliography[locallabelwidth, title={Publications (chronological)}]
+\end{refsection}
 
-\begin{bibunit}[unsrtnat_noauthor]
-    \renewcommand{\refname}{Conferences (invited oral)}
+\begin{refsection}[invited]
     \nocite{*}
-    \putbib[library_invited]
-\end{bibunit}
+    \settoggle{bbx:url}{false}
+    \printbibliography[locallabelwidth, title={Conferences (invited oral)}]
+\end{refsection}
 
-\begin{bibunit}[unsrtnat_noauthor]
-    \renewcommand{\refname}{Conferences (oral)}
+\begin{refsection}[conferences]
     \nocite{*}
-    \putbib[library_conferences]
-\end{bibunit}
+    \settoggle{bbx:url}{false}
+    \printbibliography[locallabelwidth, title={Conferences (oral)}]
+\end{refsection}
 
-\begin{bibunit}[unsrtnat_noauthor_notitle]
-    \renewcommand{\refname}{Conferences (posters)}
+\begin{refsection}[posters]
     \nocite{*}
-    \putbib[library_posters]
-\end{bibunit}
+    \settoggle{bbx:url}{false}
+    \printbibliography[locallabelwidth, title={Conferences (posters)}]
+\end{refsection}
 
-\begin{bibunit}[unsrtnat_noauthor_notitle]
-    \renewcommand{\refname}{Colloquia (invited)}
+\begin{refsection}[seminars]
     \nocite{*}
-    \putbib[library_seminars]
-\end{bibunit}
+    \settoggle{bbx:url}{false}
+    \printbibliography[locallabelwidth, title={Colloquia (invited)}]
+\end{refsection}
 
-\begin{bibunit}[unsrtnat]
-    \renewcommand{\refname}{(Co-)Supervised junior researchers: PhD, master, bachelor (chronological)}
+\begin{refsection}[students]
     \nocite{*}
-    \putbib[library_students]
-\end{bibunit}
+    \settoggle{bbx:url}{false}
+    \printbibliography[locallabelwidth, title={(Co-)Supervised junior researchers: PhD, master, bachelor (chronological)}]
+\end{refsection}
 
 \section*{Teaching activities (chronological)}
 
@@ -350,6 +378,8 @@ Physical Review Letters, Physical Review E, Mechanics of Materials, Strain, Comp
 
 \begin{itemize}
     \itemsep0em
+    \item Supervisor Leisure Rowing, Lausanne (CH, 09.2019 -- current).
+    \item Member Commission Leisure Rowing, Lausanne (CH, 09.2019 -- current).
     \item Tour du L\'{e}man (longest row race in the world on closed water) (CH, 09.2022, 09.2023).
     \item Swiss Champion Rowing, Master Men 4x (CH, 07.2023).
     \item Bronze Medal Swiss Championships Rowing, Master Men 2x (CH, 07.2021).

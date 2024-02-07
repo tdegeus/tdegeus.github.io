@@ -52,6 +52,8 @@ ENTRY
     doi
     arxivid
     eid
+    eprint
+    archiveprefix
     edition
     editor
     howpublished
@@ -300,7 +302,26 @@ FUNCTION {format.doi}
 FUNCTION {format.arxivid}
 { arxivid empty$
     { "" }
-    { new.block "\arxivid{" arxivid * "}" * }
+    { eprint empty$
+        { new.block "\arxivid{" arxivid * "}" * }
+        { "arxiv" archiveprefix "l" change.case$ =
+          { "" }
+          { new.block "\arxivid{" arxivid * "}" * }
+          if$
+        }
+      if$
+    }
+  if$
+}
+
+FUNCTION {format.eprint}
+{ eprint empty$
+    { "" }
+    { "arxiv" archiveprefix "l" change.case$ =
+      { new.block "\arxivid{" eprint * "}" * }
+      { "" }
+      if$
+    }
   if$
 }
 
@@ -729,6 +750,7 @@ FUNCTION {article}
   format.issn output
   format.doi output
   format.arxivid output
+  format.eprint output
   format.url output
   new.block
   note output
@@ -1311,21 +1333,45 @@ FUNCTION {begin.bib}
   if$
   "\begin{thebibliography}{" number.label int.to.str$ * "}" *
   write$ newline$
+  "% escape underscopes"
+  write$ newline$
+  "\providecommand{\replunderscores}[1]{\expandafter\@repl@underscores#1_\relax}"
+  write$ newline$
+  "% https://stackoverflow.com/a/57028315/2646505"
+  write$ newline$
+  "\def\@repl@underscores#1_#2\relax{%"
+  write$ newline$
+  "    \ifx"
+  write$ newline$
+  "        \relax #2\relax"
+  write$ newline$
+  "        % #2 is empty => finish"
+  write$ newline$
+  "        #1%"
+  write$ newline$
+  "    \else"
+  write$ newline$
+  "        % #2 is not empty => underscore was contained, needs to be replaced"
+  write$ newline$
+  "        #1%"
+  write$ newline$
+  "        \textunderscore"
+  write$ newline$
+  "        % continue replacing"
+  write$ newline$
+  "        % #2 ends with an extra underscore so I don't need to add another one"
+  write$ newline$
+  "        \@repl@underscores#2\relax"
+  write$ newline$
+  "    \fi"
+  write$ newline$
+  "}"
+  write$ newline$
   "\providecommand{\natexlab}[1]{#1}"
   write$ newline$
-  "\providecommand{\url}[1]{\texttt{#1}}"
+  "\renewcommand{\doi}[1]{doi:~\sloppy\href{https://dx.doi.org/#1}{\replunderscores{#1}}}"
   write$ newline$
-  "\expandafter\ifx\csname urlstyle\endcsname\relax"
-  write$ newline$
-  "  \providecommand{\arxivid}[1]{arxivid: #1}\else"
-  write$ newline$
-  "  \providecommand{\arxivid}{arxivid: \begingroup \urlstyle{rm}\Url}\fi"
-  write$ newline$
-  "\expandafter\ifx\csname urlstyle\endcsname\relax"
-  write$ newline$
-  "  \providecommand{\doi}[1]{doi: #1}\else"
-  write$ newline$
-  "  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi"
+  "\providecommand{\arxivid}[1]{arXiv:~\sloppy\href{https://arxiv.org/abs/#1}{\replunderscores{#1}}}"
   write$ newline$
 }
 
