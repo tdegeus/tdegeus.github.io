@@ -24,6 +24,7 @@
    conferences.rst
    prizes.rst
    students.rst
+   teaching.rst
    education.rst
    activities.rst
    grants.rst
