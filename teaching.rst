@@ -15,6 +15,7 @@ Statistical Physics 2
 
     *   Bachelor.
     *   Teaching assistant, EPFL, 02.2020 - 07.2020.
+        Responsibilities: exercise sessions and grading.
 
 Introduction to the theory of phase transitions.
 The course covers the following topics:
@@ -37,6 +38,7 @@ Continuum Mechanics
 
     *   Bachelor.
     *   Teaching assistant, EPFL, 09.2016 - 02.2017.
+        Responsibilities: exercise sessions and grading.
 
 Continuum mechanics introduces the concepts of stress and strain, conservation laws, equilibrium equations and constitutive laws. The course covers the following topics:
 
@@ -53,6 +55,7 @@ Finite Element Method
 
     *   Bachelor.
     *   Teaching assistant, TU/e, 09.2010 - 09.2011.
+        Responsibilities: exercise sessions and grading.
     *   Co-developer of a tensor toolbox in Matlab for education purposes, TU/e, 09.2009 - 09.2010.
 
 The finite element method is a numerical technique for finding (approximate) solutions to boundary value problems for partial differential equations.
@@ -71,6 +74,7 @@ Programming project
 
     *   Bachelor.
     *   Lecturer, TU/e, 09.2011 - 09.2015.
+        Responsibilities: course development, independent teaching, and grading.
 
 -   Gaining skills in anticipation, analysis and interpretation.
 -   Gaining skills in scientific presentation of experimental and numerical results and uncertainties.
@@ -84,6 +88,7 @@ Design Based Learning
 
     *   Bachelor.
     *   Supervisor, TU/e, 09.2008 - 09.2009.
+        Responsibilities: project supervision and grading.
 
 In Design Based Learning, students apply knowledge from previous (theoretical) courses and learn to collaborate in multidisciplinary teams.
 By doing so, students will not only develop (new) disciplinary knowledge and technical skills, but also improve on their professional and personal skills.
