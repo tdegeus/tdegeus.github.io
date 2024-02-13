@@ -93,3 +93,14 @@ Design Based Learning
 In Design Based Learning, students apply knowledge from previous (theoretical) courses and learn to collaborate in multidisciplinary teams.
 By doing so, students will not only develop (new) disciplinary knowledge and technical skills, but also improve on their professional and personal skills.
 Bi-weekly team meetings are supervised by staff members that guide both the process and the content of the project.
+
+High-school Physics and Mathematics
+-----------------------------------
+
+.. note::
+
+    *   High-school.
+    *   Tutor, 09.2004 – 09.2008.
+
+At the gymnasium, students start the transition from physics as facts and mathematics as tools, to an abstract modelling of the world.
+This transition is often helped by providing different perspectives, and therefore is often helped by interaction with a tutor who has an academic background.
