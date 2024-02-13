@@ -18,6 +18,9 @@ On a fundamental level, creep is due to thermal activations.
 Due to elastic coupling the activations are spatially correlated: thermal avalanches occur, see animation.
 In depinning-like systems, these avalanches are characterized by the same exponents as the depinning transition itself :footcite:`deGeus2024`.
 
+:octicon:`file;1em;sd-text-info`
+:download:`More... <research/creep/main.pdf>`
+
 .. raw:: html
     :file: research/creep/movies/L=2^9_temperature=0,002.html
 
