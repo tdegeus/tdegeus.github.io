@@ -17,6 +17,9 @@ Ambizione fellowship, Grant No. PZ00P2_185843 |br|
 `Swiss National Science Foundation (SNSF) <https://www.snf.ch>`_ |br|
 Grant: 567.000 CHF
 
+:octicon:`file;1em;sd-text-info`
+:download:`Final report <research/ambizione/main.pdf>`
+
 .. dropdown:: Summary
 
     Friction is omnipresent on our planet and in our daily lives. It allows us to walk, cycle, or take any means of transportation; at the same time, it can be responsible for significant energy losses. Beyond engineering applications, friction also prevents the sliding of tectonic plates, until, occasionally, the plates do slide, inducing an earthquake. For all these applications, we would like to predict and engineer frictional properties: a feat that we are unable to accomplish today.
