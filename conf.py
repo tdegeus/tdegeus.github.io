@@ -164,6 +164,7 @@ def myformat():
     remove_fields = {
         "library_invited.bib": ["author"],
         "library_conferences.bib": ["author"],
+        "library_seminars.bib": ["author"],
     }
 
     for fname, keys in data.items():
