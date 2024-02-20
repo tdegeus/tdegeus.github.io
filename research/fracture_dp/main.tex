@@ -1,4 +1,4 @@
-\documentclass[colorlinks,empty,plainparagraph]{goose-article}
+\documentclass[pagenumbers=false, paragraphafter=none]{goose-article}
 
 \usepackage{newfloat}
 \usepackage{framed}
@@ -22,7 +22,7 @@
 ]
 \sloppy
 
-\paragraph*{Impact.}
+\paragraph{Impact.}
 
 A key to a successful design is to anticipate failure.
 In practice it is desirable that failure limits be known material properties, and that approaching the failure limit is accompanied by a clear signal.
@@ -33,7 +33,7 @@ Such materials consist of two or more constituents, each with their own properti
 A significant challenge is that failure of such materials is structurally complex and often very poorly understood.
 I propose that that there is a long-range arrangement of constituents responsible for ``soft spots'' that are particularly close to failure, and in which failure is initiated before macroscopic necking occurs.
 
-\paragraph*{Material.}
+\paragraph{Material.}
 
 A material in demand is dual-phase steel, which is widely applied e.g.~in car bodies, as it is strong \emph{and} ductile (as opposed to conventional steels which are strong \emph{or} ductile).
 The microstructure comprises grains of two phases: one hard but relatively brittle (martensite) and one soft and ductile (ferrite).
@@ -44,19 +44,19 @@ The microstructure comprises grains of two phases: one hard but relatively britt
     \includegraphics[width=\linewidth]{graphical_abstract.pdf}
 \end{figure*}
 
-\paragraph*{Model.}
+\paragraph{Model.}
 
 An abstract model of the microstructure of the dual-phase steel is to assume that it consists of blocks that represent the grains of each phase.
 The simplest assumption is that each block is randomly assigned the properties of one of the two phases according to a given volume fraction.
 A realisation is presented below (on the left).
 
-\paragraph*{Stress fluctuations.}
+\paragraph{Stress fluctuations.}
 
 Imagine that both phases are elastoplastic and differ only in yield and failure stress.
 The non-uniform spatial arrangement leads to a non-uniform plastic deformation such that the tangent modulus is distributed and evolving.
 Its impact on failure is consequential.
 
-\paragraph*{Where does failure initiate?}
+\paragraph{Where does failure initiate?}
 
 To answer this question, the microstructure is loaded to a finite strain well before macroscopic fracture.
 The answer then comes from computing the average phase around damaged regions.

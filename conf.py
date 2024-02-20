@@ -9,6 +9,7 @@ import pybtex.plugin
 import texplain
 from pybtex.style.formatting import toplevel
 from pybtex.style.formatting.unsrt import Style as UnsrtStyle
+from pybtex.style.labels import BaseLabelStyle
 from pybtex.style.template import field
 from pybtex.style.template import href
 from pybtex.style.template import join
@@ -160,30 +161,34 @@ def myformat():
         ],
     }
 
+    remove_fields = {
+        "library_invited.bib": ["author"],
+        "library_conferences.bib": ["author"],
+        "library_seminars.bib": ["author"],
+    }
+
     for fname, keys in data.items():
         fpath = root / fname
         fpath.write_text(texplain.bib_select(bibfile, keys, reorder=True))
-        bib.bibtex.GbibClean(
-            [
-                "--in-place",
-                "--arxiv",
-                "arXiv preprint: {}",
-                "--rename-field",
-                "arxivid",
-                "eprint",
-                "--add-field",
-                "book:date",
-                "--add-field",
-                "book:number",
-                "--add-field",
-                "book:address",
-                "--add-field",
-                "phdthesis:type",
-                "--add-field",
-                "phdthesis:urldate",
-                fpath,
-            ]
-        )
+        opts = [
+            "--in-place",
+            "--arxiv",
+            "arXiv preprint: {}",
+            "--add-field",
+            "book:date",
+            "--add-field",
+            "book:number",
+            "--add-field",
+            "book:address",
+            "--add-field",
+            "phdthesis:type",
+            "--add-field",
+            "phdthesis:urldate",
+        ]
+        if fname in remove_fields:
+            for key in remove_fields[fname]:
+                opts += ["--remove-field", key]
+        bib.bibtex.GbibClean(opts + [fpath])
 
     return [fname for fname in data]
 
@@ -233,7 +238,19 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
             raise RuntimeError("latexmk failed")
 
 
+class MyPublicationsLabelStyle(BaseLabelStyle):
+    def format_labels(self, sorted_entries):
+        for i, entry in enumerate(sorted_entries):
+            yield str(len(sorted_entries) - i)
+
+
+class MyPublications(UnsrtStyle):
+    default_label_style = MyPublicationsLabelStyle
+
+
 class MyConf(UnsrtStyle):
+    default_label_style = MyPublicationsLabelStyle
+
     def get_book_template(self, e):
         name = join(sep=", ")[field("publisher"), optional_field("number")]
         template = toplevel[
@@ -247,6 +264,8 @@ class MyConf(UnsrtStyle):
 
 
 class MyPoster(UnsrtStyle):
+    default_label_style = MyPublicationsLabelStyle
+
     def get_book_template(self, e):
         name = join(sep=", ")[field("publisher"), optional_field("number")]
         template = toplevel[
@@ -262,6 +281,8 @@ class MyPoster(UnsrtStyle):
 
 
 class MySeminar(UnsrtStyle):
+    default_label_style = MyPublicationsLabelStyle
+
     def get_book_template(self, e):
         template = toplevel[
             sentence[
@@ -278,6 +299,7 @@ class MySeminar(UnsrtStyle):
 pybtex.plugin.register_plugin("pybtex.style.formatting", "myconf", MyConf)
 pybtex.plugin.register_plugin("pybtex.style.formatting", "myposter", MyPoster)
 pybtex.plugin.register_plugin("pybtex.style.formatting", "myseminar", MySeminar)
+pybtex.plugin.register_plugin("pybtex.style.formatting", "mypublications", MyPublications)
 
 project = "Tom de Geus"
 copyright = "Tom de Geus"

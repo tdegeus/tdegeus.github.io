@@ -6,6 +6,5 @@ Students
 ========
 
 .. bibliography:: library_students.bib
-    :style: unsrt
-    :list: enumerated
+    :style: mypublications
     :all:

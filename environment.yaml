@@ -2,7 +2,7 @@ channels:
 - conda-forge
 dependencies:
 - furo
-- goosebib >=0.9.1
+- goosebib >=0.9.4
 - sphinx-design
 - sphinx-reredirects
 - sphinxcontrib-bibtex

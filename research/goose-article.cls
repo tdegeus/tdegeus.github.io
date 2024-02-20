@@ -1,8 +1,8 @@
 % ------------------------------------------------------------------------------
 %  @LaTeX-class-file{
 %     filename        = "goose-article.cls",
-%     version         = "0.11.0",
-%     date            = "November 2023",
+%     version         = "1.0.0",
+%     date            = "Frebuary 2024",
 %     codetable       = "ISO/ASCII",
 %     keywords        = "LaTeX, goose-article",
 %     supported       = "https://github.com/tdegeus/goose-article",
@@ -13,132 +13,97 @@
 % Basic settings
 % ==============================================================================
 
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{goose-article}[2023/11/01 v0.11.0 customized article class]
+\NeedsTeXFormat{LaTeX2e}[2022-06-01]
+\ProvidesClass{goose-article}[2024/02/14 v1.0.0 customized article class]
 
 % ==============================================================================
 % Options
 % ==============================================================================
 
-% Bibliography [namecite, twocolumnbib, normalsizebib]
-% ----------------------------------------------------
-
-\newif\if@namecite
-\let\if@namecite\iffalse
-\DeclareOption{namecite}{\let\if@namecite\iftrue}
-
 \newif\if@twocolumnbib
 \let\if@twocolumnbib\iffalse
 \DeclareOption{twocolumnbib}{\let\if@twocolumnbib\iftrue}
-
-\newif\if@normalsizebib
-\let\if@normalsizebib\iffalse
-\DeclareOption{normalsizebib}{\let\if@normalsizebib\iftrue}
-
-% Layout [narrow, wide, wwide, doublespacing]
-% -------------------------------------------
-
-\newif\if@narrow
-\let\if@narrow\iffalse
-\DeclareOption{narrow}{\let\if@narrow\iftrue}
-
-\newif\if@wwide
-\let\if@wwide\iffalse
-\DeclareOption{wwide}{\let\if@wwide\iftrue}
-
-\newif\if@wide
-\let\if@wide\iffalse
-\DeclareOption{wide}{\let\if@wide\iftrue}
 
 \newif\if@doublespacing
 \let\if@doublespacing\iffalse
 \DeclareOption{doublespacing}{\let\if@doublespacing\iftrue}
 
-% Header [empty]
-% --------------
-
-\newif\if@empty
-\let\if@empty\iffalse
-\DeclareOption{empty}{\let\if@empty\iftrue}
-
-% Pargraph [plainparagraph, displayparagraph]
-% -------------------------------------------
-
-\newif\if@plainparagraph
-\let\if@plainparagraph\iffalse
-\DeclareOption{plainparagraph}{\let\if@plainparagraph\iftrue}
-
-\newif\if@displayparagraph
-\let\if@displayparagraph\iffalse
-\DeclareOption{displayparagraph}{\let\if@displayparagraph\iftrue}
-
-% Math [fleqn]
-% ------------
+\newif\if@linenumbers
+\let\if@linenumbers\iffalse
+\DeclareOption{linenumbers}{\let\if@linenumbers\iftrue}
 
 \newif\if@fleqn
 \let\if@fleqn\iffalse
 \DeclareOption{fleqn}{\let\if@fleqn\iftrue}
 
-% Font [times, garamond, verdana]
-% -------------------------------
+\DeclareKeys[myopts]{
+    bibpackage.store = \@myopts@bibpackage,
+    bibpackage.usage = load,
+    bibsize.store = \@myopts@bibsize,
+    bibsize.usage = load,
+    bibcols.store = \@myopts@bibcols,
+    bibcols.usage = load,
+    left.store = \@myopts@left,
+    left.usage = load,
+    right.store = \@myopts@right,
+    right.usage = load,
+    top.store = \@myopts@top,
+    top.usage = load,
+    bottom.store = \@myopts@bottom,
+    bottom.usage = load,
+    paragraphshape.store = \@myopts@paragraphshape,
+    paragraphshape.usage = load,
+    paragraphafter.store = \@myopts@paragraphafter,
+    paragraphafter.usage = load,
+    font.store = \@myopts@fontname,
+    font.usage = load,
+    pagenumbers.if = @myopts@@pagenumbers,
+    pagenumbers.usage = load,
+}
 
-\newif\if@font
-\let\if@font\iffalse
+\SetKeys[myopts]{
+    bibpackage = natbib,
+    bibsize = scriptsize,
+    bibcols = 1,
+    left = 25mm,
+    right = 25mm,
+    top = 30mm,
+    bottom = 30mm,
+    paragraphshape = runin,
+    paragraphafter = .,
+    font = default,
+    pagenumbers = true,
+}
 
-\newif\if@times
-\let\if@times\iffalse
-\DeclareOption{times}{\let\if@times\iftrue\let\if@font\iftrue}
+\ProcessKeyOptions[myopts]
 
-\newif\if@garamond
-\let\if@garamond\iffalse
-\DeclareOption{garamond}{\let\if@garamond\iftrue\let\if@font\iftrue}
+\DeclareOption{openright}{\OptionNotUsed}
+\DeclareOption{openany}{\OptionNotUsed}
 
-\newif\if@verdana
-\let\if@verdana\iffalse
-\DeclareOption{verdana}{\let\if@verdana\iftrue\let\if@font\iftrue}
-
-% Hyperref [showlinks, colorlinks]
-% --------------------------------
-
-\newif\if@showlinks
-\let\if@showlinks\iffalse
-\DeclareOption{showlinks}{\let\if@showlinks\iftrue}
-
-\newif\if@colorlinks
-\let\if@colorlinks\iffalse
-\DeclareOption{colorlinks}{\let\if@colorlinks\iftrue}
-
-% Process options
-% ---------------
+\PassOptionsToClass{a4paper}{article}
+\PassOptionsToClass{twoside}{article}
+\if@fleqn
+    \PassOptionsToClass{fleqn}{article}
+\fi
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
-
 \ProcessOptions\relax
+
+\LoadClass{article}
+\let\@unusedoptionlist\@empty
 
 % ==============================================================================
 % Packages
 % ==============================================================================
 
-\if@fleqn
-    \LoadClass[a4paper, fleqn, twoside]{article}
-\else
-    \LoadClass[a4paper, twoside]{article}
-\fi
+\RequirePackage[
+    left = \@myopts@left,
+    right = \@myopts@right,
+    top = \@myopts@top,
+    bottom = \@myopts@bottom,
+]{geometry}
 
-\if@narrow
-    \RequirePackage[left=40mm, right=40mm, top=30mm, bottom=30mm]{geometry}
-\else
-    \if@wwide
-        \RequirePackage[left=10mm, right=10mm, top=20mm, bottom=20mm]{geometry}
-    \else
-        \if@wide
-            \RequirePackage[left=15mm, right=15mm, top=20mm, bottom=20mm]{geometry}
-        \else
-            \RequirePackage[left=25mm, right=25mm, top=30mm, bottom=30mm]{geometry}
-        \fi
-    \fi
-\fi
-
+\RequirePackage{ifthen}
 \RequirePackage{fix-cm}
 \RequirePackage{graphicx}
 \RequirePackage{subfig}
@@ -162,118 +127,108 @@
 \RequirePackage[capitalise]{cleveref}
 
 % ==============================================================================
-% Citation style
+% Bibliography
 % ==============================================================================
 
-\if@namecite
-    \RequirePackage{natbib}
-    \let\oldbibliography\bibliography
-    \renewcommand{\bibliography}[1]{%
-        \setlength{\bibsep}{3pt plus 0.3ex}
-        \if@normalsizebib
-            \def\bibfont{\normalsize}
-        \else
-            \def\bibfont{\scriptsize}
-        \fi
-        \if@twocolumnbib
-            \begin{multicols}{2}
-                \raggedright\oldbibliography{#1}\justifying
-            \end{multicols}
-        \else
-            \raggedright\oldbibliography{#1}\justifying
-        \fi
-    }
-\else
+\ifthenelse{\equal{\@myopts@bibpackage}{natbib}}{
     \RequirePackage[square,sort&compress,numbers,comma]{natbib}
+
     \let\oldbibliography\bibliography
     \renewcommand{\bibliography}[1]{%
         \setlength{\bibsep}{3pt plus 0.3ex}
-        \if@normalsizebib
-            \def\bibfont{\normalsize}
-        \else
-            \def\bibfont{\scriptsize}
-        \fi
-        \if@twocolumnbib
-            \begin{multicols}{2}
+        \def\bibfont{\csname \@myopts@bibsize\endcsname}
+        \ifthenelse{\equal{\@myopts@bibcols}{1}}{
+            \raggedright\oldbibliography{#1}\justifying
+        }{
+            \begin{multicols}{\@myopts@bibcols}
                 \raggedright\oldbibliography{#1}\justifying
             \end{multicols}
-        \else
-            \raggedright\oldbibliography{#1}\justifying
-        \fi
+        }
     }
-\fi
-
-% escape underscopes (in DOI): https://stackoverflow.com/a/57028315/2646505
-\newcommand{\replunderscores}[1]{\expandafter\@repl@underscores#1_\relax}
-
-\def\@repl@underscores#1_#2\relax{%
-    \ifx
-        \relax #2\relax
-        % #2 is empty => finish
-        #1%
-    \else
-        % #2 is not empty => underscore was contained, needs to be replaced
-        #1%
-        \textunderscore
-        % continue replacing
-        % #2 ends with an extra underscore so I don't need to add another one
-        \@repl@underscores#2\relax
-    \fi
+}{
+    \ifthenelse{\equal{\@myopts@bibpackage}{biblatex}}{
+        \RequirePackage[sortcites,backend=bibtex,style=numeric-comp,sorting=none]{biblatex}
+        \AtBeginBibliography{\csname \@myopts@bibsize\endcsname}
+        \ifthenelse{\equal{\@myopts@bibcols}{1}}{
+            % one column -> do nothing
+        }{
+            \ClassError{goose-article}{'bibpackage=biblatex': 'bibcols=\@myopts@bibcols' not allowed}{}
+        }
+    }{
+        \ifthenelse{\equal{\@myopts@bibpackage}{none}}{
+            % no bibliography backend -> do nothing
+        }{
+            \ClassError{goose-article}{Unknown option 'bibpackage=\@myopts@bibpackage'}{}
+        }
+    }
 }
-
-\renewcommand*{\doi}[1]{\sloppy\href{https://dx.doi.org/#1}{doi:~\replunderscores{#1}}}
-\newcommand*{\arxivid}[1]{\sloppy\href{https://arxiv.org/abs/#1}{arXiv:~\replunderscores{#1}}}
 
 % ==============================================================================
 % Font
 % ==============================================================================
 
-\if@font
+\ifthenelse{\equal{\@myopts@fontname}{default}}{
+    % default
+}
+{
     \RequirePackage{mathspec}
     \RequirePackage{fontspec}
-\fi
 
-\if@garamond
-    \AtBeginDocument{%
-        \setmathfont(Digits)[Numbers=OldStyle]{Garamond}%
-        \setromanfont[%
-            BoldFont={Garamond Bold},%
-            ItalicFont={Garamond Italic},%
-            Mapping=tex-text%
-        ]{Garamond}%
-    }%
-\fi
+    \ifthenelse{\equal{\@myopts@fontname}{garamond}}{
+        \AtBeginDocument{%
+            \setmathfont(Digits)[Numbers=OldStyle]{Garamond}%
+            \setromanfont[%
+                BoldFont={Garamond Bold},%
+                ItalicFont={Garamond Italic},%
+                Mapping=tex-text%
+            ]{Garamond}%
+        }%
+    }{
+        % other font
+    }
 
-\if@verdana
-    \AtBeginDocument{%
-        \defaultfontfeatures{Mapping=tex-text}
-        \setmainfont[Mapping=tex-text]{Verdana}
-        \setsansfont{Verdana}
-        \renewcommand*{\familydefault}{\sfdefault}
-        \setmathfont(Greek,Digits,Latin){Verdana}
-        \setmathrm{Verdana}
-    }%
-\fi
+    \ifthenelse{\equal{\@myopts@fontname}{verdana}}{
+        \AtBeginDocument{%
+            \defaultfontfeatures{Mapping=tex-text}
+            \setmainfont[Mapping=tex-text]{Verdana}
+            \setsansfont{Verdana}
+            \renewcommand*{\familydefault}{\sfdefault}
+            \setmathfont(Greek,Digits,Latin){Verdana}
+            \setmathrm{Verdana}
+        }%
+    }{
+        % other font
+    }
 
-\if@times
-    \AtBeginDocument{%
-        \setmathfont(Digits)[Numbers=OldStyle]{Times New Roman}%
-        \setromanfont[%
-            BoldFont={Times New Roman Bold},%
-            ItalicFont={Times New Roman Italic},%
-            Mapping=tex-text%
-        ]{Times New Roman}%
-    }%
-\fi
+    \ifthenelse{\equal{\@myopts@fontname}{times}}{
+        \AtBeginDocument{%
+            \setmathfont(Digits)[Numbers=OldStyle]{Times New Roman}%
+            \setromanfont[%
+                BoldFont={Times New Roman Bold},%
+                ItalicFont={Times New Roman Italic},%
+                Mapping=tex-text%
+            ]{Times New Roman}%
+        }%
+    }{
+        % other font
+    }
+}
 
 % ==============================================================================
-% Spacing
+% Convience development options
 % ==============================================================================
 
 \if@doublespacing
     \AtBeginDocument{%
-        \usepackage{setspace}
+        \RequirePackage{setspace}
         \doublespacing
+    }%
+\fi
+
+\if@linenumbers
+    \AtBeginDocument{%
+        \RequirePackage{lineno}
+        \linenumbers
     }%
 \fi
 
@@ -281,46 +236,16 @@
 % Hyperref
 % ==============================================================================
 
-\if@showlinks
-    \AtBeginDocument{%
-        \hypersetup{%
-            pdftitle=\@title,
-            citecolor=NavyBlue,
-            filecolor=NavyBlue,
-            linkcolor=NavyBlue,
-            urlcolor=NavyBlue,
-            breaklinks,
-            bookmarksopen=true,
-        }%
-    }
-\else
-    \if@colorlinks
-        \AtBeginDocument{%
-            \hypersetup{%
-                pdftitle=\@title,
-                citecolor=NavyBlue,
-                filecolor=NavyBlue,
-                linkcolor=NavyBlue,
-                urlcolor=NavyBlue,
-                breaklinks,
-                bookmarksopen=true,
-            }%
-        }
-    \else
-        \AtBeginDocument{%
-            \hypersetup{%
-                pdftitle=\@title,
-                citecolor=NavyBlue,
-                filecolor=NavyBlue,
-                linkcolor=NavyBlue,
-                urlcolor=NavyBlue,
-                breaklinks,
-                hidelinks,
-                bookmarksopen=true,
-            }%
-        }
-    \fi
-\fi
+\hypersetup{
+    pdftitle=\@title,
+    breaklinks=true,
+    colorlinks=true,
+    citecolor=NavyBlue,
+    filecolor=NavyBlue,
+    linkcolor=NavyBlue,
+    urlcolor=NavyBlue,
+    bookmarksopen=true,
+}
 
 % ==============================================================================
 % Headers
@@ -330,19 +255,12 @@
 \titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}{}
 \titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}{}
 \titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}{}
-\if@displayparagraph
-    \if@plainparagraph
-        \titleformat{\paragraph}{\normalfont\normalsize\bfseries}{}{}{}
-    \else
-        \titleformat{\paragraph}{\normalfont\normalsize\bfseries}{}{}{}[.]
-    \fi
-\else
-    \if@plainparagraph
-        \titleformat{\paragraph}[runin]{\normalfont\normalsize\bfseries}{}{}{}
-    \else
-        \titleformat{\paragraph}[runin]{\normalfont\normalsize\bfseries}{}{}{}[.]
-    \fi
-\fi
+
+\ifthenelse{\equal{\@myopts@paragraphafter}{none}}{
+    \titleformat{\paragraph}[\@myopts@paragraphshape]{\normalfont\normalsize\bfseries}{}{}{}
+}{
+    \titleformat{\paragraph}[\@myopts@paragraphshape]{\normalfont\normalsize\bfseries}{}{}{}[\@myopts@paragraphafter]
+}
 
 % spacing {left}{top}{bottom}, of:
 \titlespacing{\section}{0pt}{1eM}{0.8em}
@@ -364,9 +282,6 @@
 % ==============================================================================
 % Title, authors, affiliation layout
 % ==============================================================================
-
-% add option
-\newcommand{\contact}[1]{\date{{#1}}}
 
 % basic settings
 \newcommand{\nl}{\vspace*{-.3em}\protect\\ \fontsize{9}{10.8}\itshape}
@@ -418,10 +333,11 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\if@empty
-\else
+
+\if@myopts@@pagenumbers
     \fancyhead[RO,LE]{\thepage}
 \fi
+
 \newcommand{\header}[1]{\fancyhead[LO,RE]{#1}}
 \newcommand{\headerOdd}[1]{\fancyhead[LO]{#1}}
 \newcommand{\headerEven}[1]{\fancyhead[RE]{#1}}

@@ -1,4 +1,4 @@
-\documentclass[colorlinks,empty,plainparagraph]{goose-article}
+\documentclass[pagenumbers=false, paragraphafter=none]{goose-article}
 
 \title{Microscopic prediction of stick-slip friction}
 \author{Tom de Geus}
@@ -13,19 +13,19 @@
 ]
 \sloppy
 
-\paragraph*{Impact.}
+\paragraph{Impact.}
 
 Understanding how slip at a frictional interface initiates is important for e.g.~earthquake prediction and precision engineering.
 The force needed to start sliding a solid object over a flat surface is classically described by a ``static friction coefficient'': a constant established by measurements.
 It was recently questioned if such constant exists, as it was shown to be poorly reproducible.
 
-\paragraph*{Model.}
+\paragraph{Model.}
 
 A common model divides the interface in elastically interacting `blocks' that are elastic up to a certain threshold.
 These thresholds are distributed as all contacts are different.
 Different than commonly assumed, I argue that contacts have a finite size and therefore inertia.
 
-\paragraph*{Depinning.}
+\paragraph{Depinning.}
 
 Without inertia, such model predicts a depinning transition.
 The model corresponds to a $d$ dimensional interface driven over a disordered pinning potential by a $d + 1$ dimensional solid.
@@ -34,12 +34,12 @@ Above it, the interface moves at a constant velocity.
 At the critical force, the interface is marginally stable and avalanches appear whose size diverges as a powerlaw, successfully reproducing some features of earthquakes.
 Problematically, since elastic interactions between blocks are strictly positive (a failing block destabilises all other blocks) it has been shown theoretically that stick-slip is impossible: the system cannot build up ``overstress''.
 
-\paragraph*{Fracture.}
+\paragraph{Fracture.}
 
 It is a known experimental fact that the system can build up an overstress before it fails catastrophically.
 At this point, slip starts by a fracture-like object that unzips the interface, whose front velocity and surrounding stress field are well described by fracture mechanics.
 
-\paragraph*{How is an overstress build up?}
+\paragraph{How is an overstress build up?}
 
 I argue that these two fields are not contradictory.
 The effect of inertia, ignored in depinning, is consequential.
@@ -47,7 +47,7 @@ Blocks that come close to failure at the very end of a slip event have a high pr
 This results in an `armoured' interface that can build up an overstress.
 With $x$ the distance to yielding locally, this corresponds to $P(x) \sim x^\theta$ with $\theta > 0$, but whose value depends on the surface roughness in some way.
 
-\paragraph*{Rheology.}
+\paragraph{Rheology.}
 
 The effect of inertia is consequential in two more ways.
 First, the failure of a block redistributes stress among neighbouring blocks by elastic waves.
@@ -60,7 +60,7 @@ Second, during the start of a slip event, the inertia of the surrounding elastic
     \includegraphics[width=\linewidth]{scenario.pdf}
 \end{figure}
 
-\paragraph*{When does slip start?}
+\paragraph{When does slip start?}
 
 Due to the disorder $f_c$ varies in space.
 Consequently, a microscopic event nucleated at $f_c$ can grow to a size $\ell$ with a finite probability, implying $P(\ell) \sim \ell^{-\tau}$ with $\tau > 0$.

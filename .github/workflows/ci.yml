@@ -38,12 +38,12 @@ jobs:
         packages: >-
           array
           authblk
+          biblatex
           bibunits
           caption
           cleveref
           enumitem
           environ
-          etoolbox
           etoolbox
           eurosym
           framed
