@@ -161,30 +161,33 @@ def myformat():
         ],
     }
 
+    remove_fields = {
+        "library_invited.bib": ["author"],
+        "library_conferences.bib": ["author"],
+    }
+
     for fname, keys in data.items():
         fpath = root / fname
         fpath.write_text(texplain.bib_select(bibfile, keys, reorder=True))
-        bib.bibtex.GbibClean(
-            [
-                "--in-place",
-                "--arxiv",
-                "arXiv preprint: {}",
-                "--rename-field",
-                "arxivid",
-                "eprint",
-                "--add-field",
-                "book:date",
-                "--add-field",
-                "book:number",
-                "--add-field",
-                "book:address",
-                "--add-field",
-                "phdthesis:type",
-                "--add-field",
-                "phdthesis:urldate",
-                fpath,
-            ]
-        )
+        opts = [
+            "--in-place",
+            "--arxiv",
+            "arXiv preprint: {}",
+            "--add-field",
+            "book:date",
+            "--add-field",
+            "book:number",
+            "--add-field",
+            "book:address",
+            "--add-field",
+            "phdthesis:type",
+            "--add-field",
+            "phdthesis:urldate",
+        ]
+        if fname in remove_fields:
+            for field in remove_fields[fname]:
+                opts += ["--remove-field", field]
+        bib.bibtex.GbibClean(opts + [fpath])
 
     return [fname for fname in data]
 
