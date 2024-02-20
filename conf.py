@@ -185,8 +185,8 @@ def myformat():
             "phdthesis:urldate",
         ]
         if fname in remove_fields:
-            for field in remove_fields[fname]:
-                opts += ["--remove-field", field]
+            for key in remove_fields[fname]:
+                opts += ["--remove-field", key]
         bib.bibtex.GbibClean(opts + [fpath])
 
     return [fname for fname in data]
