@@ -254,8 +254,9 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
             ],
             capture_output=True,
         )
-        if result.stdout.decode("utf-8").strip() != "1":
-            raise RuntimeError(f"{project}/main.pdf not one page")
+        pages = result.stdout.decode("utf-8").strip()
+        if pages != "1":
+            raise RuntimeError(f"{project}/main.pdf has {pages} pages (instead of 1)")
 
 
 class MyPublicationsLabelStyle(BaseLabelStyle):
