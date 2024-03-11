@@ -246,23 +246,21 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
 
         if project.name in ["cv", "teaching", "ambizione"]:
             continue
-        result = subprocess.run(
-            [
-                "gs",
-                "-q",
-                "-dNOSAFER",
-                "-dNODISPLAY",
-                "-c",
-                '"(main.pdf) (r) file runpdfbegin pdfpagecount = quit"',
-            ],
-            capture_output=True,
-        )
+        cmd = [
+            "gs",
+            "-q",
+            "-dNOSAFER",
+            "-dNODISPLAY",
+            "-c",
+            '"(main.pdf) (r) file runpdfbegin pdfpagecount = quit"',
+        ]
+        result = subprocess.run(cmd, capture_output=True)
         if result.returncode != 0:
             print("stdout:")
             print(result.stdout.decode("utf-8"))
             print("stderr:")
             print(result.stderr.decode("utf-8"))
-            raise RuntimeError(f"gs {project}/main.pdf failed")
+            raise RuntimeError(f"Failed: {project} $ {' '.join(cmd)}")
         pages = result.stdout.decode("utf-8").strip()
         if pages != "1":
             raise RuntimeError(f"{project}/main.pdf has {pages} pages (instead of 1)")
