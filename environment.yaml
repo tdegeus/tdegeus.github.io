@@ -2,6 +2,7 @@ channels:
 - conda-forge
 dependencies:
 - furo
+- ghostscript
 - goosebib >=0.9.4
 - sphinx-design
 - sphinx-reredirects

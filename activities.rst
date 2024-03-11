@@ -83,7 +83,7 @@ Volunteering
 *   Buddy of autistic first year student |br|
     Eindhoven University of Technology, Eindhoven, The Netherlands |br|
     2008 - 2009 |br|
-    Responsibilities: weekly meetings with to goal to enhance well-being and study-effectiveness of autistic student
+    Responsibilities: weekly meetings with to goal to enhance well-being and study effectiveness of autistic student
 
 *   Field hockey equipment commissioner |br|
     Eindhoven area, The Netherlands |br|
@@ -93,7 +93,7 @@ Volunteering
 *   Trainer field hockey |br|
     Eindhoven area, The Netherlands |br|
     2005 - 2010 |br|
-    Responsibilities: design and execution specialised goalkeeper training
+    Responsibilities: design and execution specialized goalkeeper training
 
 Student jobs
 ============
@@ -108,6 +108,6 @@ Student jobs
     09.2003 - 09.2007
 
 *   Shift supervisor hospitality |br|
-    Maison van den Boer at soccer stadium of PSV |br|
+    Maison van den Boer at football stadium of PSV |br|
     Eindhoven area, The Netherlands |br|
     09.2001 - 09.2004
