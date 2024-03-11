@@ -10,13 +10,21 @@ Education
 
    <br />
 
+Postdoctoral research
+=====================
+
+École Polytechnique Fédérale de Lausanne (EPFL), Switzerland |br|
+Department of Physics |br|
+Physics of Complex Systems Laboratory, Institute of Theoretical Physics |br|
+2016-2023
+
 Doctor of Philosophy
 ====================
 
 Eindhoven University of Technology |br|
 Mechanical Engineering |br|
 `Cum Laude <https://www.tue.nl/en/university/departments/mechanical-engineering/news/04-05-2016-tom-de-geus-gaines-his-phd-cum-laude/>`_ |br|
-2016
+Graduation: 2016
 
 .. image:: research/fracture_dp/thesis.jpg
     :width: 100%
@@ -55,8 +63,21 @@ Mechanical Engineering |br|
 Master of Science
 =================
 
-Eindhoven University of Technology |br|
-Mechanical Engineering |br|
+Eindhoven University of Technology, The Netherlands |br|
+Department of Mechanical Engineering |br|
+Mechanics of Materials Institute |br|
 With great appreciation (GPA 8.5/10) |br|
-Internship: Harvard University |br|
-2012
+Graduation: 2012
+
+Research internship
+===================
+
+Harvard University, United States |br|
+School of Engineering and Applied Sciences |br|
+2011
+
+Bachelor of Science
+===================
+
+Eindhoven University of Technology, The Netherlands |br|
+Department of Mechanical Engineering

@@ -8,7 +8,7 @@ Shear-banding
 How amorphous solids such as granular materials, bulk metallic glasses, colloidal suspensions or foams yield under an applied strain or flow under an applied stress is a central question in fields as diverse as geophysics, material science and soft matter.
 This question enters your everyday life for example by the stability and manipulability of coffee foam, toothpaste, or mayonnaise.
 The system has a crucial dependence on preparation.
-If the systems is annealed the stress can 'overshoot' before it shear-bands.
+If the system is annealed the stress can 'overshoot' before it shear-bands.
 We prose models on:
 
 *   How the system can nucleate a shear-band in a very stable system :footcite:`Popovic2018`.

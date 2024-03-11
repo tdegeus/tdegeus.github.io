@@ -10,14 +10,14 @@ Techniques that apply the Fast Fourier Transform have attracted much attention a
 Moreover, the Fast Fourier Transform is a natural companion of pixel-based digital images which often serve as input.
 In its original form, one of the biggest challenges for the method is the treatment of (geometrically) non-linear problems, partially due to the need for a uniform linear reference problem.
 
-In a geometrically linear setting, the problem has recently been treated in a variational form resulting in an unconditionally stable scheme that combines Newton iterations with an iterative linear solver, and therefore exhibits robust and quadratic convergence behaviour :footcite:`Zeman2017`.
-Through this approach, well-known key ingredients were recovered in terms of discretization, numerical quadrature, consistent linearization of the material model, and the iterative solution of the resulting linear system.
+In a geometrically linear setting, the problem has been treated in a variational form resulting in an unconditionally stable scheme that combines Newton iterations with an iterative linear solver, and therefore exhibits robust and quadratic convergence behaviour :footcite:`Zeman2017`.
+Through this approach, well-known key ingredients are recovered in terms of discretization, numerical quadrature, consistent linearization of the material model, and the iterative solution of the resulting linear system.
 
-As a result, the extension to finite strains, using arbitrary constitutive models, is at hand.
-Because of the application of the Fast Fourier Transform, the implementation is substantially easier than that of other (Finite Element) methods.
-Both claims are demonstrated in this paper and substantiated with a `simple code in Python of just 59 lines (without comments) <https://github.com/tdegeus/GooseFFT>`_ :footcite:`deGeus2017a`.
-The aim is to render the method transparent and accessible, whereby researchers that are new to this method should be able to implement it efficiently.
-The potential of this method is demonstrated using two examples, each with a different material model.
+The extension to finite strains, using arbitrary constitutive models, is now straightforward.
+Moreover, because of the application of the Fast Fourier Transform, the implementation is substantially easier than that of other (Finite Element) methods.
+Both claims are demonstrated with a `simple code in Python of just 59 lines (without comments) <https://github.com/tdegeus/GooseFFT>`_ :footcite:`deGeus2017a`.
+
+Although a fast method that is able to deal with a large number of degrees-of-freedom is now very accessible, its true efficiency in terms of the number of floating point operations needed to calculate the response of a continuum problem with finite precision may be limited :footcite:`Vondrejc2020`.
 
 :octicon:`file;1em;sd-text-info`
 :download:`More... <research/fft/main.pdf>`

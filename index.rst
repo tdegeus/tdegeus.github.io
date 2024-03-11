@@ -12,9 +12,9 @@
    research_creep.rst
    research_stick-slip.rst
    research_shear-band.rst
+   research_excitations.rst
    research_fracture.rst
    research_fft.rst
-   research_excitations.rst
 
 .. toctree::
    :maxdepth: 1
