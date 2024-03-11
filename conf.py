@@ -238,7 +238,10 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
                 shutil.copyfile(f"../../{lib}", lib)
         result = subprocess.run(["latexmk", "-pdf", "main.tex"], capture_output=True)
         if result.returncode != 0:
+            print("stdout:")
             print(result.stdout.decode("utf-8"))
+            print("stderr:")
+            print(result.stderr.decode("utf-8"))
             raise RuntimeError(f"latexmk {project}/main.tex failed")
 
         if project.name in ["cv", "teaching", "ambizione"]:
@@ -254,6 +257,12 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
             ],
             capture_output=True,
         )
+        if result.returncode != 0:
+            print("stdout:")
+            print(result.stdout.decode("utf-8"))
+            print("stderr:")
+            print(result.stderr.decode("utf-8"))
+            raise RuntimeError(f"gs {project}/main.pdf failed")
         pages = result.stdout.decode("utf-8").strip()
         if pages != "1":
             raise RuntimeError(f"{project}/main.pdf has {pages} pages (instead of 1)")
