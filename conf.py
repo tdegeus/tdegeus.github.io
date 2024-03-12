@@ -1,7 +1,9 @@
+import datetime
 import os
 import pathlib
 import shutil
 import subprocess
+import textwrap
 from contextlib import contextmanager
 
 import GooseBib as bib
@@ -163,6 +165,18 @@ def myformat():
             "thesis_Hatzidimitris2013",
         ],
     }
+
+    # write counters
+    today = datetime.datetime.now().strftime("%Y/%m/%d")
+    text = rf"""
+    \NeedsTeXFormat{{LaTeX2e}}
+    \ProvidesPackage{{mycounters}}[{today} Counters of output]
+
+    \newcommand{{\mypublications}}{{{len(data['library_publications.bib'])}}}
+    \newcommand{{\mystudents}}{{{len(data['library_students.bib'])}}}
+    """
+    pathlib.Path("mycounters.sty").write_text(textwrap.dedent(text).strip())
+    shutil.copyfile("mycounters.sty", os.path.join("research", "cv_short_en", "mycounters.tex"))
 
     remove_fields = {
         "library_invited.bib": ["author"],

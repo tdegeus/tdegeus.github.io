@@ -1,0 +1,208 @@
+% !TeX spellcheck = en_GB
+% !TeX program = pdflatex
+%
+% LetzCV-sleek 1.0 LaTeX template
+% Author: Andreï V. Kostyrka, University of Luxembourg
+%
+% This template fills the gap in the available variety of templates
+% by proposing something that is not a custom class, not using any
+% hard-coded settings deeply hidden in style files, and provides
+% a handful of custom command definitions that are as transparent as it gets.
+% Developed at the University of Luxembourg.
+%
+% *NOTHING IS HARCODED, and never should be.*
+%
+% Target audience: applicants in the IT industry, or business in general
+%
+% The main strength of this template is, it explicitly showcases how
+% to break the flow of text to achieve the most flexible right alignment
+% of dates for multiple configurations.
+
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[british]{babel}
+\usepackage[left = 0mm, right = 0mm, top = 0mm, bottom = 0mm]{geometry}
+\usepackage[stretch = 25, shrink = 25]{microtype}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{marvosym}
+\usepackage{eurosym}
+
+\usepackage{enumitem}
+\setlist{
+    parsep = 0pt,
+    topsep = 0pt,
+    partopsep = 1pt,
+    itemsep = 1pt,
+    leftmargin = 6mm
+}
+
+\usepackage{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{cvblue}{HTML}{304263}
+
+%%%%%%% USER COMMAND DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These are the real workhorses of this template
+\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
+\newcommand{\is}{\par\vskip.5ex plus .4ex} % Item spacing
+\newcommand{\smaller}[1]{{\small\ #1}}
+\newcommand{\headleft}[1]{
+    \vspace*{3ex}\textsc{\textbf{#1}}\par%
+    \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}
+}
+\newcommand{\headright}[1]{
+    \vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
+    \vspace*{-2ex}{\color{cvblue}\hrulefill}\par
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+\usepackage{mycounters}
+
+\begin{document}
+
+% Style definitions -- killing the unnecessary space and adding the skips explicitly
+\setlength{\topskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+\pagestyle{empty}
+\raggedbottom
+
+\begin{minipage}[t]{0.33\textwidth} %% Left column -- outer definition
+    \colorbox{cvblue!90}{
+        \color{white} %% LEFT BOX
+        \kern0.09\textwidth\relax% Left margin provided explicitly
+        \begin{minipage}[t][297mm][t]{0.82\textwidth}
+            \raggedright
+            \vspace*{2.5ex}
+
+            \Large Dr.~Tom \textbf{\textsc{de Geus}} \normalsize
+
+            % Centering without extra vertical spacing
+            \null\hfill\includegraphics[width=0.65\textwidth]{tom.jpg}\hfill\null
+
+            \vspace*{0.5ex}
+
+            \headleft{Profile}
+            Creative and successful \textbf{scientist} passionate about \textbf{complex problems} that need solving by innovation.
+            PhD in mechanical \textbf{engineering}, seven years experience as senior researcher \textbf{physics}.
+            \mypublications~publications in top physics and engineering journals, numerous conference presentations and colloquia, supervised \mystudents~student projects, various teaching experiences, skilled programmer and open-source contributor.
+            Reviewed publications for top journals and open-source projects.
+            Successful acquisition of funds and project execution.
+
+            \headleft{Contact details}
+            \small
+            \MVAt\ {\small \href{mailto:tom@geus.me}{tom@geus.me}} \\
+            [0.4ex]
+            \Telefon\ +41\,77\,993\,72\,35 \\
+            [0.5ex]
+            \Mundus\ \href{https://www.geus.me}{www.geus.me} \\
+            [0.1ex]
+            \Letter\ Chemin du Parc-de-Valancy 11 \\
+            CH-1004 Lausanne
+            \normalsize
+
+            \headleft{Personal information}
+            Year of birth: \textbf{1985} \\[0.5ex]
+            Citizenship: \textbf{The Netherlands} \\[0.5ex]
+            Residency: \textbf{Switzerland} {\tiny (from 2016)} \\[0.5ex]
+            Civil status: \textbf{Married} \\[0.5ex]
+            Languages: \\[0.5ex]
+            \textbf{Dutch} (native), \textbf{English} (fluent), \textbf{French} (fluent), \textbf{German} (good)
+
+            \headleft{Skills}
+            \begin{itemize}
+                \item Project management
+                \item Leadership
+                \item Communication
+                \item Teaching \& coaching
+                \item Problem evaluation \& solving
+                \item Python, C++, LaTeX, git
+                \item Various languages \& tools
+            \end{itemize}
+
+        \end{minipage}%
+        \kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+    }
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.56\textwidth}
+    \hypersetup{urlcolor = black, linkcolor = black}
+
+    \setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+    \vspace{2ex}
+
+    \headright{Experience}
+
+    \textsc{Senior researcher Physics} \dates{2019--pres.} \\
+    \textit{EPFL (Switzerland)} \\
+    \smaller{Acquired funding (567 kCHF), indepently designed and executed research resulting in top journal publications and conference presentations, indepently supervised bachelor and master students, co-supervised PhD student, designed and applied high-performance computations, reviewed for top journals.}
+
+    \is
+    \textsc{Postdoctoral researcher Physics} \dates{2016--2019} \\
+    \textit{EPFL (Switzerland)} \\
+    \smaller{Acquired funding (160 k\euro), published in top journals, participated in education and student supervision, designed and applied computations.}
+
+    \is
+    \textsc{Postdoctoral researcher Valorization} \dates{2016} \\
+    \textit{M2i \& TATA Steel (The Netherlands)} \\
+    \smaller{Acquired funding (10 k\euro), developped numerical tool for industrial usage.}
+
+    \is
+    \textsc{Research internship} \dates{2010} \\
+    \textit{Harvard University (United States)} \\
+    \smaller{Designed 3D meta-material, developed numerical tools.}
+
+    \headright{Education}
+
+    \textsc{PhD Mechanical Engineering (cum laude)} \dates{2012-2016} \\
+    \textit{Eindhoven University of Technology (The Netherlands)} \\
+    \smaller{Specialisation: mechanics of materials} \\
+    \smaller{Martinus van Marum award for best PhD thesis (12.5 k\euro), various awards}
+
+    \is
+    \textsc{MSc Mechanical Engineering (great appreciation)} \dates{2009-2012} \\
+    \textit{Eindhoven University of Technology (The Netherlands)} \\
+    \smaller{Specialisation: mechanics of materials}
+
+    \is
+    \textsc{BSc Mechanical Engineering (great appreciation)} \dates{2004-2009} \\
+    \textit{Eindhoven University of Technology (The Netherlands)} \\
+
+    \headright{Volunteering}
+
+    \textsc{Mountaineering} \dates{2024-pres.} \\
+    Assistant group leader ski touring.
+
+    \textsc{Rowing} \dates{2019-pres.} \\
+    Swiss champion, world longest race, teacher, group leader leisure.
+
+    \textsc{Field hockey} \dates{2003-2010} \\
+    Trainer, equipment commissioner.
+
+    \textsc{Well-being} \dates{2008-2014} \\
+    President PhD association, buddy autistic student.
+
+    \textsc{Open-source} \dates{2016-pres.} \\
+    Developer and maintainer numerous projects.
+
+    \headright{Student jobs}
+
+    \textsc{Sales employee and Delivery driver} \dates{2003–2007} \\
+    \textit{Boels Rental (The Netherlands)}
+
+    \textsc{Tutor of high school students in Physics and Math} \dates{2004–2008} \\
+    \textit{Independent (The Netherlands)}
+
+    \textsc{Shift supervisor Catering} \dates{2001–2004} \\
+    \textit{Maison van den Boer at stadium of PSV (The Netherlands)}
+
+
+\end{minipage}
+
+\end{document}
