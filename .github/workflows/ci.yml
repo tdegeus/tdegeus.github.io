@@ -42,6 +42,7 @@ jobs:
           bibunits
           caption
           cleveref
+          collection-latex
           enumitem
           environ
           etoolbox
