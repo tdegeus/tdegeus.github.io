@@ -33,7 +33,7 @@ jobs:
         post-cleanup: all
 
     - name: Setup TeXLive
-      uses: teatimeguest/setup-texlive-action@v3
+      uses: teatimeguest/setup-texlive-action@main
       with:
         packages: >-
           array
@@ -47,6 +47,7 @@ jobs:
           etoolbox
           eurosym
           fira
+          fontaxes
           framed
           hyperref
           latexmk
