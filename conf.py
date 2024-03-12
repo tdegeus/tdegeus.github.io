@@ -277,7 +277,7 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
             "-dNOSAFER",
             "-dNODISPLAY",
             "-c",
-            '(main.pdf) (r) file runpdfbegin pdfpagecount = quit',
+            "(main.pdf) (r) file runpdfbegin pdfpagecount = quit",
         ]
         ret = myrun(cmd, error_message=f"Failed: {project} $ {' '.join(cmd)}")
         if ret != "1":
