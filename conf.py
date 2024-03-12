@@ -214,6 +214,27 @@ def cwd(dirname: pathlib.Path):
         os.chdir(origin)
 
 
+def myrun(cmd: list[str], error_message: str) -> str:
+    """
+    Run command.
+    Print error if command fails.
+
+    :param cmd: Command (as list, see ``subprocess.run``).
+    :error_message: Error message to print if command fails.
+    :return: Decoded stdout.
+    """
+    result = subprocess.run(cmd, capture_output=True)
+
+    if result.returncode == 0:
+        return result.stdout.decode("utf-8").strip()
+
+    print("stdout:")
+    print(result.stdout.decode("utf-8"))
+    print("stderr:")
+    print(result.stderr.decode("utf-8"))
+    raise RuntimeError(error_message)
+
+
 libraries = myformat()
 root = pathlib.Path(__file__).parent
 bib.bibtex.GbibClean(
@@ -227,22 +248,40 @@ bib.bibtex.GbibClean(
     ]
 )
 
+# compile LaTeX projects
+
 for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
     with cwd(project):
+        # nothing to compile
         if not pathlib.Path("main.tex").exists():
+            assert len([i for i in pathlib.Path().glob("*.tex")]) == 0
             continue
+
+        # copy style and library / extracted libraries
         for fname in ["goose-article.cls", "unsrtnat.bst", "library.bib"]:
             shutil.copyfile(f"../{fname}", fname)
         if project.name == "cv":
             for lib in libraries:
                 shutil.copyfile(f"../../{lib}", lib)
-        result = subprocess.run(["latexmk", "-pdf", "main.tex"], capture_output=True)
-        if result.returncode != 0:
-            print("stdout:")
-            print(result.stdout.decode("utf-8"))
-            print("stderr:")
-            print(result.stderr.decode("utf-8"))
-            raise RuntimeError(f"latexmk {project}/main.tex failed")
+
+        # compile
+        myrun(["latexmk", "-pdf", "main.tex"], error_message=f"latexmk {project}/main.tex failed")
+        assert pathlib.Path("main.pdf").exists
+
+        # flyers: check that they have only one page
+        if project.name in ["cv", "teaching", "ambizione"]:
+            continue
+        cmd = [
+            "gs",
+            "-q",
+            "-dNOSAFER",
+            "-dNODISPLAY",
+            "-c",
+            "(main.pdf) (r) file runpdfbegin pdfpagecount = quit",
+        ]
+        ret = myrun(cmd, error_message=f"Failed: {project} $ {' '.join(cmd)}")
+        if ret != "1":
+            raise RuntimeError(f"{project}/main.pdf has {ret} pages (instead of 1)")
 
 
 class MyPublicationsLabelStyle(BaseLabelStyle):
