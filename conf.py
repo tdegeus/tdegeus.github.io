@@ -1,7 +1,9 @@
+import datetime
 import os
 import pathlib
 import shutil
 import subprocess
+import textwrap
 from contextlib import contextmanager
 
 import GooseBib as bib
@@ -164,6 +166,18 @@ def myformat():
         ],
     }
 
+    # write counters
+    today = datetime.datetime.now().strftime("%Y/%m/%d")
+    text = rf"""
+    \NeedsTeXFormat{{LaTeX2e}}
+    \ProvidesPackage{{mycounters}}[{today} Counters of output]
+
+    \newcommand{{\mypublications}}{{{len(data['library_publications.bib'])}}}
+    \newcommand{{\mystudents}}{{{len(data['library_students.bib'])}}}
+    """
+    pathlib.Path("mycounters.sty").write_text(textwrap.dedent(text).strip())
+    shutil.copyfile("mycounters.sty", os.path.join("research", "cv_short_en", "mycounters.sty"))
+
     remove_fields = {
         "library_invited.bib": ["author"],
         "library_conferences.bib": ["author"],
@@ -283,6 +297,11 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
         if ret != "1":
             raise RuntimeError(f"{project}/main.pdf has {ret} pages (instead of 1)")
 
+static = pathlib.Path("_static")
+static.mkdir(exist_ok=True)
+research = pathlib.Path("research")
+shutil.copy(research / "cv_short_en" / "main.pdf", static / "cv.pdf")
+
 
 class MyPublicationsLabelStyle(BaseLabelStyle):
     def format_labels(self, sorted_entries):
@@ -361,6 +380,8 @@ extensions = [
 ]
 bibtex_bibfiles = libraries
 html_favicon = "favicon.ico"
+html_static_path = ["_static"]
 redirects = {
     "phd": "education.html#doctor-of-philosophy",
+    "cv": "_static/cv.pdf",
 }
