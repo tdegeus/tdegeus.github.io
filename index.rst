@@ -30,7 +30,10 @@
    grants.rst
 
 :octicon:`file;1em;sd-text-info`
-:download:`CV <research/cv/main.pdf>`
+:download:`CV <research/cv_short_en/main.pdf>`
+
+:octicon:`file;1em;sd-text-info`
+:download:`Academic CV <research/cv/main.pdf>`
 
 .. toctree::
    :maxdepth: 1
