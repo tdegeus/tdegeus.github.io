@@ -380,7 +380,7 @@ extensions = [
 ]
 bibtex_bibfiles = libraries
 html_favicon = "favicon.ico"
-html_static_path = ['_static']
+html_static_path = ["_static"]
 redirects = {
     "phd": "education.html#doctor-of-philosophy",
     "cv": "_static/cv.pdf",

@@ -8,4 +8,3 @@ dependencies:
 - sphinx-reredirects
 - sphinxcontrib-bibtex
 - texplain >=0.8.8
-- sphinx-reredirects
