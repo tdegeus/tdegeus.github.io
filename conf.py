@@ -277,11 +277,8 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
             "-dNOSAFER",
             "-dNODISPLAY",
             "-c",
-            '"(main.pdf) (r) file runpdfbegin pdfpagecount = quit"',
+            '(main.pdf) (r) file runpdfbegin pdfpagecount = quit',
         ]
-        print("----")
-        print(os.getcwd())
-        print([i for i in pathlib.Path().glob("*")])
         ret = myrun(cmd, error_message=f"Failed: {project} $ {' '.join(cmd)}")
         if ret != "1":
             raise RuntimeError(f"{project}/main.pdf has {ret} pages (instead of 1)")
