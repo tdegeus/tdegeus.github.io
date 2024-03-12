@@ -51,6 +51,8 @@ jobs:
           latexmk
           listings
           listingsutf8
+          marvosym
+          microtype
           newfloat
           pdfcol
           pgf
