@@ -297,6 +297,11 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
         if ret != "1":
             raise RuntimeError(f"{project}/main.pdf has {ret} pages (instead of 1)")
 
+static = pathlib.Path("_static")
+static.mkdir(exist_ok=True)
+research = pathlib.Path("research")
+shutil.copy(research / "cv_short_en" / "main.pdf", static / "cv.pdf")
+
 
 class MyPublicationsLabelStyle(BaseLabelStyle):
     def format_labels(self, sorted_entries):
@@ -375,6 +380,8 @@ extensions = [
 ]
 bibtex_bibfiles = libraries
 html_favicon = "favicon.ico"
+html_static_path = ['_static']
 redirects = {
     "phd": "education.html#doctor-of-philosophy",
+    "cv": "_static/cv.pdf",
 }
