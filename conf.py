@@ -176,7 +176,7 @@ def myformat():
     \newcommand{{\mystudents}}{{{len(data['library_students.bib'])}}}
     """
     pathlib.Path("mycounters.sty").write_text(textwrap.dedent(text).strip())
-    shutil.copyfile("mycounters.sty", os.path.join("research", "cv_short_en", "mycounters.tex"))
+    shutil.copyfile("mycounters.sty", os.path.join("research", "cv_short_en", "mycounters.sty"))
 
     remove_fields = {
         "library_invited.bib": ["author"],
