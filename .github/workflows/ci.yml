@@ -42,7 +42,6 @@ jobs:
           bibunits
           caption
           cleveref
-          collection-latex
           enumitem
           environ
           etoolbox
@@ -68,6 +67,7 @@ jobs:
           titlesec
           uri
           xcolor
+          xkeyval
 
     - name: Clone pybtex
       run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
