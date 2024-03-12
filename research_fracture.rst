@@ -11,6 +11,7 @@ This is the case for ductile materials, e.g. many crystalline metals, in which s
 Yet, ductility comes at the cost of strength, often resulting in overly bulky (i.e. heavy) designs.
 To go beyond this trade-off, the next step is to use multiphase materials.
 Such materials consist of two or more constituents, each with their own properties.
+
 A significant challenge is that failure of such materials is structurally complex and often very poorly understood.
 I propose that that there is a long-range arrangement of constituents responsible for "soft spots" that are particularly close to failure, and in which failure is initiated before macroscopic necking occurs.
 These "soft spots" can be identified by computing the correlation between damage on the local phase distribution.

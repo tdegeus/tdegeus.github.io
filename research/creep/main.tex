@@ -28,8 +28,8 @@
 \paragraph{Impact}
 
 Understanding how slip at a frictional interface initiates is important for e.g.~earthquake prediction and precision engineering.
-It is commonly accepted that the ``static friction coefficient'' grows in time due to creep.
-However, it remains a mystery how creep relates the spontaneous slip nucleation.
+It is commonly accepted that the ``static friction coefficient'' grows logarithmically in time due to creep.
+However, it remains a mystery how creep relates spontaneous slip nucleation.
 
 \paragraph{Measurements}
 
@@ -47,7 +47,7 @@ This forces the stick-slip cycles to de-synchronize, such that the effect of cre
 \paragraph{Model}
 
 The simplest model is that of an elastic interface driven over a disordered pinning potential.
-It consists of $N$ particles that interact interact with their nearest neighbours.
+It consists of $N$ particles that interact with their nearest neighbours.
 Each particle, furthermore, experiences a driving force (by connecting the particle to a driving frame using a weak spring) and an elastic force due to the pinning potential.
 
 \paragraph{Depinning}
@@ -63,13 +63,17 @@ What happens in the presence of inertia and temperature is less clear.
 
 Still neglecting inertia, but assuming a finite temperature, the system displays creep at any force: the depinning transition is ``rounded''.
 Intriguingly, the creep regime is also intermittent.
-Due to elastic coupling the activations are spatially correlated: thermal avalanches occur, see below (showing activity at different times at a fixed temperature, left, and at different temperatures at fixed time, right).
+The activations are spatially correlated due to elastic coupling: thermal avalanches occur (shown below: activity at different times at a fixed temperature, left, and at different temperatures at fixed time, right).
 We predict these exponents to be the same exponents as the depinning transition itself.
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=0.9\linewidth]{prl_snapshots.pdf}
+    \includegraphics[width=0.8\linewidth]{prl_snapshots.pdf}
 \end{figure}
+
+\paragraph{Key question}
+
+How thermal avalanches and inertial avalanches co-exist and interact around the inertial critical force is even quantitatively unknown.
 
 \nocite{Poincloux2023,deGeus2024}
 \bibliographystyle{unsrtnat}

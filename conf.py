@@ -236,9 +236,13 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
         if project.name == "cv":
             for lib in libraries:
                 shutil.copyfile(f"../../{lib}", lib)
-        result = subprocess.run(["latexmk", "-pdf", "main.tex"])
+        result = subprocess.run(["latexmk", "-pdf", "main.tex"], capture_output=True)
         if result.returncode != 0:
-            raise RuntimeError("latexmk failed")
+            print("stdout:")
+            print(result.stdout.decode("utf-8"))
+            print("stderr:")
+            print(result.stderr.decode("utf-8"))
+            raise RuntimeError(f"latexmk {project}/main.tex failed")
 
 
 class MyPublicationsLabelStyle(BaseLabelStyle):
