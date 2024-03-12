@@ -46,7 +46,7 @@ jobs:
           environ
           etoolbox
           eurosym
-          FiraSans
+          fira
           framed
           hyperref
           latexmk
