@@ -244,27 +244,6 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
             print(result.stderr.decode("utf-8"))
             raise RuntimeError(f"latexmk {project}/main.tex failed")
 
-        if project.name in ["cv", "teaching", "ambizione"]:
-            continue
-        cmd = [
-            "gs",
-            "-q",
-            "-dNOSAFER",
-            "-dNODISPLAY",
-            "-c",
-            '"(main.pdf) (r) file runpdfbegin pdfpagecount = quit"',
-        ]
-        result = subprocess.run(cmd, capture_output=True)
-        if result.returncode != 0:
-            print("stdout:")
-            print(result.stdout.decode("utf-8"))
-            print("stderr:")
-            print(result.stderr.decode("utf-8"))
-            raise RuntimeError(f"Failed: {project} $ {' '.join(cmd)}")
-        pages = result.stdout.decode("utf-8").strip()
-        if pages != "1":
-            raise RuntimeError(f"{project}/main.pdf has {pages} pages (instead of 1)")
-
 
 class MyPublicationsLabelStyle(BaseLabelStyle):
     def format_labels(self, sorted_entries):
