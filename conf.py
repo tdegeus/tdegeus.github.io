@@ -3,7 +3,6 @@ import os
 import pathlib
 import shutil
 import subprocess
-import textwrap
 from contextlib import contextmanager
 
 import GooseBib as bib
@@ -20,7 +19,14 @@ from pybtex.style.template import sentence
 from pybtex.style.template import words
 
 
-def myformat():
+def myformat() -> tuple[list[str], dict[int]]:
+    """
+    Create separate bibtex files for each citation category.
+
+    :return: ``(files, counters)``, with
+        ``files`` a list of created files, and
+        ``counters`` a dictionary with the number of citations per file.
+    """
     root = pathlib.Path(__file__).parent
     bibfile = (root / "library.bib").read_text()
 
@@ -166,18 +172,6 @@ def myformat():
         ],
     }
 
-    # write counters
-    today = datetime.datetime.now().strftime("%Y/%m/%d")
-    text = rf"""
-    \NeedsTeXFormat{{LaTeX2e}}
-    \ProvidesPackage{{mycounters}}[{today} Counters of output]
-
-    \newcommand{{\mypublications}}{{{len(data['library_publications.bib'])}}}
-    \newcommand{{\mystudents}}{{{len(data['library_students.bib'])}}}
-    """
-    pathlib.Path("mycounters.sty").write_text(textwrap.dedent(text).strip())
-    shutil.copyfile("mycounters.sty", os.path.join("research", "cv_short_en", "mycounters.sty"))
-
     remove_fields = {
         "library_invited.bib": ["author"],
         "library_conferences.bib": ["author"],
@@ -207,7 +201,7 @@ def myformat():
                 opts += ["--remove-field", key]
         bib.bibtex.GbibClean(opts + [fpath])
 
-    return [fname for fname in data]
+    return [fname for fname in data], {k: len(v) for k, v in data.items()}
 
 
 @contextmanager
@@ -249,7 +243,7 @@ def myrun(cmd: list[str], error_message: str) -> str:
     raise RuntimeError(error_message)
 
 
-libraries = myformat()
+libraries, counters = myformat()
 root = pathlib.Path(__file__).parent
 bib.bibtex.GbibClean(
     [
@@ -261,6 +255,117 @@ bib.bibtex.GbibClean(
         root / "library.bib",
     ]
 )
+
+# dates
+
+sources = {
+    "Mail": "mailto:tom@geus.me",
+    "Site": "https://www.geus.me",
+    "GitHub": "https://github.com/tdegeus",
+    "Grants": "https://www.geus.me/grants.html",
+    "PhD": "https://www.geus.me/education.html#doctor-of-philosophy",
+    "Publications": "https://www.geus.me/publications.html",
+    "Students": "https://www.geus.me/students.html",
+    "StickSlip": "https://www.geus.me/research_stick-slip.html",
+    "Excitations": "https://www.geus.me/research_excitations.html",
+    "ChampionSuisse": "https://www.geus.me/activities.html#swiss-champions-rowing",
+    "TdL": "https://www.geus.me/activities.html#tour-du-leman",
+    "RTS": "https://pages.rts.ch/la-1ere/programmes/forum/11247813-forum-du-22-04-2020.html",
+}
+
+dates = {
+    "Ambizione": [datetime.date(2019, 10, 1), None],
+    "Rubicon": [datetime.date(2016, 9, 1), datetime.date(2019, 10, 1)],
+    "Valorization": [datetime.date(2016, 4, 1), datetime.date(2016, 7, 1)],
+    "Harvard": [datetime.date(2010, 9, 1), datetime.date(2010, 11, 1)],
+    "PhD": [datetime.date(2012, 4, 1), datetime.date(2016, 4, 1)],
+    "EM": [datetime.date(2012, 4, 1), datetime.date(2015, 10, 1)],
+    "MSc": [datetime.date(2009, 9, 1), datetime.date(2012, 8, 1)],
+    "BSc": [datetime.date(2004, 9, 1), datetime.date(2009, 12, 1)],
+    "HighSchool": [datetime.date(1997, 9, 1), datetime.date(2004, 6, 1)],
+    "PrizeMartinus": datetime.date(2017, 6, 1),
+    "PrizeTUe": datetime.date(2017, 5, 1),
+    "PrizeEccomas": datetime.date(2017, 9, 1),
+    "PrizePosterMB": datetime.date(2016, 12, 1),
+    "PrizePosterMA": datetime.date(2013, 12, 1),
+    "PrizeEntrepreneurship": datetime.date(2008, 2, 1),
+    "DataChampion": [datetime.date(2021, 9, 1), None],
+    "ClusterEPFL": [datetime.date(2017, 3, 1), None],
+    "ClusterTUe": [datetime.date(2013, 9, 1), datetime.date(2016, 7, 1)],
+    "InterviewRTS": datetime.date(2020, 4, 22),
+    "InterviewTerlouw": datetime.date(2017, 5, 1),
+    "InterviewRradio": datetime.date(2016, 5, 1),
+    "CAS": [datetime.date(2024, 2, 1), None],
+    "LSArandonnee": [datetime.date(2019, 4, 1), None],
+    "LSAencadrant": [datetime.date(2019, 4, 1), None],
+    "HoraEst": [datetime.date(2014, 9, 1), datetime.date(2015, 9, 1)],
+    "Buddy": [datetime.date(2008, 9, 1), datetime.date(2009, 9, 1)],
+    "HockeyEquipment": [datetime.date(2003, 9, 1), datetime.date(2007, 9, 1)],
+    "HockeyTrainer": [datetime.date(2005, 9, 1), datetime.date(2010, 9, 1)],
+    "Hockey": [datetime.date(2003, 9, 1), datetime.date(2015, 9, 1)],
+    "Tutor": [datetime.date(2004, 9, 1), datetime.date(2008, 9, 1)],
+    "Boels": [datetime.date(2003, 9, 1), datetime.date(2007, 9, 1)],
+    "PSV": [datetime.date(2001, 9, 1), datetime.date(2004, 9, 1)],
+    "TdLA": datetime.date(2022, 9, 1),
+    "TdLB": datetime.date(2023, 9, 1),
+    "ChampionSuisseA": datetime.date(2021, 7, 1),
+    "ChampionSuisseB": datetime.date(2023, 7, 1),
+    "TeachingEPFLStatPhys": [datetime.date(2020, 2, 1), datetime.date(2020, 9, 1)],
+    "TeachingEPFLContinuum": [datetime.date(2016, 9, 1), datetime.date(2017, 2, 1)],
+    "TeachingTUeProgramming": [datetime.date(2011, 9, 1), datetime.date(2015, 9, 1)],
+    "TeachingTUeFEM": [datetime.date(2010, 9, 1), datetime.date(2011, 9, 1)],
+    "TeachingTUeMatlab": [datetime.date(2009, 9, 1), datetime.date(2010, 9, 1)],
+    "TeachingTUeDBL": [datetime.date(2008, 9, 1), datetime.date(2009, 9, 1)],
+}
+
+formatted = {}
+for project, date_range in dates.items():
+    if isinstance(date_range, datetime.date):
+        formatted[project] = date_range.strftime("%Y")
+        continue
+
+    first, last = date_range
+
+    if project.startswith("Teaching"):
+        if first.year == last.year:
+            first = datetime.date(first.year - 1, 9, 1)
+
+    if last is None:
+        formatted[project] = f"{first.strftime('%Y')}--pres."
+    elif first.year == last.year:
+        formatted[project] = first.strftime("%Y")
+    else:
+        formatted[project] = f"{first.strftime('%Y')}--{last.strftime('%Y')}"
+
+# register counters and dates for later use
+
+today = datetime.datetime.now().strftime("%Y/%m/%d")
+
+text = []
+text.append(r"\NeedsTeXFormat{LaTeX2e}")
+text.append(rf"\ProvidesPackage{{mycounters}}[{today} Counters of output]")
+text.append("")
+text.append(rf"\newcommand{{\mypublications}}{{{counters['library_publications.bib']}}}")
+text.append(rf"\newcommand{{\mystudents}}{{{counters['library_students.bib']}}}")
+
+text.append("")
+for key, value in formatted.items():
+    text.append(rf"\newcommand{{\MyDate{key}}}{{{value}}}")
+
+text.append("")
+for key, value in sources.items():
+    value = value.replace("#", r"\#")
+    if key == "Mail":
+        text.append(rf"\newcommand{{\MySource{key}}}[1][tom@geus.me]{{\href{{{value}}}{{#1}}}}")
+    elif key == "Site":
+        text.append(rf"\newcommand{{\MySource{key}}}[1][www.geus.me]{{\href{{{value}}}{{#1}}}}")
+    else:
+        text.append(rf"\newcommand{{\MySource{key}}}[1]{{\href{{{value}}}{{#1}}}}")
+
+pathlib.Path("mycounters.sty").write_text("\n".join(text))
+shutil.copyfile("mycounters.sty", os.path.join("research", "cv_short_en", "mycounters.sty"))
+shutil.copyfile("mycounters.sty", os.path.join("research", "cv", "mycounters.sty"))
+shutil.copyfile("mycounters.sty", os.path.join("research", "teaching", "mycounters.sty"))
 
 # compile LaTeX projects
 
