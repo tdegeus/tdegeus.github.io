@@ -47,6 +47,7 @@ jobs:
           etoolbox
           eurosym
           fira
+          fontawesome5
           fontaxes
           framed
           hyperref
