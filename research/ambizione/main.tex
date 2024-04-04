@@ -43,7 +43,7 @@ New open questions are also identified.
 
 This report summarizes the main results of the project.
 It includes citations to the publications that have resulted from the project.
-References to other literature are not included, but can be found in the publications.
+References to other literature are not included, but can be found in the cited publications.
 
 \section{State-of-the-art}
 
@@ -53,7 +53,7 @@ It is well known that the shear force required to initiate slip is proportional 
 Since friction is in addition independent of the nominal contact area, one should study the \emph{shear stress}.
 In all of the following, we uniquely study the shear stress.
 We denote $f$ the remotely applied shear stress (proportional to the force with one needs to pull a sliding block).
-For simplicity, we will refer to $f$ as force.
+For simplicity, we will refer to $f$ as force and not that our results are on non-dimensional (and could be converted to desired units if needed).
 
 \paragraph{Continuum models}
 
@@ -72,18 +72,18 @@ At any instance of time, a fraction of local hills forms a contact that elastici
 
 We can model such phenomenology as an elastic interface driven over a disordered pinning potential using a weak spring.
 The elasticity accounts for the fact that points along the interface cannot slip independently.
-The disorder accounts for the fact that contacts elastically resist deformation up to a local (random) threshold.
+The disorder accounts for the fact that contacts elastically resist deformation up to a local (`random') threshold.
 
 \paragraph{Depinning transition}
 
 If overdamped dynamics are considered, such models undergo a depinning transition at a critical force $f_c$.
 At $f_c$, the interface moves via large reorganizations, called avalanches.
-Their size is power law distributed, $P(S) \sim S^{-\tau}$.
-Moreover, the interface shape is a self-similar shape with a roughness exponent $\zeta$.
-At lower applied forces ($f < f_c$), the avalanche's maximal linear extent diverges approaching the critical point: $\ell_\mathrm{dep} (f) \sim |f - f_c|^{-\nu}$.
+Their size is power law distributed, $P(S) \sim S^{-\tau_\mathrm{dep}}$.
+Moreover, the interface shape is a self-similar shape with a roughness exponent $\zeta_\mathrm{dep}$.
+At lower applied forces ($f < f_c$), the avalanche's maximal linear extent diverges approaching the critical point: $\ell_\mathrm{dep} (f) \sim |f - f_c|^{-\nu_\mathrm{dep}}$.
 At higher applied forces ($f > f_c$) the interface moves at a finite velocity.
-The exponents $\tau, \zeta, \nu, \ldots$ are now well understood and related by scaling relations.
-Note thereby that the roughness exponent $\zeta$ captures the spatial correlations of slip.
+The exponents $\tau_\mathrm{dep}, \zeta_\mathrm{dep}, \nu_\mathrm{dep}, \ldots$ are now well understood and related by scaling relations.
+A practical note thereby that the roughness exponent $\zeta_\mathrm{dep}$ captures the spatial correlations of slip.
 This is a priori unrelated from the surface roughness of the frictional interface, that is captured the physical height-height correlations of the interface.
 \emph{Crucially, the depinning transition is a continuous transition: it does not display stick-slip as observed at the frictional interface and in earthquakes.}
 
@@ -91,7 +91,7 @@ This is a priori unrelated from the surface roughness of the frictional interfac
 
 \paragraph{Finite mass}
 
-The key physics to link the macroscopically observed stick-slip due to velocity-weakening, to the microscopic collective dynamics of the interface, is inertia.
+The key physics to link the macroscopically observed stick-slip (due to velocity-weakening) to the microscopic collective dynamics of the interface, is inertia.
 At the frictional interface local failure corresponds to the failure of ``asperities'' (hills) of a finite size and mass.
 Moreover, the elastic bulk permits elastic wave propagation.
 
@@ -99,7 +99,7 @@ Moreover, the elastic bulk permits elastic wave propagation.
 
 The effect of inertia can be understood as follows.
 During elastic loading the interface climbs up energy barriers, but then abruptly slides downhill once the barrier is overcome.
-For overdamped systems, this descent suffices to dissipate the energy stored during loading, while at lower damping the inertia may carry the system over several successive barriers leading to force overshoots and oscillations.
+For overdamped systems (that display the continuous depinning transition), this descent suffices to dissipate the energy stored during loading, while at lower damping the inertia may carry the system over several successive barriers leading to force overshoots and oscillations.
 Such oscillations emit acoustic waves that facilitate failure of neighbouring regions.
 Since their failure also emits waves, there is a feedback corresponding to velocity-weakening.
 
@@ -142,7 +142,7 @@ Furthermore, we find that an avalanche is unstable if its extent $\ell > \ell_c 
 In an infinitely large system, the interface is thus protected from building up a load $f > f_c$.
 If an instability occurs, the system advances by a large reorganization, and unloads to $f_{\min}$ (the minimum of the flow curve), resulting in the stick-slip cycle in \cref{fig:nonmonotic}.
 Thereby we numerically find that $f_c \approx f_{\min}$ in very large systems \cite{deGeus2022,deGeus2024a,deGeus2019}.
-Crucially, the disorder is responsible for a distribution of barriers $f_c$ resulting in a self-affine roughness of the interface, which can be related to criticality to the non-trivial exponent $\nu$.
+Crucially, the disorder is responsible for a distribution of barriers resulting in a self-affine roughness of the interface characterized by an exponents $\zeta$, which can be related to criticality to the non-trivial exponent $\nu$.
 Thereby, we find that all exponents and most of their scaling is different from the depinning transition.
 Moreover, we find that the nucleation of slip at a disordered interface is not captured by continuum theory.
 
@@ -152,8 +152,9 @@ In a finite system, the stick-slip amplitude is increased due to armouring by in
 In particular, we find that if the interface stops after a system spanning event there are very few regions with a small activation energy in the forward direction.
 Consequently, the number of avalanche is reduced, such that the interface can build up a load $f_s > f_c$, \cref{fig:pre:flow,fig:pre:stick-slip}.
 The scarcity of avalanches thereby masks the criticality of the interface, as a bimodal event size distribution is observed instead, see \cref{fig:pre:bimodal}, indeed argued to be the distribution of earthquakes on a single fault.
-To study the properties of avalanches in an infinite system, we trigger avalanches at different forces $f$ as study their statistics.
-At $f_c$ their properties are scale free, while at $f > f_c$ avalanches transition to system spanning events if their extent $\ell > \ell_c$, see \cref{fig:pre:ellc}.
+To study the properties of avalanches in an infinite system, we trigger avalanches at different forces $f$ and study their statistics.
+At $f_c$, their properties are scale free.
+At $f > f_c$, avalanches transition to system spanning events if their extent $\ell > \ell_c$, see \cref{fig:pre:ellc}.
 We predict and test $f_s - f_c$ as a function of the system size and the exponents $\tau$, $\nu$, and that of the distribution of activation barriers.
 
 \begin{figure}[htp]
@@ -188,7 +189,7 @@ A single-particle toy model with inertia and disorder captures the existence of 
 
 \paragraph{Dissipation}
 
-In a $d$ dimensional interface embedded in a $d + 1$ dimensional elastic medium, also the inertia of the medium has a stabilization effect known as ``radiation damping''.
+In a $d$ dimensional interface embedded in a $d + 1$ dimensional elastic medium, on top of damping due to thermalisation, the inertia of the medium has a stabilization effect known as ``radiation damping''.
 This changes stick-slip if a system has very weak background damping, for example because only little energy is lost at the system's boundaries.
 Suppose that the resistance of the pinning potential as a function of velocity is $f^p(v)$.
 Then, during flow, the remote force $f$ measured at the system's boundaries is $f = f^p(v) + \eta v$, with $\eta$ the background damping, see \cref{fig:radiation:b}.
@@ -216,8 +217,8 @@ We qualitatively confirmed this picture using the model of \cite{deGeus2019,deGe
     \centering
     \includegraphics[width=\linewidth]{figures/radiation_damping.pdf}
     \caption{
-        [Sketch] In a $d$ dimensional interface embedded in a $d + 1$ dimensional elastic medium, also the inertia of the medium has a stabilization effect known as ``radiation damping''.
-        Flow low background damping, this can lead to an additional source of hysteresis.
+        [Sketch] In a $d$ dimensional interface embedded in a $d + 1$ dimensional elastic medium, on top of damping due to thermalisation, also the inertia of the medium has a stabilization effect known as ``radiation damping''.
+        For low background damping, this can lead to an additional source of hysteresis.
         \protect\subref{fig:radiation:a} During nucleation, the background damping is dominated by radiation damping leading to a non-monotonic flow curve with a minimum at $f_{\min}^\text{nucl}$.
         \protect\subref{fig:radiation:b} Once moving, the radiation damping term disappears and the flow curve is lowered with a minimum at $f_{\min}^\text{flow}$.
         (\protect\subref*{fig:radiation:c},\protect\subref*{fig:radiation:d}) Quasistatic loading of the interface in the thermodynamic limit results in stick-slip whereby slip nucleates at $f_c > f_{\min}^\text{nucl}$ and stops at $f_{\min}^\text{flow} < f_{\min}^\text{nucl} < f_c$, as indicated with arrows and corresponding colours.
