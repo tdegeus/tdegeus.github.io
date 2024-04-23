@@ -1,0 +1,43 @@
+\documentclass[
+    bibsize = normalsize,
+    bibpackage = none,
+    paragraphshape = display,
+    paragraphafter = none,
+]{goose-article}
+
+\usepackage[backend=bibtex, style=numeric, sorting=ydnt]{biblatex}
+
+\title{Publications (chronological)}
+\author{Tom de Geus}
+\date{}
+
+% --------------------------------------------
+% https://tex.stackexchange.com/a/22770/132350
+
+% Count total number of entries in each refsection
+\AtDataInput{%
+    \csnumgdef{entrycount:\therefsection}{%
+        \csuse{entrycount:\therefsection}+1
+    }
+}
+
+% Print the labelnumber as the total number of entries in the
+% current refsection, minus the actual labelnumber, plus one
+\DeclareFieldFormat{labelnumber}{\mkbibdesc{#1}}
+\newrobustcmd*{\mkbibdesc}[1]{%
+    \number\numexpr\csuse{entrycount:\therefsection}+1-#1\relax
+}
+
+% --------------------------------------------
+
+\addbibresource[label=publications]{library_publications.bib}
+
+\begin{document}
+
+\maketitle
+\begin{refsection}[publications]
+    \nocite{*}
+    \printbibliography[locallabelwidth, heading=none]
+\end{refsection}
+
+\end{document}
