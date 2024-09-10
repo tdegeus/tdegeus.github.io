@@ -8,3 +8,6 @@ Publications
 .. bibliography:: library_publications.bib
     :style: mypublications
     :all:
+
+:octicon:`file;1em;sd-text-info`
+:download:`Publication list <research/publications/main.pdf>`
