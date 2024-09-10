@@ -278,7 +278,7 @@ sources = {
 }
 
 dates = {
-    "Ambizione": [datetime.date(2019, 10, 1), None],
+    "Ambizione": [datetime.date(2019, 10, 1), datetime.date(2024, 3, 1)],
     "Rubicon": [datetime.date(2016, 9, 1), datetime.date(2019, 10, 1)],
     "Valorization": [datetime.date(2016, 4, 1), datetime.date(2016, 7, 1)],
     "Harvard": [datetime.date(2010, 9, 1), datetime.date(2010, 11, 1)],
@@ -392,7 +392,7 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
         assert pathlib.Path("main.pdf").exists
 
         # flyers: check that they have only one page
-        if project.name in ["cv", "teaching", "ambizione"]:
+        if project.name in ["cv", "teaching", "ambizione", "publications"]:
             continue
         cmd = [
             "gs",
