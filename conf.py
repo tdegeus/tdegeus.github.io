@@ -383,7 +383,7 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
         # copy style and library / extracted libraries
         for fname in ["goose-article.cls", "unsrtnat.bst", "library.bib"]:
             shutil.copyfile(f"../{fname}", fname)
-        if project.name == "cv":
+        if project.name in ["cv", "publications"]:
             for lib in libraries:
                 shutil.copyfile(f"../../{lib}", lib)
 
