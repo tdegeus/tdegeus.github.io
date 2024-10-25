@@ -318,6 +318,7 @@ dates = {
     "TdLB": datetime.date(2023, 9, 1),
     "ChampionSuisseA": datetime.date(2021, 7, 1),
     "ChampionSuisseB": datetime.date(2023, 7, 1),
+    "ChampionSuisseC": datetime.date(2024, 7, 1),
     "TeachingEPFLStatPhys": [datetime.date(2020, 2, 1), datetime.date(2020, 9, 1)],
     "TeachingEPFLContinuum": [datetime.date(2016, 9, 1), datetime.date(2017, 2, 1)],
     "TeachingTUeProgramming": [datetime.date(2011, 9, 1), datetime.date(2015, 9, 1)],
