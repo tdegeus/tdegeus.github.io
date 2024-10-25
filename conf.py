@@ -139,6 +139,8 @@ def myformat() -> tuple[list[str], dict[int]]:
             "deGeus2013",
         ],
         "library_students.bib": [
+            "thesis_Mortgat2024",
+            "thesis_Pottie2024",
             "thesis_Mortgat2023",
             "thesis_Pottie2023",
             "thesis_Fjellman2023",
@@ -278,6 +280,7 @@ sources = {
 }
 
 dates = {
+    "IPI": [datetime.date(2024, 9, 1), None],
     "Ambizione": [datetime.date(2019, 10, 1), datetime.date(2024, 3, 1)],
     "Rubicon": [datetime.date(2016, 9, 1), datetime.date(2019, 10, 1)],
     "Valorization": [datetime.date(2016, 4, 1), datetime.date(2016, 7, 1)],
