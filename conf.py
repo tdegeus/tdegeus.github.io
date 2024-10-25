@@ -302,6 +302,7 @@ dates = {
     "ClusterEPFL": [datetime.date(2017, 3, 1), None],
     "ClusterTUe": [datetime.date(2013, 9, 1), datetime.date(2016, 7, 1)],
     "InterviewRTS": datetime.date(2020, 4, 22),
+    "InterviewHorizons": datetime.date(2024, 8, 28),
     "InterviewTerlouw": datetime.date(2017, 5, 1),
     "InterviewRradio": datetime.date(2016, 5, 1),
     "CAS": [datetime.date(2024, 2, 1), None],
