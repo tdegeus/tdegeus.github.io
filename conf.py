@@ -278,6 +278,7 @@ sources = {
     "ChampionSuisse": "https://www.geus.me/activities.html#swiss-champions-rowing",
     "TdL": "https://www.geus.me/activities.html#tour-du-leman",
     "RTS": "https://pages.rts.ch/la-1ere/programmes/forum/11247813-forum-du-22-04-2020.html",
+    "Horizons": "https://www.snf.ch/en/My7k7JZSdDAVSEjW/page/research-magazine-horizons",
 }
 
 dates = {
