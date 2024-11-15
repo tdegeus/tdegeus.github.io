@@ -110,6 +110,7 @@ def myformat() -> tuple[list[str], dict[int]]:
             "seminar_deGeus2016_1",
         ],
         "library_publications.bib": [
+            "deGeus2024_line",
             "deGeus2024",
             "Chen2024",
             "ElSergany2023",
