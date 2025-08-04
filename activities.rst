@@ -85,6 +85,10 @@ Swiss Champions Rowing
 
 *   Silver Medal Swiss Champion Rowing, Master Men B 4x |br|
     Luzern, Switzerland |br|
+    07.2025
+
+*   Silver Medal Swiss Champion Rowing, Master Men B 4x |br|
+    Luzern, Switzerland |br|
     07.2024
 
 *   Bronze Medal Swiss Champion Rowing, Master Men B 8+ |br|
