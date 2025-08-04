@@ -279,6 +279,7 @@ sources = {
     "ChampionSuisse": "https://www.geus.me/activities.html#swiss-champions-rowing",
     "TdL": "https://www.geus.me/activities.html#tour-du-leman",
     "RTS": "https://pages.rts.ch/la-1ere/programmes/forum/11247813-forum-du-22-04-2020.html",
+    "Horizons": "https://www.snf.ch/en/My7k7JZSdDAVSEjW/page/research-magazine-horizons",
 }
 
 dates = {
@@ -302,6 +303,7 @@ dates = {
     "ClusterEPFL": [datetime.date(2017, 3, 1), None],
     "ClusterTUe": [datetime.date(2013, 9, 1), datetime.date(2016, 7, 1)],
     "InterviewRTS": datetime.date(2020, 4, 22),
+    "InterviewHorizons": datetime.date(2024, 8, 28),
     "InterviewTerlouw": datetime.date(2017, 5, 1),
     "InterviewRradio": datetime.date(2016, 5, 1),
     "CAS": [datetime.date(2024, 2, 1), None],
