@@ -33,43 +33,19 @@ jobs:
         post-cleanup: all
 
     - name: Setup TeXLive
-      uses: teatimeguest/setup-texlive-action@main
-      with:
-        packages: >-
-          array
-          authblk
-          biblatex
-          bibunits
-          caption
-          cleveref
-          enumitem
-          environ
-          etoolbox
-          eurosym
-          fira
-          fontawesome5
-          fontaxes
-          framed
-          hyperref
-          latexmk
-          listings
-          listingsutf8
-          marvosym
-          microtype
-          newfloat
-          pdfcol
-          pgf
-          ragged2e
-          scheme-basic
-          setspace
-          sttools
-          subfig
-          tcolorbox
-          tikzfill
-          titlesec
-          uri
-          xcolor
-          xkeyval
+      run: |
+        sudo apt-get update -y \
+            # Install the full version
+            # sudo apt-get install texlive-full -y
+            # or only your required latex packages
+            sudo apt install -y \
+                texlive-full \
+                texlive-latex-base \
+                texlive-latex-recommended \
+                texlive-latex-extra \
+                texlive-fonts-recommended \
+                latexmk \
+                lmodern
 
     - name: Clone pybtex
       run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
