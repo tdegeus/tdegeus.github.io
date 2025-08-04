@@ -264,20 +264,20 @@ bib.bibtex.GbibClean(
 
 sources = {
     "Mail": "mailto:tom@geus.me",
-    "Site": "https://www.geus.me",
+    "Site": "https://tdegeus.github.io",
     "GitHub": "https://github.com/tdegeus",
     "StackOverflow": "https://stackoverflow.com/users/2646505/tom-de-geus",
     "LinkedIn": "https://www.linkedin.com/in/tdegeus/",
     "ORCID": "https://orcid.org/0000-0002-1694-3375",
     "GoogleScholar": "https://scholar.google.ch/citations?user=e5yVf8AAAAAJ&hl=en",
-    "Grants": "https://www.geus.me/grants.html",
-    "PhD": "https://www.geus.me/education.html#doctor-of-philosophy",
-    "Publications": "https://www.geus.me/publications.html",
-    "Students": "https://www.geus.me/students.html",
-    "StickSlip": "https://www.geus.me/research_stick-slip.html",
-    "Excitations": "https://www.geus.me/research_excitations.html",
-    "ChampionSuisse": "https://www.geus.me/activities.html#swiss-champions-rowing",
-    "TdL": "https://www.geus.me/activities.html#tour-du-leman",
+    "Grants": "https://tdegeus.github.io/grants.html",
+    "PhD": "https://tdegeus.github.io/education.html#doctor-of-philosophy",
+    "Publications": "https://tdegeus.github.io/publications.html",
+    "Students": "https://tdegeus.github.io/students.html",
+    "StickSlip": "https://tdegeus.github.io/research_stick-slip.html",
+    "Excitations": "https://tdegeus.github.io/research_excitations.html",
+    "ChampionSuisse": "https://tdegeus.github.io/activities.html#swiss-champions-rowing",
+    "TdL": "https://tdegeus.github.io/activities.html#tour-du-leman",
     "RTS": "https://pages.rts.ch/la-1ere/programmes/forum/11247813-forum-du-22-04-2020.html",
     "Horizons": "https://www.snf.ch/en/My7k7JZSdDAVSEjW/page/research-magazine-horizons",
 }
@@ -370,7 +370,9 @@ for key, value in sources.items():
     if key == "Mail":
         text.append(rf"\newcommand{{\MySource{key}}}[1][tom@geus.me]{{\href{{{value}}}{{#1}}}}")
     elif key == "Site":
-        text.append(rf"\newcommand{{\MySource{key}}}[1][www.geus.me]{{\href{{{value}}}{{#1}}}}")
+        text.append(
+            rf"\newcommand{{\MySource{key}}}[1][tdegeus.github.io]{{\href{{{value}}}{{#1}}}}"
+        )
     else:
         text.append(rf"\newcommand{{\MySource{key}}}[1]{{\href{{{value}}}{{#1}}}}")
 
