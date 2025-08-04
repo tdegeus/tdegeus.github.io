@@ -36,7 +36,7 @@ Prize: acceptance colloquium, a medal, and 12500 euro |br|
 
     Maar het unieke van dit promotieonderzoek is vooral de nieuwe onderzoeksmethode van De Geus. Door miljoenen numerieke experimenten uit te voeren en deze zelf ‘hun verhaal’ te laten vertellen, zonder uit te gaan van vooronderstellingen, kwam hij op objectieve wijze tot nieuwe inzichten.
     Op dit moment doet Tom de Geus met een beurs van NWO onderzoek naar wrijving, bij de École Polytechnique Fédérale de Lausanne (EPFL) in Zwitserland. Hier probeert hij met een vergelijkbare onderzoeksmethodiek tot nieuwe inzichten te komen in een relatief oud vakgebied.
-    De dissertatie is te downloaden op: `geus.me/phd <http://www.geus.me/phd>`_
+    De dissertatie is te downloaden op: `tdegeus.github.io/phd <https://tdegeus.github.io/phd>`_
 
     **Over de Martinus van Marum Prijs**
 
