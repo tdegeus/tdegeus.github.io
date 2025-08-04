@@ -370,7 +370,9 @@ for key, value in sources.items():
     if key == "Mail":
         text.append(rf"\newcommand{{\MySource{key}}}[1][tom@geus.me]{{\href{{{value}}}{{#1}}}}")
     elif key == "Site":
-        text.append(rf"\newcommand{{\MySource{key}}}[1][tdegeus.github.io]{{\href{{{value}}}{{#1}}}}")
+        text.append(
+            rf"\newcommand{{\MySource{key}}}[1][tdegeus.github.io]{{\href{{{value}}}{{#1}}}}"
+        )
     else:
         text.append(rf"\newcommand{{\MySource{key}}}[1]{{\href{{{value}}}{{#1}}}}")
 
