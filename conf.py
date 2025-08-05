@@ -377,6 +377,7 @@ for key, value in sources.items():
 
 pathlib.Path("mycounters.sty").write_text("\n".join(text))
 shutil.copyfile("mycounters.sty", os.path.join("research", "cv_short_en", "mycounters.sty"))
+shutil.copyfile("mycounters.sty", os.path.join("research", "cv_medium_en", "mycounters.sty"))
 shutil.copyfile("mycounters.sty", os.path.join("research", "cv", "mycounters.sty"))
 shutil.copyfile("mycounters.sty", os.path.join("research", "teaching", "mycounters.sty"))
 
@@ -401,7 +402,7 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
         assert pathlib.Path("main.pdf").exists
 
         # flyers: check that they have only one page
-        if project.name in ["cv", "teaching", "ambizione", "publications"]:
+        if project.name in ["cv", "cv_medium_en", "teaching", "ambizione", "publications"]:
             continue
         cmd = [
             "gs",
@@ -418,7 +419,7 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
 static = pathlib.Path("_static")
 static.mkdir(exist_ok=True)
 research = pathlib.Path("research")
-shutil.copy(research / "cv_short_en" / "main.pdf", static / "cv.pdf")
+shutil.copy(research / "cv_medium_en" / "main.pdf", static / "cv.pdf")
 
 
 class MyPublicationsLabelStyle(BaseLabelStyle):
