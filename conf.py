@@ -260,7 +260,11 @@ bib.bibtex.GbibClean(
     ]
 )
 
-# dates
+# text / url / dates
+
+standard_text = {
+    "Citations": r"> 790 citations on Google Scholar",
+}
 
 sources = {
     "Mail": "mailto:tom@geus.me",
@@ -374,6 +378,10 @@ for key, value in sources.items():
         text.append(rf"\newcommand{{\MySource{key}}}[1][www.geus.me]{{\href{{{value}}}{{#1}}}}")
     else:
         text.append(rf"\newcommand{{\MySource{key}}}[1]{{\href{{{value}}}{{#1}}}}")
+
+text.append("")
+for key, value in standard_text.items():
+    text.append(rf"\newcommand{{\MyText{key}}}{{{value}}}")
 
 pathlib.Path("mycounters.sty").write_text("\n".join(text))
 shutil.copyfile("mycounters.sty", os.path.join("research", "cv_short_en", "mycounters.sty"))
