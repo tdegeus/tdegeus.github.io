@@ -263,7 +263,7 @@ bib.bibtex.GbibClean(
 # text / url / dates
 
 standard_text = {
-    "Citations": r"$\geq$ 800 citations on Google Scholar",
+    "Citations": r"> 800 citations on Google Scholar",
 }
 
 sources = {
