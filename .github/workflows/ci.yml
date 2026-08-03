@@ -47,12 +47,8 @@ jobs:
                 latexmk \
                 lmodern
 
-    - name: Clone pybtex
-      run: git clone https://bitbucket.org/pybtex-devs/pybtex.git
-
-    - name: Install pybtex locally
-      working-directory: pybtex
-      run: python -m pip install . -v --no-build-isolation
+    - name: Install pybtex
+      run: pip install pybtex
 
     - name: Make
       run: make html

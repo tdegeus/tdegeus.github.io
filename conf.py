@@ -240,6 +240,7 @@ def myrun(cmd: list[str], error_message: str) -> str:
     if result.returncode == 0:
         return result.stdout.decode("utf-8").strip()
 
+    print("pwd:", os.getcwd())
     print("stdout:")
     print(result.stdout.decode("utf-8"))
     print("stderr:")
@@ -263,7 +264,7 @@ bib.bibtex.GbibClean(
 # text / url / dates
 
 standard_text = {
-    "Citations": r"> 800 citations on Google Scholar",
+    "Citations": r"900+ citations on Google Scholar",
 }
 
 sources = {
@@ -294,6 +295,7 @@ dates = {
     "Harvard": [datetime.date(2010, 9, 1), datetime.date(2010, 11, 1)],
     "PhD": [datetime.date(2012, 4, 1), datetime.date(2016, 4, 1)],
     "EM": [datetime.date(2012, 4, 1), datetime.date(2015, 10, 1)],
+    "BScMSc": [datetime.date(2004, 9, 1), datetime.date(2012, 8, 1)],
     "MSc": [datetime.date(2009, 9, 1), datetime.date(2012, 8, 1)],
     "BSc": [datetime.date(2004, 9, 1), datetime.date(2009, 12, 1)],
     "HighSchool": [datetime.date(1997, 9, 1), datetime.date(2004, 6, 1)],
@@ -406,7 +408,7 @@ for project in [f for f in (root / "research").glob("*") if f.is_dir()]:
                 shutil.copyfile(f"../../{lib}", lib)
 
         # compile
-        myrun(["latexmk", "-pdf", "main.tex"], error_message=f"latexmk {project}/main.tex failed")
+        myrun(["latexmk", "-pdf", "-f", "main.tex"], error_message=f"latexmk {project}/main.tex failed")
         assert pathlib.Path("main.pdf").exists
 
         # flyers: check that they have only one page
